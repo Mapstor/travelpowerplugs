@@ -1,0 +1,195 @@
+'use client';
+
+import React from 'react';
+import { PlugProps } from './types';
+
+const TypeN: React.FC<PlugProps> = ({ 
+  size = 120, 
+  variant = 'plug', 
+  animated = false,
+  showLabel = false,
+  className = ''
+}) => {
+  const height = variant === 'plug' ? 180 : 140;
+  const animationClass = animated ? 'plug-animated' : '';
+  
+  return (
+    <div className={className}>
+      <svg
+        width={size}
+        height={(height * size) / 120}
+        viewBox={`0 0 120 ${height}`}
+        role="img"
+        aria-label="Type N Brazilian plug"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <style>{`
+          :root {
+            --plug-body: #f5f3ef;
+            --plug-border: #888;
+            --socket-hole: #222;
+          }
+          @media (prefers-color-scheme: dark) {
+            :root {
+              --plug-body: #2a2a2a;
+              --plug-border: #555;
+              --socket-hole: #000;
+            }
+          }
+          .plug-animated {
+            animation: plugDescend 0.4s ease-out forwards;
+          }
+          @keyframes plugDescend {
+            from { transform: translateY(-40px); }
+            to { transform: translateY(0); }
+          }
+        `}</style>
+        
+        <g className={animationClass}>
+          {variant === 'plug' ? (
+            <>
+              {/* Plug body */}
+              <rect
+                x="25"
+                y="60"
+                width="70"
+                height="100"
+                rx="8"
+                fill="var(--plug-body)"
+                stroke="var(--plug-border)"
+                strokeWidth="2"
+              />
+              
+              {/* Recessed area */}
+              <rect
+                x="35"
+                y="70"
+                width="50"
+                height="60"
+                rx="5"
+                fill="#ddd"
+                stroke="#aaa"
+                strokeWidth="1"
+                opacity="0.3"
+              />
+              
+              {/* Top ground pin */}
+              <circle
+                cx="60"
+                cy="30"
+                r="3"
+                fill="#6a6a6a"
+                stroke="#555"
+                strokeWidth="1"
+              />
+              <rect
+                x="58"
+                y="15"
+                width="4"
+                height="50"
+                fill="#6a6a6a"
+                stroke="#555"
+                strokeWidth="1"
+              />
+              
+              {/* Bottom left pin */}
+              <circle
+                cx="45"
+                cy="45"
+                r="3"
+                fill="#888"
+                stroke="#666"
+                strokeWidth="1"
+              />
+              <rect
+                x="43"
+                y="25"
+                width="4"
+                height="40"
+                fill="#888"
+                stroke="#666"
+                strokeWidth="1"
+              />
+              
+              {/* Bottom right pin */}
+              <circle
+                cx="75"
+                cy="45"
+                r="3"
+                fill="#888"
+                stroke="#666"
+                strokeWidth="1"
+              />
+              <rect
+                x="73"
+                y="25"
+                width="4"
+                height="40"
+                fill="#888"
+                stroke="#666"
+                strokeWidth="1"
+              />
+            </>
+          ) : (
+            <>
+              {/* Socket face */}
+              <rect
+                x="10"
+                y="20"
+                width="100"
+                height="100"
+                rx="8"
+                fill="var(--plug-body)"
+                stroke="var(--plug-border)"
+                strokeWidth="2"
+              />
+              
+              {/* Recessed area */}
+              <rect
+                x="35"
+                y="40"
+                width="50"
+                height="60"
+                rx="5"
+                fill="#eee"
+                stroke="#ccc"
+                strokeWidth="1"
+                opacity="0.5"
+              />
+              
+              {/* Top ground hole */}
+              <circle
+                cx="60"
+                cy="55"
+                r="5"
+                fill="var(--socket-hole)"
+              />
+              
+              {/* Bottom left hole */}
+              <circle
+                cx="45"
+                cy="80"
+                r="5"
+                fill="var(--socket-hole)"
+              />
+              
+              {/* Bottom right hole */}
+              <circle
+                cx="75"
+                cy="80"
+                r="5"
+                fill="var(--socket-hole)"
+              />
+            </>
+          )}
+        </g>
+      </svg>
+      
+      {showLabel && (
+        <div className="text-center mt-2 text-sm font-medium">Type N</div>
+      )}
+    </div>
+  );
+};
+
+export default TypeN;

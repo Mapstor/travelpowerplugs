@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Type B — NEMA 5-15 Animation</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#f7f5f2;font-family:'DM Sans',sans-serif;padding:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh}
+  .plug-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.05),0 3px 12px rgba(0,0,0,0.03);max-width:700px;width:100%}
+  .plug-card__head{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid #f0eeeb}
+  .plug-card__name{display:flex;align-items:baseline;gap:6px}
+  .plug-card__name h3{font-size:18px;font-weight:700;color:#2a2a2a}
+  .plug-card__name h3 span{color:#c85a3a}
+  .plug-card__name .sub{font-size:11px;color:#aaa}
+  .plug-card__volt{font-size:10px;padding:3px 9px;border-radius:100px;background:rgba(200,90,58,0.07);color:#c85a3a;font-weight:500;letter-spacing:0.3px}
+  .plug-card__body{display:flex;align-items:stretch;position:relative;height:180px;background:#f4f2ef}
+  .plug-card__scene{flex:1;position:relative;cursor:pointer;min-width:0}
+  .plug-card__scene canvas{display:block;width:100%;height:100%}
+  .plug-card__specs{width:120px;flex-shrink:0;display:flex;flex-direction:column;justify-content:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,0.85);backdrop-filter:blur(6px);border-left:1px solid rgba(0,0,0,0.04)}
+  .spec-item{display:flex;flex-direction:column}
+  .spec-item__label{font-size:8.5px;letter-spacing:1.2px;text-transform:uppercase;color:#bbb;margin-bottom:1px;line-height:1}
+  .spec-item__value{font-size:14px;font-weight:600;color:#444;line-height:1.2}
+  .replay-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(244,242,239,0.45);opacity:0;transition:opacity 0.4s;pointer-events:none;z-index:2}
+  .replay-overlay.visible{opacity:1;pointer-events:auto}
+  .replay-btn-3d{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.9);border:1.5px solid #ddd;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+  .replay-btn-3d:hover{border-color:#c85a3a;background:#fff;transform:scale(1.08)}
+  .replay-btn-3d svg{width:16px;height:16px;fill:none;stroke:#999;stroke-width:2;stroke-linecap:round}
+  .replay-btn-3d:hover svg{stroke:#c85a3a}
+  .plug-card__progress{height:2px;background:#eee}
+  .plug-card__progress-fill{height:100%;width:0%;background:#c85a3a}
+</style>
+</head>
+<body>
+<div class="plug-card">
+  <div class="plug-card__head">
+    <div class="plug-card__name"><h3><span>Type B</span></h3><span class="sub">NEMA 5-15</span></div>
+    <span class="plug-card__volt">120V / 60Hz</span>
+  </div>
+  <div class="plug-card__body">
+    <div class="plug-card__scene" id="scene">
+      <canvas id="cv"></canvas>
+      <div class="replay-overlay" id="ro">
+        <div class="replay-btn-3d" id="rb"><svg viewBox="0 0 24 24"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></div>
+      </div>
+    </div>
+    <div class="plug-card__specs">
+      <div class="spec-item"><div class="spec-item__label">Pins</div><div class="spec-item__value">2 flat + 1 round</div></div>
+      <div class="spec-item"><div class="spec-item__label">Blade</div><div class="spec-item__value">6.3 mm</div></div>
+      <div class="spec-item"><div class="spec-item__label">Spacing</div><div class="spec-item__value">12.7 mm</div></div>
+      <div class="spec-item"><div class="spec-item__label">Rated</div><div class="spec-item__value">15A</div></div>
+    </div>
+  </div>
+  <div class="plug-card__progress"><div class="plug-card__progress-fill" id="pf"></div></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const canvas = document.getElementById('cv');
+const sceneEl = document.getElementById('scene');
+const replayOverlay = document.getElementById('ro');
+const replayBtn = document.getElementById('rb');
+const pfEl = document.getElementById('pf');
+
+const rect = sceneEl.getBoundingClientRect();
+const w = Math.round(rect.width) || 560, h = Math.round(rect.height) || 180;
+canvas.width = w * 2; canvas.height = h * 2;
+
+const scene3 = new THREE.Scene();
+scene3.background = new THREE.Color(0xf4f2ef);
+
+// Same camera as working Type C/F
+const camera = new THREE.PerspectiveCamera(28, w/h, 0.1, 100);
+camera.position.set(-0.3, 1.6, 9.5);
+camera.lookAt(0.3, -0.1, 0);
+
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+renderer.setSize(w, h);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.15;
+
+scene3.add(new THREE.AmbientLight(0xffffff, 0.45));
+const keyL = new THREE.DirectionalLight(0xfff8ee, 0.95);
+keyL.position.set(3, 6, 5); keyL.castShadow = true; keyL.shadow.mapSize.set(512, 512);
+scene3.add(keyL);
+scene3.add(new THREE.DirectionalLight(0xe0ecff, 0.3).translateX(-5).translateY(2).translateZ(3));
+
+function rrShape(sw, sh, r) {
+  const s = new THREE.Shape();
+  s.moveTo(-sw/2+r, -sh/2); s.lineTo(sw/2-r, -sh/2);
+  s.quadraticCurveTo(sw/2, -sh/2, sw/2, -sh/2+r);
+  s.lineTo(sw/2, sh/2-r); s.quadraticCurveTo(sw/2, sh/2, sw/2-r, sh/2);
+  s.lineTo(-sw/2+r, sh/2); s.quadraticCurveTo(-sw/2, sh/2, -sw/2, sh/2-r);
+  s.lineTo(-sw/2, -sh/2+r); s.quadraticCurveTo(-sw/2, -sh/2, -sw/2+r, -sh/2);
+  return s;
+}
+
+const mW = new THREE.MeshStandardMaterial({ color: 0xf2f2f2, roughness: 0.38 });
+const mP = new THREE.MeshStandardMaterial({ color: 0xf0eeea, roughness: 0.3 });
+const mR = new THREE.MeshStandardMaterial({ color: 0xd8d5cf, roughness: 0.5 });
+const mBlade = new THREE.MeshStandardMaterial({ color: 0xbcbcbc, roughness: 0.16, metalness: 0.92 });
+const mD = new THREE.MeshStandardMaterial({ color: 0x060606, roughness: 0.95 });
+const mCbl = new THREE.MeshStandardMaterial({ color: 0x1c1c1c, roughness: 0.6 });
+const mDP = new THREE.MeshStandardMaterial({ color: 0x282828, roughness: 0.5 });
+const mWall = new THREE.MeshStandardMaterial({ color: 0xe2dfd9, roughness: 0.55 });
+const mScr = new THREE.MeshStandardMaterial({ color: 0xb8b8b8, roughness: 0.28, metalness: 0.75 });
+const mHR = new THREE.MeshStandardMaterial({ color: 0xccc8c2, roughness: 0.4, metalness: 0.1 });
+const mSl = new THREE.MeshStandardMaterial({ color: 0x777 });
+
+// Slot spacing along Z (horizontal) — same axis as Type C/F holes
+const SLOT_Z = 0.35;
+
+// ═══ SOCKET — built EXACTLY like Type C/F but with rectangular slots ═══
+const sG = new THREE.Group();
+
+// Wall (same as Type C/F)
+const wallM = new THREE.Mesh(new THREE.BoxGeometry(0.4, 3.2, 3.2), mWall);
+wallM.position.x = 0.2; wallM.receiveShadow = true; sG.add(wallM);
+
+// Faceplate (same as Type C/F but slightly different proportions for US)
+const fpGeo = new THREE.ExtrudeGeometry(rrShape(2.5, 1.6, 0.12), {
+  depth: 0.14, bevelEnabled: true, bevelThickness: 0.025, bevelSize: 0.025, bevelSegments: 3
+});
+fpGeo.center();
+const fpMesh = new THREE.Mesh(fpGeo, mP);
+fpMesh.rotation.y = -Math.PI / 2;
+fpMesh.castShadow = true; fpMesh.receiveShadow = true;
+sG.add(fpMesh);
+
+// Recess — oval/rounded rect (like the US outlet depression)
+const recGeo = new THREE.ExtrudeGeometry(rrShape(1.4, 0.9, 0.3), {
+  depth: 0.10, bevelEnabled: true, bevelThickness: 0.015, bevelSize: 0.015, bevelSegments: 2
+});
+recGeo.center();
+const recMesh = new THREE.Mesh(recGeo, mR);
+recMesh.rotation.y = -Math.PI / 2;
+recMesh.position.x = -0.01;
+sG.add(recMesh);
+
+// SLOTS — using BoxGeometry oriented along X axis (like CylinderGeometry holes in Type C/F)
+// Each slot is a long dark box going into the wall along X
+// Visible face is the YZ cross-section: tall in Y (vertical slot), thin in Z
+for (let sign of [-1, 1]) {
+  // Slot tunnel — long box along X (goes into wall), same as cylindrical holes but rectangular
+  const slotGeo = new THREE.BoxGeometry(0.7, 0.32, 0.06);
+  const slotMesh = new THREE.Mesh(slotGeo, mD);
+  slotMesh.position.set(0.2, 0, sign * SLOT_Z);
+  sG.add(slotMesh);
+
+  // Slot rim (like the TorusGeometry on round holes)
+  // Use a thin box frame around the slot opening
+  // Top edge
+  const rimT = new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.02, 0.08), mHR);
+  rimT.position.set(-0.08, 0.17, sign * SLOT_Z); sG.add(rimT);
+  // Bottom edge
+  const rimB = new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.02, 0.08), mHR);
+  rimB.position.set(-0.08, -0.17, sign * SLOT_Z); sG.add(rimB);
+  // Left edge
+  const rimL = new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.36, 0.015), mHR);
+  rimL.position.set(-0.08, 0, sign * SLOT_Z - 0.035); sG.add(rimL);
+  // Right edge
+  const rimR = new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.36, 0.015), mHR);
+  rimR.position.set(-0.08, 0, sign * SLOT_Z + 0.035); sG.add(rimR);
+}
+
+// GROUND HOLE — round hole below the two slots (D-shaped in real life, we use cylinder)
+const gHoleGeo = new THREE.CylinderGeometry(0.075, 0.075, 0.7, 24);
+const gHoleMesh = new THREE.Mesh(gHoleGeo, mD);
+gHoleMesh.rotation.z = Math.PI / 2;
+gHoleMesh.position.set(0.2, -0.55, 0);
+sG.add(gHoleMesh);
+
+// Ground hole rim
+const gRimGeo = new THREE.TorusGeometry(0.085, 0.018, 8, 24);
+const gRimMesh = new THREE.Mesh(gRimGeo, mHR);
+gRimMesh.rotation.y = Math.PI / 2;
+gRimMesh.position.set(-0.08, -0.55, 0);
+sG.add(gRimMesh);
+
+// Center screw (same as Type C/F)
+const scrMesh = new THREE.Mesh(new THREE.CylinderGeometry(0.055, 0.055, 0.03, 16), mScr);
+scrMesh.rotation.z = Math.PI / 2;
+scrMesh.position.set(-0.09, 0, 0);
+sG.add(scrMesh);
+for (let r of [0, Math.PI/2]) {
+  const sl = new THREE.Mesh(new THREE.BoxGeometry(0.01, 0.075, 0.013), mSl);
+  sl.rotation.x = r;
+  sl.position.set(-0.1, 0, 0);
+  sG.add(sl);
+}
+
+// Same position as Type C/F, with slight angle toward viewer
+sG.position.set(3.2, 0, 0);
+sG.rotation.y = 0.35; // ~20° toward camera
+scene3.add(sG);
+
+// ═══ PLUG — same structure as Type C/F but with flat blades ═══
+const pG = new THREE.Group();
+
+// Body — slightly taller than Type A to fit ground pin
+const bGeo = new THREE.ExtrudeGeometry(rrShape(0.95, 1.0, 0.15), {
+  depth: 0.42, bevelEnabled: true, bevelThickness: 0.04, bevelSize: 0.04, bevelSegments: 4
+});
+bGeo.center();
+const bMesh = new THREE.Mesh(bGeo, mW);
+bMesh.rotation.y = -Math.PI / 2;
+bMesh.castShadow = true;
+pG.add(bMesh);
+
+// Nose
+const nGeo = new THREE.ExtrudeGeometry(rrShape(0.58, 0.48, 0.08), {
+  depth: 0.08, bevelEnabled: true, bevelThickness: 0.02, bevelSize: 0.02, bevelSegments: 2
+});
+nGeo.center();
+const nMesh = new THREE.Mesh(nGeo, mW);
+nMesh.rotation.y = -Math.PI / 2;
+nMesh.position.x = 0.23;
+nMesh.castShadow = true;
+pG.add(nMesh);
+
+// FLAT BLADES — BoxGeometry instead of CylinderGeometry
+// Extend along +X (same as pins in Type C/F)
+// Each blade: long in X, tall in Y (vertical), thin in Z
+const BL = 0.55;   // length along X
+const BH = 0.28;   // height in Y (matches slot height)
+const BT = 0.022;  // thickness in Z (very thin)
+
+for (let sign of [-1, 1]) {
+  const blGeo = new THREE.BoxGeometry(BL, BH, BT);
+  const blMesh = new THREE.Mesh(blGeo, mBlade);
+  blMesh.position.set(0.27 + BL/2, 0, sign * SLOT_Z);
+  blMesh.castShadow = true;
+  pG.add(blMesh);
+
+  // Blade tip
+  const tGeo = new THREE.BoxGeometry(0.015, BH - 0.02, BT);
+  const tMesh = new THREE.Mesh(tGeo, new THREE.MeshStandardMaterial({
+    color: 0xd0d0d0, roughness: 0.12, metalness: 0.9
+  }));
+  tMesh.position.set(0.27 + BL + 0.008, 0, sign * SLOT_Z);
+  pG.add(tMesh);
+
+  // Edge highlights
+  for (let es of [-1, 1]) {
+    const eGeo = new THREE.BoxGeometry(BL, 0.004, BT + 0.002);
+    const eMesh = new THREE.Mesh(eGeo, new THREE.MeshStandardMaterial({
+      color: 0xd8d8d8, roughness: 0.14, metalness: 0.88
+    }));
+    eMesh.position.set(0.27 + BL/2, es * BH/2, sign * SLOT_Z);
+    pG.add(eMesh);
+  }
+}
+
+// GROUND PIN — round cylindrical pin below the two blades
+const mGroundPin = new THREE.MeshStandardMaterial({ color: 0xccaa55, roughness: 0.18, metalness: 0.92 });
+const gPinLen = 0.6;
+const gPinGeo = new THREE.CylinderGeometry(0.065, 0.065, gPinLen, 24);
+const gPinMesh = new THREE.Mesh(gPinGeo, mGroundPin);
+gPinMesh.rotation.z = -Math.PI / 2;
+gPinMesh.position.set(0.27 + gPinLen/2, -0.55, 0);
+gPinMesh.castShadow = true;
+pG.add(gPinMesh);
+
+// Ground pin rounded tip
+const gTipGeo = new THREE.SphereGeometry(0.065, 16, 10, 0, Math.PI * 2, 0, Math.PI / 2);
+const gTipMesh = new THREE.Mesh(gTipGeo, mGroundPin);
+gTipMesh.rotation.z = Math.PI / 2;
+gTipMesh.position.set(0.27 + gPinLen, -0.55, 0);
+pG.add(gTipMesh);
+
+// Cable (same as Type C/F)
+const cblMesh = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.08, 3, 16), mCbl);
+cblMesh.rotation.z = -Math.PI / 2; cblMesh.position.x = -1.7; cblMesh.castShadow = true;
+pG.add(cblMesh);
+
+// Strain relief (same as Type C/F)
+const srMesh = new THREE.Mesh(new THREE.CylinderGeometry(0.11, 0.09, 0.2, 16), mDP);
+srMesh.rotation.z = -Math.PI / 2; srMesh.position.x = -0.26;
+pG.add(srMesh);
+
+pG.position.set(-4.5, 0, 0);
+scene3.add(pG);
+
+// ═══ ANIMATION — same proven timeline as Type C/F ═══
+const TX = 2.35, IX = 2.78, DUR = 4000;
+let st = null, aId = null, playing = false;
+
+function easeInOutCubic(t) { return t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t+2, 3)/2; }
+function easeOutCubic(t) { return 1 - Math.pow(1-t, 3); }
+function lerp(a, b, t) { return a + (b-a) * t; }
+
+function getState(t) {
+  let px, py, rz;
+  const SX = -4.5;
+  if (t <= 0.05) { px = SX; py = 0; rz = 0; }
+  else if (t <= 0.42) {
+    const p = easeInOutCubic((t - 0.05) / 0.37);
+    px = lerp(SX, TX - 1, p);
+    py = Math.sin(p * Math.PI) * 0.25;
+    rz = Math.sin(p * Math.PI) * 0.03;
+  }
+  else if (t <= 0.60) {
+    const p = easeInOutCubic((t - 0.42) / 0.18);
+    px = lerp(TX - 1, TX - 0.1, p); py = 0; rz = 0;
+  }
+  else if (t <= 0.70) {
+    const p = easeInOutCubic((t - 0.60) / 0.10);
+    px = lerp(TX - 0.1, TX, p); py = 0; rz = 0;
+  }
+  else if (t <= 0.90) {
+    const p = easeOutCubic((t - 0.70) / 0.20);
+    px = lerp(TX, IX, p); py = 0; rz = 0;
+  }
+  else {
+    const p = (t - 0.90) / 0.10;
+    const b = Math.sin(p * Math.PI * 3.5) * (1-p) * 0.02;
+    px = IX + b; py = 0; rz = 0;
+  }
+  return { px, py, rz };
+}
+
+function rf(t) {
+  const s = getState(t);
+  pG.position.set(s.px, s.py, 0);
+  pG.rotation.z = s.rz;
+  renderer.render(scene3, camera);
+  pfEl.style.width = (t * 100) + '%';
+}
+
+rf(0);
+
+function animate(ts) {
+  if (!st) st = ts;
+  const t = Math.min((ts - st) / DUR, 1);
+  rf(t);
+  if (t < 1) aId = requestAnimationFrame(animate);
+  else { playing = false; setTimeout(() => replayOverlay.classList.add('visible'), 500); }
+}
+
+function play() {
+  if (playing) return;
+  playing = true;
+  replayOverlay.classList.remove('visible');
+  if (aId) cancelAnimationFrame(aId);
+  st = null; pfEl.style.width = '0%';
+  pG.position.set(-4.5, 0, 0);
+  aId = requestAnimationFrame(animate);
+}
+
+replayBtn.addEventListener('click', e => { e.stopPropagation(); play(); });
+sceneEl.addEventListener('click', play);
+setTimeout(play, 400);
+</script>
+</body>
+</html>

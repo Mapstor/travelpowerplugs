@@ -1,0 +1,4 @@
+<svg width="150" height="125" xmlns="http://www.w3.org/2000/svg">
+  <rect width="150" height="125" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="75" y="62" text-anchor="middle" font-family="Arial" font-size="24" fill="#333">Type H</text>
+</svg>

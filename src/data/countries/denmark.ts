@@ -1,0 +1,233 @@
+import type { CountryPlugData } from '@/types';
+
+const denmark: CountryPlugData = {
+  slug: 'denmark-electric-plug-types',
+  name: 'Denmark',
+  demonym: 'Danish',
+  continent: 'Europe',
+  region: 'Northern Europe',
+  voltage: 230,
+  frequency: 50,
+  complexityTier: 'moderate',
+  
+  plugTypes: [
+    {
+      id: 'type-c',
+      name: 'Type C',
+      subtitle: 'Europlug',
+      pins: 2,
+      pinShape: 'round',
+      pinDiameter: 4.0,
+      pinSpacing: 19,
+      ratedAmps: 2.5,
+      grounded: false,
+      hasGroundClips: false,
+      pinRadius: 0.063,
+      bodyWidth: 1.18,
+      bodyHeight: 0.72,
+      bodyCornerRadius: 0.2,
+      noseRadius: 0.42,
+      recessRadius: 0.92,
+      faceplateSize: 2.7,
+    },
+    {
+      id: 'type-e',
+      name: 'Type E',
+      subtitle: 'French Standard',
+      pins: 2,
+      pinShape: 'round',
+      pinDiameter: 4.8,
+      pinSpacing: 19,
+      ratedAmps: 16,
+      grounded: true,
+      hasGroundClips: false,
+      pinRadius: 0.075,
+      bodyWidth: 1.3,
+      bodyHeight: 1.3,
+      bodyCornerRadius: 0.25,
+      noseRadius: 0.52,
+      recessRadius: 1.05,
+      faceplateSize: 2.9,
+    },
+    {
+      id: 'type-f',
+      name: 'Type F',
+      subtitle: 'Schuko',
+      pins: 2,
+      pinShape: 'round',
+      pinDiameter: 4.8,
+      pinSpacing: 19,
+      ratedAmps: 16,
+      grounded: true,
+      hasGroundClips: true,
+      pinRadius: 0.075,
+      bodyWidth: 1.3,
+      bodyHeight: 1.3,
+      bodyCornerRadius: 0.25,
+      noseRadius: 0.52,
+      recessRadius: 1.05,
+      faceplateSize: 2.9,
+    },
+    {
+      id: 'type-k',
+      name: 'Type K',
+      subtitle: 'Danish Standard',
+      pins: 3,
+      pinShape: 'round',
+      pinDiameter: 4.8,
+      pinSpacing: 19,
+      ratedAmps: 16,
+      grounded: true,
+      hasGroundClips: false,
+      pinRadius: 0.075,
+      bodyWidth: 1.3,
+      bodyHeight: 1.3,
+      bodyCornerRadius: 0.25,
+      noseRadius: 0.52,
+      recessRadius: 1.05,
+      faceplateSize: 2.9,
+    },
+  ],
+  
+  quirks: [
+    'Denmark has its own Type K plug with a grounding pin, similar to Type E but with the ground pin on the plug instead of the socket. However, Type C, E, and F are also widely used.',
+    'The Danish Type K is being phased out in favor of Type E/F, but you\'ll still encounter it, especially in older buildings.',
+    'Denmark generates over 80% of its electricity from renewable sources, mainly wind power.',
+  ],
+  
+  travelContext: 'Denmark is known for Copenhagen\'s colorful harbors, Viking heritage, and being one of the world\'s happiest countries. The electrical system is reliable throughout, from Copenhagen to the countryside. Most places accept multiple plug types due to EU standardization.',
+  
+  adapterNeeded: [
+    {
+      origin: 'US',
+      originPlugTypes: 'A, B',
+      adapterNeeded: true,
+      converterNeeded: false,
+      notes: 'US plugs won\'t fit Danish outlets. You need an adapter for Type C/E/F/K. Most US devices are dual-voltage and work with 230V.',
+    },
+    {
+      origin: 'UK',
+      originPlugTypes: 'G',
+      adapterNeeded: true,
+      converterNeeded: false,
+      notes: 'British plugs need an adapter for Danish sockets. Voltage is the same at 230V.',
+    },
+    {
+      origin: 'EU',
+      originPlugTypes: 'C, E, F',
+      adapterNeeded: false,
+      converterNeeded: false,
+      notes: 'Standard European plugs work in Denmark. Type C fits all Danish sockets, and most accommodate Type E/F as well.',
+    },
+    {
+      origin: 'Sweden/Norway',
+      originPlugTypes: 'C, F',
+      adapterNeeded: false,
+      converterNeeded: false,
+      notes: 'Scandinavian neighbors use compatible plugs. No adapter needed.',
+    },
+  ],
+  
+  localPurchaseOptions: [
+    {
+      name: 'Elgiganten',
+      type: 'electronics',
+      city: 'Nationwide',
+      priceRange: '50-150 DKK',
+      note: 'Denmark\'s largest electronics retailer with stores across the country.',
+    },
+    {
+      name: 'Power',
+      type: 'electronics',
+      city: 'Major cities',
+      priceRange: '40-120 DKK',
+      note: 'Electronics chain with competitive prices on adapters.',
+    },
+    {
+      name: 'Bilka',
+      type: 'supermarket',
+      city: 'Nationwide',
+      priceRange: '30-80 DKK',
+      note: 'Hypermarket chain that stocks basic travel adapters.',
+    },
+    {
+      name: 'Copenhagen Airport',
+      type: 'airport',
+      city: 'Copenhagen',
+      priceRange: '80-200 DKK',
+      note: 'Convenience stores in the airport sell adapters at higher prices.',
+    },
+  ],
+  
+  airportName: 'Copenhagen Airport',
+  airportCode: 'CPH',
+  
+  neighbors: [
+    {
+      name: 'Germany',
+      slug: 'germany-electric-plug-types-will-you-need-an-adapter-in-germany',
+      plugTypes: ['C', 'F'],
+      voltage: 230,
+      sameAsSubject: 'compatible',
+      adapterNote: 'German plugs work in Danish Type C/E/F sockets.',
+    },
+    {
+      name: 'Sweden',
+      slug: 'sweden-electric-plug-types',
+      plugTypes: ['C', 'F'],
+      voltage: 230,
+      sameAsSubject: 'compatible',
+      adapterNote: 'Swedish plugs work directly in Denmark.',
+    },
+    {
+      name: 'Norway',
+      slug: 'norway-electric-plug-types',
+      plugTypes: ['C', 'F'],
+      voltage: 230,
+      sameAsSubject: 'compatible',
+      adapterNote: 'Norwegian plugs are fully compatible with Danish outlets.',
+    },
+  ],
+  
+  hotelAdapterAvailability: 'sometimes',
+  hotelUSBPorts: 'common',
+  hotelHairDryers: 'standard',
+  
+  accommodationNote: 'Copenhagen hotels, especially international chains, often provide USB ports and may have adapters at reception. Danish design hotels typically include hair dryers. Budget accommodations have standard Danish/European outlets only.',
+  
+  faqs: [
+    {
+      question: 'What is Denmark\'s Type K plug?',
+      answer: 'Type K is Denmark\'s own standard with a grounding pin, similar to Type E but with the pin on the plug rather than in the socket. It\'s being phased out, but you might still see it. Type C plugs fit Type K sockets.',
+    },
+    {
+      question: 'Do I need a special adapter for Denmark?',
+      answer: 'No special adapter needed. Any adapter that works for continental Europe (Type C/E/F) will work in Denmark. The unique Type K accepts Type C plugs.',
+    },
+    {
+      question: 'Can I use my Swedish electronics in Denmark?',
+      answer: 'Yes, perfectly. Denmark and Sweden use compatible electrical systems — Type C and F plugs at 230V/50Hz.',
+    },
+    {
+      question: 'Where can I buy adapters in Copenhagen?',
+      answer: 'Elgiganten and Power electronics stores sell adapters, as do larger supermarkets like Bilka. The central train station and airport also have them, though more expensive.',
+    },
+    {
+      question: 'Are Copenhagen hotels equipped with international outlets?',
+      answer: 'Many international hotels in Copenhagen have USB ports and some provide adapters on request. It\'s best to bring your own adapter to be sure.',
+    },
+  ],
+  
+  metaTitle: 'Denmark Power Plugs: Types C, E, F, K at 230V — Adapter Guide',
+  metaDescription: 'Denmark uses Types C, E, F, and unique Type K plugs at 230V. Standard European adapters work. Learn about Denmark\'s electrical system and where to buy adapters.',
+  lastUpdated: '2025-01-15',
+  
+  relatedCountries: [
+    { name: 'Sweden', slug: 'sweden-electric-plug-types' },
+    { name: 'Norway', slug: 'norway-electric-plug-types' },
+    { name: 'Germany', slug: 'germany-electric-plug-types-will-you-need-an-adapter-in-germany' },
+    { name: 'Netherlands', slug: 'netherlands-electric-plug-types' },
+  ],
+};
+
+export default denmark;

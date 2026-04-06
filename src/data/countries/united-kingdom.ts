@@ -1,0 +1,66 @@
+import { CountryPlugData } from '@/types';
+
+const united_kingdom: CountryPlugData = {
+  slug: 'united-kingdom-electric-plug-types-which-adapter-do-you-need-in-uk',
+  name: 'United Kingdom',
+  demonym: 'British',
+  continent: 'Europe',
+  region: 'Northern Europe',
+  voltage: 230,
+  frequency: 50,
+  complexityTier: 'moderate',
+  plugTypes: [
+    { id: 'type-g', name: 'Type G', subtitle: 'British', pins: 3, pinShape: 'rectangular', pinDiameter: 6.35, pinSpacing: 22.2, ratedAmps: 13, grounded: true, hasGroundClips: false, pinRadius: 0.08, bodyWidth: 1.6, bodyHeight: 1.2, bodyCornerRadius: 0.2, noseRadius: 0.55, recessRadius: 1.15, faceplateSize: 3.1 },
+  ],
+  quirks: [
+    'Every Type G plug contains a built-in fuse — the UK is the only country in the world where the plug itself is fused. If a device stops working, the tiny fuse inside the plug may have blown. Replacements are sold everywhere for pennies.',
+    'British bathrooms typically have a special shaver socket that outputs 110V and accepts both Type C (Europlug) and US Type A plugs. These are the only outlets permitted in UK bathrooms by wiring regulations — you won\'t find regular Type G sockets near a bathtub.',
+    'UK sockets have built-in safety shutters that only open when the longer earth pin is inserted first. This prevents children from poking objects into live contacts — a design feature since the 1940s.',
+    'The UK uses a ring circuit wiring system rather than the radial circuits common elsewhere. This is why individual plugs need their own fuses — the ring can carry high current, and each plug must protect its own device.',
+  ],
+  travelContext: 'The UK\'s chunky three-pin plug is unlike anything else in Europe, so even travelers arriving from France via the Eurostar need an adapter the moment they step off the train.',
+  adapterNeeded: [
+    { origin: 'United States & Canada', originPlugTypes: 'Type A / Type B', adapterNeeded: true, converterNeeded: 'maybe', notes: 'US plugs won\'t fit UK sockets at all. You need a Type A/B to Type G adapter. Voltage jumps from 120V to 230V — check each device for "100–240V" on the label. Laptops and phone chargers are almost always fine; hair dryers usually are not.' },
+    { origin: 'Europe (Type C/E/F countries)', originPlugTypes: 'Type C / Type E / Type F', adapterNeeded: true, converterNeeded: false, notes: 'European plugs don\'t fit UK sockets despite the shared 230V voltage. You need a Europlug-to-Type G adapter. No voltage converter needed. One exception: the bathroom shaver socket accepts Type C plugs directly.' },
+    { origin: 'Australia & New Zealand', originPlugTypes: 'Type I', adapterNeeded: true, converterNeeded: false, notes: 'Type I plugs won\'t fit. Bring a Type I to Type G adapter. Voltage is the same (230V), so your devices will work fine with just the adapter.' },
+    { origin: 'India', originPlugTypes: 'Type D / Type M', adapterNeeded: true, converterNeeded: false, notes: 'Indian plugs are incompatible with UK sockets. You need an adapter. Both countries run at 230V, so no converter is needed.' },
+    { origin: 'Asia (varies)', originPlugTypes: 'Various', adapterNeeded: true, converterNeeded: 'maybe', notes: 'Japanese travelers need an adapter and should check voltage (Japan uses 100V). Chinese, Korean, and Southeast Asian travelers need an adapter but voltage is typically compatible.' },
+  ],
+  localPurchaseOptions: [
+    { name: 'Argos', type: 'electronics', note: 'Catalogue-style store found across the UK — cheap adapters from £3' },
+    { name: 'Currys', type: 'electronics', note: 'UK\'s main electronics retailer, stocks universal travel adapters' },
+    { name: 'Boots', type: 'pharmacy', note: 'Pharmacy chain with travel adapter sections in larger stores' },
+    { name: 'WHSmith', type: 'airport', city: 'London Heathrow', priceRange: '£8–15', note: 'Found in every UK airport and most train stations' },
+    { name: 'Tesco', type: 'supermarket', note: 'Larger Tesco Extra stores carry adapters in the electricals aisle' },
+  ],
+  airportName: 'London Heathrow Airport',
+  airportCode: 'LHR',
+  neighbors: [
+    { name: 'Ireland', slug: 'SLUG-NEEDED-ireland', plugTypes: ['G'], voltage: 230, sameAsSubject: 'identical', adapterNote: 'Ireland uses the same Type G plugs and 230V as the UK. No adapter needed.' },
+    { name: 'France', slug: 'SLUG-NEEDED-france', plugTypes: ['C', 'E'], voltage: 230, sameAsSubject: 'different', adapterNote: 'France uses Type C/E at the same voltage, but a different plug shape. You need an adapter crossing the Channel via Eurostar or ferry.' },
+  ],
+  hotelAdapterAvailability: 'common',
+  hotelUSBPorts: 'common',
+  hotelHairDryers: 'standard',
+  accommodationNote: 'British hotels almost always have hair dryers and often keep a small stock of universal adapters at reception — especially in London and tourist areas. Many newer hotels have USB ports in bedside panels. Remember: the bathroom will only have a shaver socket (110V, Type C compatible), not a full Type G outlet.',
+  faqs: [
+    { question: 'What plug type does the UK use?', answer: 'The UK exclusively uses Type G — a large three-pin plug with rectangular prongs. It\'s unique to the UK, Ireland, and a handful of former British territories.' },
+    { question: 'Can I use my European charger in a UK bathroom shaver socket?', answer: 'Yes. UK bathrooms have special dual-voltage shaver sockets that accept Type C (Europlug) and Type A (US) plugs at 110V or 230V. They\'re designed for low-power devices like electric shavers and toothbrushes — don\'t try to plug in a hair dryer.' },
+    { question: 'Why does my UK plug have a fuse inside it?', answer: 'The UK is the only country where every plug is individually fused. This is because British homes use a ring circuit system that can deliver high current to any socket. The fuse in each plug protects the device\'s cable from overheating. If your device stops working, try replacing the fuse — they cost about 20p at any newsagent.' },
+    { question: 'Do I need a voltage converter for the UK?', answer: 'Only if you\'re coming from a 100–127V country (US, Canada, Japan, Mexico) AND your device isn\'t dual-voltage. Check the label on your charger. Most laptops, phones, cameras, and tablets are dual-voltage. Hair dryers and flat irons from 120V countries usually need a converter — or just buy one locally.' },
+    { question: 'Is the UK plug the same as in Ireland?', answer: 'Yes, identical. Ireland uses the same Type G plug at the same voltage. If you\'re traveling between the UK and Ireland, no adapter is needed.' },
+    { question: 'Where can I buy a plug adapter at Heathrow Airport?', answer: 'WHSmith and Boots both sell adapters at all Heathrow terminals. Expect to pay £8–15, which is more than you\'d pay at an Argos or Tesco in town. Arrivals halls sometimes have vending machines with adapters too.' },
+  ],
+  metaTitle: 'UK Power Plugs & Outlets — Which Adapter Do You Need? (2026)',
+  metaDescription: 'The UK uses the unique Type G plug at 230V/50Hz. Find out which adapter you need, why UK plugs have fuses, and where to buy an adapter in London.',
+  lastUpdated: '2026-03-30',
+  relatedCountries: [
+    { name: 'Ireland', slug: 'SLUG-NEEDED-ireland' },
+    { name: 'France', slug: 'SLUG-NEEDED-france' },
+    { name: 'United States', slug: 'usa-electric-plug-types-will-you-need-an-adapter-traveling-to-the-us' },
+    { name: 'Australia', slug: 'SLUG-NEEDED-australia' },
+    { name: 'India', slug: 'SLUG-NEEDED-india' },
+  ],
+};
+
+export default united_kingdom;

@@ -1,0 +1,182 @@
+'use client';
+
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+
+const continents = [
+  { name: 'Europe', slug: 'europe' },
+  { name: 'Asia', slug: 'asia' },
+  { name: 'Africa', slug: 'africa' },
+  { name: 'North America', slug: 'north-america' },
+  { name: 'South America', slug: 'south-america' },
+  { name: 'Oceania', slug: 'oceania' },
+  { name: 'Middle East', slug: 'middle-east' },
+];
+
+const tools = [
+  { name: 'Adapter Finder', slug: 'adapter-finder', icon: '🔌' },
+  { name: 'Voltage Calculator', slug: 'voltage-calculator', icon: '⚡' },
+  { name: 'Trip Planner', slug: 'trip-planner', icon: '✈️' },
+  { name: 'Compatibility Matrix', slug: 'compatibility-matrix', icon: '📊' },
+  { name: 'Plug Identifier', slug: 'plug-identifier', icon: '🔍' },
+];
+
+const plugTypes = [
+  { name: 'Type A - American', slug: 'type-a', icon: '🇺🇸' },
+  { name: 'Type B - American Grounded', slug: 'type-b', icon: '🇺🇸' },
+  { name: 'Type C - Europlug', slug: 'type-c', icon: '🇪🇺' },
+  { name: 'Type D - Indian', slug: 'type-d', icon: '🇮🇳' },
+  { name: 'Type E - French', slug: 'type-e', icon: '🇫🇷' },
+  { name: 'Type F - Schuko', slug: 'type-f', icon: '🇩🇪' },
+  { name: 'Type G - British', slug: 'type-g', icon: '🇬🇧' },
+  { name: 'Type H - Israeli', slug: 'type-h', icon: '🇮🇱' },
+  { name: 'Type I - Australian', slug: 'type-i', icon: '🇦🇺' },
+  { name: 'Type J - Swiss', slug: 'type-j', icon: '🇨🇭' },
+  { name: 'Type K - Danish', slug: 'type-k', icon: '🇩🇰' },
+  { name: 'Type L - Italian', slug: 'type-l', icon: '🇮🇹' },
+  { name: 'Type M - South African', slug: 'type-m', icon: '🇿🇦' },
+  { name: 'Type N - Brazilian', slug: 'type-n', icon: '🇧🇷' },
+  { name: 'Type O - Thai', slug: 'type-o', icon: '🇹🇭' },
+];
+
+interface HeaderProps {
+  showFullNav?: boolean;
+}
+
+export default function Header({ showFullNav = true }: HeaderProps) {
+  const [isToolsOpen, setIsToolsOpen] = useState(false);
+  const [isPlugTypesOpen, setIsPlugTypesOpen] = useState(false);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest('.dropdown-container')) {
+        setIsToolsOpen(false);
+        setIsPlugTypesOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
+
+  const toggleToolsDropdown = () => {
+    setIsToolsOpen(!isToolsOpen);
+    setIsPlugTypesOpen(false);
+  };
+
+  const togglePlugTypesDropdown = () => {
+    setIsPlugTypesOpen(!isPlugTypesOpen);
+    setIsToolsOpen(false);
+  };
+
+  return (
+    <header className="bg-white border-b border-gray-200 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center space-x-2">
+              <img 
+                src="/favicon.ico" 
+                alt="Travel Power Plugs" 
+                className="w-8 h-8"
+              />
+              <div>
+                <span className="text-xl font-serif font-bold text-gray-900">Travel Power Plugs</span>
+                <span className="hidden sm:block text-xs text-gray-500">Electrical Standards Guide</span>
+              </div>
+            </Link>
+          </div>
+        
+        {showFullNav && (
+          <nav className="hidden lg:flex items-center space-x-6">
+            {/* Continents */}
+            <div className="flex space-x-4">
+              {continents.slice(0, 4).map((continent) => (
+                <Link
+                  key={continent.slug}
+                  href={`/continent/${continent.slug}`}
+                  className="text-sm text-gray-700 hover:text-blue-600 transition-colors"
+                >
+                  {continent.name}
+                </Link>
+              ))}
+            </div>
+            
+            {/* Plug Types Dropdown */}
+            <div className="relative dropdown-container">
+              <button 
+                onClick={togglePlugTypesDropdown}
+                className="text-sm text-gray-700 hover:text-blue-600 transition-colors flex items-center"
+              >
+                Plug Types <span className="ml-1">▼</span>
+              </button>
+              
+              {isPlugTypesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-[500px] overflow-y-auto">
+                  {plugTypes.map((plugType) => (
+                    <Link
+                      key={plugType.slug}
+                      href={`/plug-type/${plugType.slug}`}
+                      className="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors first:rounded-t-lg last:rounded-b-lg"
+                      onClick={() => setIsPlugTypesOpen(false)}
+                    >
+                      <span className="mr-3">{plugType.icon}</span>
+                      {plugType.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+            
+            {/* About Link */}
+            <Link
+              href="/about"
+              className="text-sm text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              About
+            </Link>
+            
+            {/* Tools Dropdown */}
+            <div className="relative dropdown-container">
+              <button 
+                onClick={toggleToolsDropdown}
+                className="text-sm text-gray-700 hover:text-blue-600 transition-colors flex items-center"
+              >
+                Tools <span className="ml-1">▼</span>
+              </button>
+              
+              {isToolsOpen && (
+                <div className="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                  {tools.map((tool) => (
+                    <Link
+                      key={tool.slug}
+                      href={`/tools/${tool.slug}`}
+                      className="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors first:rounded-t-lg last:rounded-b-lg"
+                      onClick={() => setIsToolsOpen(false)}
+                    >
+                      <span className="mr-3">{tool.icon}</span>
+                      {tool.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          </nav>
+        )}
+        
+          {/* Mobile menu placeholder */}
+          <div className="lg:hidden">
+            <button className="text-gray-700 p-2 rounded-md hover:bg-gray-100">
+              <span className="sr-only">Open menu</span>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}

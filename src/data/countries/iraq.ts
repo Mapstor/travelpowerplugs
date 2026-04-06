@@ -1,0 +1,225 @@
+import type { CountryPlugData } from '@/types';
+
+const iraq: CountryPlugData = {
+  slug: 'iraq-electric-plug-types-will-you-need-an-adapter-traveling-to-iraq',
+  name: 'Iraq',
+  demonym: 'Iraqi',
+  continent: 'Asia',
+  region: 'Middle East',
+  voltage: 230,
+  frequency: 50,
+  complexityTier: 'moderate',
+  plugTypes: [
+    {
+      id: 'type-c',
+      name: 'Type C',
+      subtitle: 'Europlug',
+      pins: 2,
+      pinShape: 'round',
+      pinDiameter: 4.0,
+      pinSpacing: 19,
+      ratedAmps: 2.5,
+      grounded: false,
+      hasGroundClips: false,
+      pinRadius: 0.063,
+      bodyWidth: 1.18,
+      bodyHeight: 0.72,
+      bodyCornerRadius: 0.2,
+      noseRadius: 0.42,
+      recessRadius: 0.92,
+      faceplateSize: 2.7,
+    },
+    {
+      id: 'type-d',
+      name: 'Type D',
+      subtitle: 'Old British (India)',
+      pins: 3,
+      pinShape: 'round',
+      pinDiameter: 5.08,
+      pinSpacing: 19.1,
+      ratedAmps: 5,
+      grounded: true,
+      hasGroundClips: false,
+      pinRadius: 0.08,
+      bodyWidth: 1.3,
+      bodyHeight: 1.0,
+      bodyCornerRadius: 0.2,
+      noseRadius: 0.48,
+      recessRadius: 1.0,
+      faceplateSize: 2.8,
+    },
+    {
+      id: 'type-g',
+      name: 'Type G',
+      subtitle: 'British',
+      pins: 3,
+      pinShape: 'rectangular',
+      pinDiameter: 6.35,
+      pinSpacing: 22.2,
+      ratedAmps: 13,
+      grounded: true,
+      hasGroundClips: false,
+      pinRadius: 0.08,
+      bodyWidth: 1.6,
+      bodyHeight: 1.2,
+      bodyCornerRadius: 0.2,
+      noseRadius: 0.55,
+      recessRadius: 1.15,
+      faceplateSize: 3.1,
+    },
+  ],
+  quirks: [
+    'Power supply is unreliable across much of Iraq, with frequent outages and widespread reliance on private generators. The Kurdistan Region (Erbil, Sulaymaniyah, Duhok) has notably more stable electricity than central and southern Iraq.',
+    'The plug type mix of C, D, and G means you may encounter different sockets even within the same building. A universal adapter and a surge protector are both essential.',
+  ],
+  travelContext:
+    'Iraq is visited primarily for the Kurdistan Region\'s stunning mountains and hospitality, as well as religious pilgrimage to Najaf and Karbala. Erbil is the main entry point for most tourists. Power infrastructure varies dramatically — Kurdistan is far more stable than Baghdad and the south. Pack a universal adapter, surge protector, and portable battery.',
+  adapterNeeded: [
+    {
+      origin: 'US / Canada',
+      originPlugTypes: 'A, B',
+      adapterNeeded: true,
+      converterNeeded: false,
+      notes:
+        'US plugs are incompatible with all Iraqi socket types. A universal adapter is essential given the C/D/G mix.',
+    },
+    {
+      origin: 'UK / Ireland',
+      originPlugTypes: 'G',
+      adapterNeeded: true,
+      converterNeeded: false,
+      notes:
+        'Some Iraqi buildings have Type G, but many have Type C or D. Bring a universal adapter to be safe.',
+    },
+    {
+      origin: 'Europe (Continental)',
+      originPlugTypes: 'C, E, F',
+      adapterNeeded: true,
+      converterNeeded: false,
+      notes:
+        'Type C outlets exist, but you may encounter Type D or G. A universal adapter ensures compatibility everywhere.',
+    },
+    {
+      origin: 'Australia / New Zealand',
+      originPlugTypes: 'I',
+      adapterNeeded: true,
+      converterNeeded: false,
+      notes:
+        'Type I is not used in Iraq. Bring a universal adapter.',
+    },
+  ],
+  localPurchaseOptions: [
+    {
+      name: 'Majidi Mall shops',
+      type: 'electronics',
+      city: 'Erbil',
+      priceRange: '5,000–15,000 IQD',
+      note: 'Electronics vendors inside Erbil\'s main shopping mall.',
+    },
+    {
+      name: 'Family Mall shops',
+      type: 'electronics',
+      city: 'Sulaymaniyah, Erbil',
+      priceRange: '5,000–15,000 IQD',
+      note: 'Mall electronics stores in Kurdistan Region cities.',
+    },
+    {
+      name: 'Local electronics bazaars',
+      type: 'convenience',
+      city: 'Erbil, Baghdad',
+      priceRange: '3,000–10,000 IQD',
+      note: 'Bazaar stalls sell basic adapters. Bargaining is expected.',
+    },
+  ],
+  airportName: 'Erbil International',
+  airportCode: 'EBL',
+  neighbors: [
+    {
+      name: 'Turkey',
+      slug: 'turkey-electric-plug-types-will-you-need-an-adapter-for-turkey',
+      plugTypes: ['C', 'F'],
+      voltage: 230,
+      sameAsSubject: 'partially',
+      adapterNote: 'Turkey uses C/F only — simpler than Iraq. Your Type C devices work in Turkey without issue.',
+    },
+    {
+      name: 'Iran',
+      slug: 'iran-electric-plug-types-will-you-need-an-adapter-traveling-to-iran',
+      plugTypes: ['C', 'F'],
+      voltage: 230,
+      sameAsSubject: 'partially',
+      adapterNote: 'Iran uses C/F. Type C devices from Iraq work there directly.',
+    },
+    {
+      name: 'Kuwait',
+      slug: 'kuwait-electric-plug-types-will-you-need-an-adapter-in-kuwait-city',
+      plugTypes: ['G'],
+      voltage: 240,
+      sameAsSubject: 'partially',
+      adapterNote: 'Kuwait uses Type G only. Your Iraqi Type G adapter works, but C and D devices will not.',
+    },
+    {
+      name: 'Saudi Arabia',
+      slug: 'saudi-arabia-electric-plug-types-which-adapter-will-you-need',
+      plugTypes: ['G'],
+      voltage: 220,
+      sameAsSubject: 'partially',
+      adapterNote: 'Saudi uses Type G at 60Hz. Your Type G adapter works for the plug shape.',
+    },
+    {
+      name: 'Jordan',
+      slug: 'jordan-electric-plug-types-will-you-need-adapter-traveling-to-jordan',
+      plugTypes: ['C', 'D', 'F', 'G'],
+      voltage: 230,
+      sameAsSubject: 'mostly',
+      adapterNote: 'Jordan has a similar C/D/G mix plus Type F. Your Iraqi adapter likely works.',
+    },
+    {
+      name: 'Syria',
+      slug: 'syria-electric-plug-types-which-adapter-will-you-need-in-syria',
+      plugTypes: ['C', 'E', 'L'],
+      voltage: 220,
+      sameAsSubject: 'partially',
+      adapterNote: 'Syria uses Type C (compatible) plus E and L.',
+    },
+  ],
+  hotelAdapterAvailability: 'rare',
+  hotelUSBPorts: 'rare',
+  hotelHairDryers: 'sometimes',
+  accommodationNote:
+    'Hotels in Erbil and Sulaymaniyah (Kurdistan Region) are modern and reasonably reliable, with generator backup. Baghdad hotels also have generators but power gaps are more common. Outside major cities, conditions are much more basic. Always bring your own adapter, surge protector, and portable battery.',
+  faqs: [
+    {
+      question: 'Is the Kurdistan Region of Iraq better for electricity than the rest of the country?',
+      answer:
+        'Significantly better. Erbil and Sulaymaniyah have more stable power grids, and hotels in these cities maintain good generator backup. Central and southern Iraq — including Baghdad — experience longer and more frequent outages.',
+    },
+    {
+      question: 'What type of adapter should I bring to Iraq?',
+      answer:
+        'A universal travel adapter is the only sensible choice. Iraq uses Type C, D, and G, and you cannot predict which socket you will encounter. A universal adapter covers all three.',
+    },
+    {
+      question: 'Do I need a surge protector in Iraq?',
+      answer:
+        'Yes. The frequent power cuts and generator switchovers cause voltage fluctuations that can harm electronics. A compact surge protector is important for protecting laptops and cameras.',
+    },
+    {
+      question: 'Can I buy an adapter at Erbil Airport?',
+      answer:
+        'Erbil Airport (EBL) has limited shopping options. You may find a basic adapter, but selection is unreliable. Majidi Mall in Erbil city center is a better bet, or bring one from home.',
+    },
+  ],
+  metaTitle: 'Iraq Power Plugs: Types C, D & G — Will You Need an Adapter?',
+  metaDescription:
+    'Iraq uses Type C, D, and G plugs at 230V/50Hz. A universal adapter is essential. Tips on power reliability, Kurdistan vs the south, and surge protection.',
+  lastUpdated: '2025-06-01',
+  relatedCountries: [
+    { name: 'Jordan', slug: 'jordan-electric-plug-types-will-you-need-adapter-traveling-to-jordan' },
+    { name: 'Iran', slug: 'iran-electric-plug-types-will-you-need-an-adapter-traveling-to-iran' },
+    { name: 'Kuwait', slug: 'kuwait-electric-plug-types-will-you-need-an-adapter-in-kuwait-city' },
+    { name: 'Lebanon', slug: 'lebanon-electric-plug-types-will-you-need-an-adapter-in-beirut' },
+  ],
+};
+
+export default iraq;

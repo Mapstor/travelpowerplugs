@@ -1,0 +1,66 @@
+import { CountryPlugData } from '@/types';
+
+const mexico: CountryPlugData = {
+  slug: 'mexico-electric-plug-types-will-you-need-an-adapter-in-mexico',
+  name: 'Mexico',
+  demonym: 'Mexican',
+  continent: 'North America',
+  region: 'Central America',
+  voltage: 127,
+  frequency: 60,
+  complexityTier: 'moderate',
+  plugTypes: [
+    { id: 'type-a', name: 'Type A', subtitle: 'US ungrounded', pins: 2, pinShape: 'flat', pinDiameter: 6.35, pinSpacing: 12.7, ratedAmps: 15, grounded: false, hasGroundClips: false, pinRadius: 0.05, bodyWidth: 1.0, bodyHeight: 0.7, bodyCornerRadius: 0.15, noseRadius: 0.35, recessRadius: 0.85, faceplateSize: 2.5 },
+    { id: 'type-b', name: 'Type B', subtitle: 'US grounded', pins: 3, pinShape: 'flat', pinDiameter: 6.35, pinSpacing: 12.7, ratedAmps: 15, grounded: true, hasGroundClips: false, pinRadius: 0.05, bodyWidth: 1.2, bodyHeight: 0.9, bodyCornerRadius: 0.15, noseRadius: 0.4, recessRadius: 0.95, faceplateSize: 2.7 },
+  ],
+  quirks: [
+    'Mexico\'s official voltage is 127V — slightly higher than the US\'s 120V but well within the tolerance range of any device designed for North American power. You won\'t notice the difference.',
+    'Older buildings, especially in colonial centers like Oaxaca, San Miguel de Allende, and Guanajuato, frequently have ungrounded Type A outlets only. If your device has a three-prong plug, you may need a three-to-two prong adapter (or a "cheater plug") in addition to any international adapter.',
+    'Resort areas along the Riviera Maya, Los Cabos, and Puerto Vallarta generally have modern, well-grounded electrical infrastructure. Budget hotels and rural guesthouses may have fewer outlets and older wiring.',
+  ],
+  travelContext: 'American and Canadian travelers can leave their adapters at home when heading to Cancún or Mexico City — the same plugs work on both sides of the border.',
+  adapterNeeded: [
+    { origin: 'United States & Canada', originPlugTypes: 'Type A / Type B', adapterNeeded: false, converterNeeded: false, notes: 'Mexico uses the same Type A/B plugs as the US and Canada. The voltage difference (127V vs 120V) is negligible. Your devices will work without any adapter or converter.' },
+    { origin: 'Europe (Type C/E/F countries)', originPlugTypes: 'Type C / Type E / Type F', adapterNeeded: true, converterNeeded: 'maybe', notes: 'European plugs don\'t fit Mexican outlets. You need an adapter. Mexico runs at 127V — much lower than Europe\'s 230V. Phone and laptop chargers labeled "100–240V" are fine; hair dryers and other heat appliances will barely function without a step-up converter.' },
+    { origin: 'United Kingdom & Ireland', originPlugTypes: 'Type G', adapterNeeded: true, converterNeeded: 'maybe', notes: 'UK plugs are far too large for Mexican outlets. You need a Type G to Type A/B adapter. Same voltage concern — check for dual-voltage labels on each device.' },
+    { origin: 'Australia & New Zealand', originPlugTypes: 'Type I', adapterNeeded: true, converterNeeded: 'maybe', notes: 'You need a plug adapter and should check voltage. Australian devices expect 230V; Mexico provides 127V. Phones and laptops are fine, but single-voltage appliances won\'t work properly.' },
+    { origin: 'Asia (varies)', originPlugTypes: 'Various', adapterNeeded: true, converterNeeded: 'maybe', notes: 'Japanese travelers: your Type A plugs work in Mexico, and 100V devices handle 127V fine — no adapter needed. Travelers from other Asian countries need an adapter and should check voltage compatibility.' },
+  ],
+  localPurchaseOptions: [
+    { name: 'Coppel', type: 'electronics', note: 'Mexico\'s large department/electronics chain — affordable adapters' },
+    { name: 'Walmart Mexico', type: 'supermarket', note: 'Same travel adapter section as US Walmarts, found in most Mexican cities' },
+    { name: 'Elektra', type: 'electronics', note: 'Electronics retailer with locations across Mexico' },
+    { name: 'OXXO', type: 'convenience', note: 'Mexico\'s ubiquitous convenience store — some locations carry basic adapters and charging cables' },
+    { name: 'Mexico City Airport (MEX) shops', type: 'airport', city: 'Mexico City', priceRange: 'MX$200–500' },
+  ],
+  airportName: 'Mexico City International Airport',
+  airportCode: 'MEX',
+  neighbors: [
+    { name: 'United States', slug: 'usa-electric-plug-types-will-you-need-an-adapter-traveling-to-the-us', plugTypes: ['A', 'B'], voltage: 120, sameAsSubject: 'compatible', adapterNote: 'Same plug types. Voltage difference (127V vs 120V) is negligible — no adapter needed.' },
+    { name: 'Guatemala', slug: 'SLUG-NEEDED-guatemala', plugTypes: ['A', 'B'], voltage: 120, sameAsSubject: 'compatible', adapterNote: 'Guatemala uses the same plugs at a very similar voltage.' },
+    { name: 'Belize', slug: 'SLUG-NEEDED-belize', plugTypes: ['A', 'B', 'G'], voltage: 110, sameAsSubject: 'mostly', adapterNote: 'Belize uses Type A/B like Mexico, but some outlets are Type G (British-style) from its colonial era. Voltage is close at 110V.' },
+  ],
+  hotelAdapterAvailability: 'sometimes',
+  hotelUSBPorts: 'sometimes',
+  hotelHairDryers: 'common',
+  accommodationNote: 'Resorts in Cancún, Playa del Carmen, and Los Cabos cater heavily to North American guests and usually have modern outlets, hair dryers, and sometimes USB ports. Mid-range hotels in Mexico City and Guadalajara typically provide hair dryers. Budget hotels and Airbnbs in older colonial buildings may have limited outlets and no ground connections. International adapters at the front desk are hit-or-miss — larger resort chains are your best bet.',
+  faqs: [
+    { question: 'What type of plug does Mexico use?', answer: 'Mexico uses Type A (two flat prongs) and Type B (two flat prongs plus a round ground pin) — the same style as the United States and Canada.' },
+    { question: 'Do Americans need an adapter for Mexico?', answer: 'No. US and Canadian plugs work directly in Mexican outlets. The voltage is 127V versus 120V in the US, but this tiny difference doesn\'t affect any device.' },
+    { question: 'Why don\'t some Mexican outlets have a ground hole?', answer: 'Many older Mexican buildings were wired with two-prong Type A outlets before grounding became standard. This is especially common in historic city centers and rural areas. If your laptop charger has three prongs, you might need a cheap three-to-two prong adapter, available at any OXXO or hardware store.' },
+    { question: 'Will my European hair dryer work in Mexico?', answer: 'With an adapter it will power on, but expect very weak performance. Mexico\'s 127V is roughly half of Europe\'s 230V. A voltage converter for a hair dryer is impractical for travel. Most resort hotels provide hair dryers, or you can buy one cheaply at Walmart Mexico or Coppel.' },
+    { question: 'Is the electricity reliable in Mexican resorts?', answer: 'Major resort areas along the coast have reliable power with modern infrastructure. Occasional brief outages happen during hurricane season (June–November) along the Caribbean coast. Large resorts have backup generators.' },
+    { question: 'Can I charge my phone at Mexican airports?', answer: 'Yes. Mexico City (MEX), Cancún (CUN), and Guadalajara (GDL) airports all have charging stations and wall outlets with Type A/B sockets. Some newer terminals have USB charging ports at gate seating.' },
+  ],
+  metaTitle: 'Mexico Power Plugs & Outlets — Do You Need an Adapter? (2026)',
+  metaDescription: 'Mexico uses Type A and B plugs at 127V/60Hz — compatible with US and Canadian devices. Find out if you need an adapter, voltage info, and where to buy one.',
+  lastUpdated: '2026-03-30',
+  relatedCountries: [
+    { name: 'United States', slug: 'usa-electric-plug-types-will-you-need-an-adapter-traveling-to-the-us' },
+    { name: 'Canada', slug: 'canada-electric-plug-types-will-you-need-an-adapter' },
+    { name: 'Guatemala', slug: 'SLUG-NEEDED-guatemala' },
+    { name: 'Brazil', slug: 'brazil-electric-plug-types-will-you-need-an-adapter' },
+  ],
+};
+
+export default mexico;
