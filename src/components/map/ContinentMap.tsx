@@ -422,7 +422,7 @@ const ContinentMap: React.FC<ContinentMapProps> = ({
           .data(countries.features) // Use all countries, not just filtered
           .enter()
           .append('path')
-          .attr('d', path)
+          .attr('d', (d: any) => path(d))
           .attr('fill', (d: any) => {
             const countryData = findCountryData(d);
             const name = d.properties.name || d.properties.NAME || d.properties.name_long || d.properties.name_en;

@@ -7,7 +7,6 @@ const belize: CountryPlugData = {
   continent: 'North America',
   region: 'Central America',
   voltage: 110,
-  voltageNote: 'Most tourist areas use 110V with US-style outlets. Some older buildings have 220V British-style outlets. Always check.',
   frequency: 60,
   complexityTier: 'complex',
   plugTypes: [

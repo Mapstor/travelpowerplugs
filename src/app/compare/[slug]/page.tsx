@@ -252,14 +252,15 @@ export default async function ComparePage({ params }: PageProps) {
         {/* Header */}
         <section className="bg-gradient-to-br from-purple-600 to-indigo-700 text-white py-16">
           <div className="max-w-7xl mx-auto px-4">
-            <Breadcrumb 
-              items={[
-                { label: 'Home', href: '/' },
-                { label: 'Compare', href: '/compare' },
-                { label: comparison.title }
-              ]}
-              className="text-white/80 mb-4"
-            />
+            <div className="text-white/80 mb-4">
+              <Breadcrumb 
+                items={[
+                  { label: 'Home', href: '/' },
+                  { label: 'Compare', href: '/compare' },
+                  { label: comparison.title }
+                ]}
+              />
+            </div>
             
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               {comparison.title}

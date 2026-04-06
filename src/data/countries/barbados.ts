@@ -8,7 +8,6 @@ const barbados: CountryPlugData = {
   region: 'Caribbean',
   voltage: 115,
   frequency: 50,
-  frequencyNote: 'Barbados runs at 50Hz rather than the 60Hz found in the US and most of the Americas. This difference doesn\'t affect chargers, laptops, or typical travel electronics.',
   complexityTier: 'simple',
   plugTypes: [
     {

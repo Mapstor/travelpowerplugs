@@ -7,7 +7,6 @@ const brazil: CountryPlugData = {
   continent: 'South America',
   region: 'South America',
   voltage: 127,
-  voltageNote: 'Voltage varies by state: São Paulo and Rio de Janeiro use 127V, while Brasília, Manaus, and most of the northeast use 220V. Always check locally — even neighboring cities can differ.',
   frequency: 60,
   complexityTier: 'complex',
   plugTypes: [
@@ -21,7 +20,6 @@ const brazil: CountryPlugData = {
     'Despite the 2011 standard, you\'ll still encounter old Type A and Type B (American-style) outlets in some older buildings and budget accommodations. A universal adapter is the safest bet.',
     'Many Brazilian hotels in tourist areas provide voltage adapters or have outlets labeled with their voltage. Some luxury hotels wire rooms at both 127V and 220V, with different outlets for each — check the labels on the outlet or ask reception.',
   ],
-  recentChanges: 'Brazil mandated the NBR 14136 (Type N) standard in 2011 and has been phasing out all other outlet types since. New construction exclusively uses Type N, but the transition is still ongoing in older buildings.',
   travelContext: 'Brazil is one of the trickiest countries in the world for power — you need to worry about both the plug shape and the voltage, which can change from one city to the next.',
   adapterNeeded: [
     { origin: 'United States & Canada', originPlugTypes: 'Type A / Type B', adapterNeeded: true, converterNeeded: 'maybe', notes: 'US plugs don\'t fit modern Brazilian Type N sockets. You need an adapter. Voltage is the bigger concern: in São Paulo and Rio (127V), your 120V devices work fine. In Brasília or Manaus (220V), only dual-voltage devices are safe. Always check the local voltage before plugging in.' },
@@ -32,11 +30,11 @@ const brazil: CountryPlugData = {
     { origin: 'Asia (varies)', originPlugTypes: 'Various', adapterNeeded: true, converterNeeded: 'maybe', notes: 'Most Asian travelers need an adapter. Japanese visitors: your Type A plugs won\'t fit Type N, and voltage varies — bring a universal adapter. Chinese travelers need an adapter; check voltage by destination city.' },
   ],
   localPurchaseOptions: [
-    { name: 'Casas Bahia', type: 'electronics', note: 'One of Brazil\'s biggest electronics retailers — cheap adapters and voltage converters' },
-    { name: 'Magazine Luiza', type: 'electronics', note: 'Major Brazilian electronics chain with adapters and power accessories' },
-    { name: 'Kalunga', type: 'electronics', note: 'Office and electronics supplies — stocks travel adapters' },
-    { name: 'Lojas Americanas', type: 'convenience', note: 'Variety store found everywhere in Brazil — basic adapters in the electronics section' },
-    { name: 'São Paulo Guarulhos Airport (GRU) shops', type: 'airport', city: 'São Paulo', priceRange: 'R$30–80' },
+    { name: 'Casas Bahia', type: 'electronics', priceRange: 'R$15–50', note: 'One of Brazil\'s biggest electronics retailers — cheap adapters and voltage converters' },
+    { name: 'Magazine Luiza', type: 'electronics', priceRange: 'R$20–60', note: 'Major Brazilian electronics chain with adapters and power accessories' },
+    { name: 'Kalunga', type: 'electronics', priceRange: 'R$15–40', note: 'Office and electronics supplies — stocks travel adapters' },
+    { name: 'Lojas Americanas', type: 'convenience', priceRange: 'R$10–30', note: 'Variety store found everywhere in Brazil — basic adapters in the electronics section' },
+    { name: 'São Paulo Guarulhos Airport (GRU) shops', type: 'airport', city: 'São Paulo', priceRange: 'R$30–80', note: 'Limited selection but available for last-minute needs' },
   ],
   airportName: 'São Paulo/Guarulhos International Airport',
   airportCode: 'GRU',

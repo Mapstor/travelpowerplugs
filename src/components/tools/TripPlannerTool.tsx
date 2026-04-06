@@ -85,25 +85,25 @@ const TripPlannerTool: React.FC = () => {
     destinations.forEach(dest => {
       const compatibility = checkCompatibility(homeCountry.iso2, dest.iso2);
       const destPlugData = destPlugDataMap.get(dest.slug);
-      const primaryPlugs = destPlugData?.plugTypes.filter(p => p.status === 'primary').map(p => p.type) || [];
+      const primaryPlugs = destPlugData?.plugTypes.filter((p: any) => p.status === 'primary').map((p: any) => p.type) || [];
       
       // Check if home country plugs work with destination's PRIMARY plugs
       const practicallyCompatible = homePlugData?.plugTypes
         .filter(p => p.status === 'primary')
         .some(homePlug => 
-          primaryPlugs.some(destPlug => {
-            const compat = COMPATIBILITY_MATRIX[homePlug.type]?.[destPlug];
+          primaryPlugs.some((destPlug: any) => {
+            const compat = (COMPATIBILITY_MATRIX as any)[homePlug.type]?.[destPlug];
             return compat === 'full' || compat === 'partial';
           })
         ) || false;
 
       const warnings = [];
-      if (compatibility && !compatibility.practicallyCompatible) {
-        if (compatibility.reason?.includes('secondary') || compatibility.reason?.includes('legacy')) {
-          warnings.push('Officially listed plugs may be rare in modern buildings');
+      if (compatibility && !practicallyCompatible) {
+        if (compatibility.details?.needsAdapter) {
+          warnings.push('Adapter required for different plug standards');
         }
-        if (compatibility.reason?.includes('colonial')) {
-          warnings.push('Check accommodation type - hotels may differ from residential');
+        if (compatibility.details?.needsVoltageConverter) {
+          warnings.push('Voltage converter may be needed for some devices');
         }
       }
 
@@ -120,16 +120,16 @@ const TripPlannerTool: React.FC = () => {
     const allPrimaryPlugs = new Set<PlugType>();
     destinations.forEach(dest => {
       const destPlugData = destPlugDataMap.get(dest.slug);
-      const primaryPlugs = destPlugData?.plugTypes.filter(p => p.status === 'primary') || [];
-      primaryPlugs.forEach(plug => allPrimaryPlugs.add(plug.type));
+      const primaryPlugs = destPlugData?.plugTypes.filter((p: any) => p.status === 'primary') || [];
+      primaryPlugs.forEach((plug: any) => allPrimaryPlugs.add(plug.type));
     });
 
     // Find universal adapter coverage (based on PRIMARY plugs only)
     const universalPlugTypes: PlugType[] = ['A', 'C', 'G', 'I']; // Most common universal adapter types
     const universalCoverage = destinations.filter(dest => {
       const destPlugData = destPlugDataMap.get(dest.slug);
-      const primaryPlugs = destPlugData?.plugTypes.filter(p => p.status === 'primary') || [];
-      return primaryPlugs.some(plug => universalPlugTypes.includes(plug.type));
+      const primaryPlugs = destPlugData?.plugTypes.filter((p: any) => p.status === 'primary') || [];
+      return primaryPlugs.some((plug: any) => universalPlugTypes.includes(plug.type));
     });
 
     // Check voltage compatibility using practical data
@@ -159,7 +159,7 @@ const TripPlannerTool: React.FC = () => {
     const practicalDifferences = destinations.filter(dest => {
       const destPlugData = destPlugDataMap.get(dest.slug);
       const allPlugTypes = dest.plugTypes;
-      const primaryPlugTypes = destPlugData?.plugTypes.filter(p => p.status === 'primary').map(p => p.type) || [];
+      const primaryPlugTypes = destPlugData?.plugTypes.filter((p: any) => p.status === 'primary').map((p: any) => p.type) || [];
       return allPlugTypes.length !== primaryPlugTypes.length;
     });
 
@@ -357,8 +357,8 @@ const TripPlannerTool: React.FC = () => {
                       Covers {analysis.universalCoverage} of {analysis.totalDestinations} destinations: {
                         destinations.filter(dest => {
                           const destPlugData = analysis.destPlugDataMap.get(dest.slug);
-                          const primaryPlugs = destPlugData?.plugTypes.filter(p => p.status === 'primary') || [];
-                          return primaryPlugs.some(plug => ['A', 'C', 'G', 'I'].includes(plug.type));
+                          const primaryPlugs = destPlugData?.plugTypes.filter((p: any) => p.status === 'primary') || [];
+                          return primaryPlugs.some((plug: any) => ['A', 'C', 'G', 'I'].includes(plug.type));
                         }).map(d => d.name).join(', ')
                       }
                     </p>
@@ -421,7 +421,7 @@ const TripPlannerTool: React.FC = () => {
               {destinations.map((dest) => {
                 const compatibility = analysis.compatibilityMap.get(dest.slug);
                 const destPlugData = analysis.destPlugDataMap.get(dest.slug);
-                const primaryPlugs = destPlugData?.plugTypes.filter(p => p.status === 'primary').map(p => p.type) || [];
+                const primaryPlugs = destPlugData?.plugTypes.filter((p: any) => p.status === 'primary').map((p: any) => p.type) || [];
                 const homeVoltage = getCountryPlugData(homeCountry.iso2)?.voltage?.standard || homeCountry.voltage;
                 const destVoltage = destPlugData?.voltage?.standard || dest.voltage;
                 

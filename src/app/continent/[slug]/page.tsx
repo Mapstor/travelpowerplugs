@@ -423,7 +423,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: continent.title,
     description: continent.description,
-    canonical: `https://travelpowerplugs.com/continent/${slug}`,
     openGraph: {
       title: continent.title,
       description: continent.description,
