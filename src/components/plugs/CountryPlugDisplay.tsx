@@ -38,19 +38,27 @@ const CountryPlugDisplay: React.FC<CountryPlugDisplayProps> = ({
         </h3>
         
         {/* Show primary plug types */}
-        <div className="flex flex-wrap gap-8 justify-center mb-8">
+        <div className="flex flex-wrap gap-4 justify-center mb-8">
           {country.plugTypes.map((plugType) => {
-            const PlugComponent = getPlugComponent(plugType);
-            if (!PlugComponent) return null;
+            const plugTypeLower = plugType.toLowerCase();
+            const animationSrc = `/animations/type-${plugTypeLower}-plug-animation.html`;
             
             return (
               <div key={plugType} className="text-center">
-                <PlugComponent
-                  size={size}
-                  variant="socket"
-                  animated={false}
-                  showLabel={true}
-                />
+                <div className="w-[300px] h-[180px] bg-gray-50 rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                  <iframe
+                    src={animationSrc}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 'none' }}
+                    loading="lazy"
+                    title={`Type ${plugType.toUpperCase()} Socket`}
+                    className="w-full h-full"
+                  />
+                </div>
+                <div className="mt-2 text-sm font-semibold text-gray-700">
+                  Type {plugType.toUpperCase()}
+                </div>
               </div>
             );
           })}
