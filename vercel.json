@@ -1,46 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/albanian-plug-types",
-      "destination": "/albania-electric-plug-types",
-      "permanent": true
-    },
-    {
-      "source": "/albania-electric-plug-types/",
-      "destination": "/albania-electric-plug-types",
-      "permanent": true
-    },
-    {
-      "source": "/algeria-electrical-plug-type",
-      "destination": "/algeria-electric-plug-types",
-      "permanent": true
-    },
-    {
-      "source": "/andorra-plug-types-electric-sockets-used-in-andorra-adapter",
-      "destination": "/andorra-electric-plug-types",
-      "permanent": true
-    },
-    {
-      "source": "/armenia-electric-socket-types-do-you-need-to-pack-an-adapter",
-      "destination": "/armenia-electric-plug-types",
-      "permanent": true
-    },
-    {
-      "source": "/austria-electric-power-plug-types-do-you-need-an-adapter",
-      "destination": "/austria-electric-plug-types",
-      "permanent": true
-    },
-    {
-      "source": "/azerbaijan-electric-socket-types-will-you-need-an-adapter",
-      "destination": "/azerbaijan-electric-plug-types",
-      "permanent": true
-    },
-    {
-      "source": "/bahamas-electric-socket-types-will-you-need-an-adapter",
-      "destination": "/bahamas-electric-plug-types",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -97,6 +55,48 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/terms-of-use",
+      "destination": "/terms"
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy"
+    },
+    {
+      "source": "/about-me",
+      "destination": "/about"
+    },
+    {
+      "source": "/europe",
+      "destination": "/continent/europe"
+    },
+    {
+      "source": "/north-america",
+      "destination": "/continent/north-america"
+    },
+    {
+      "source": "/south-america",
+      "destination": "/continent/south-america"
+    },
+    {
+      "source": "/asia",
+      "destination": "/continent/asia"
+    },
+    {
+      "source": "/africa",
+      "destination": "/continent/africa"
+    },
+    {
+      "source": "/oceania",
+      "destination": "/continent/oceania"
     }
   ],
   "functions": {

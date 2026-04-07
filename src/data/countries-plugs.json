@@ -1,2354 +1,5714 @@
 {
   "af": {
     "name": "Afghanistan",
-    "slug": "afghanistan-power-plug-type-electric-socket-type-and-adapter",
+    "slug": "afghanistan-electric-plug-types",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Standard for most outlets" },
-      { "type": "F", "status": "secondary", "note": "Found in newer buildings" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Standard for most outlets"
+      },
+      {
+        "type": "F",
+        "status": "secondary",
+        "note": "Found in newer buildings"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C (Europlug) is most common. Type F (Schuko) in newer construction."
   },
   "al": {
     "name": "Albania",
-    "slug": "albania-electric-plug-types",
+    "slug": "albanian-plug-types",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "Schuko standard dominates" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F, common for low-power devices" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "Schuko standard dominates"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F, common for low-power devices"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F (Schuko) is the primary standard. Type C plugs work in Type F sockets."
   },
   "dz": {
     "name": "Algeria",
-    "slug": "algeria-electric-plug-types",
+    "slug": "algeria-electrical-plug-type",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "German standard dominates" },
-      { "type": "C", "status": "secondary", "note": "Compatible, widespread" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "German standard dominates"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible, widespread"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F (Schuko) is primary. French colonial legacy mixed with modern German standard."
   },
   "ar": {
     "name": "Argentina",
-    "slug": "argentina-electric-plug-types",
+    "slug": "argentina-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "I", "status": "primary", "note": "Standard in all modern installations since 1998" },
-      { "type": "C", "status": "legacy", "note": "Old buildings only, increasingly rare" }
+      {
+        "type": "I",
+        "status": "primary",
+        "note": "Standard in all modern installations since 1998"
+      },
+      {
+        "type": "C",
+        "status": "legacy",
+        "note": "Old buildings only, increasingly rare"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Argentina switched to Type I (three angled flat pins) in 1998. Type C exists in very old buildings but don't rely on it. Type I is mandatory for all new construction."
   },
   "am": {
     "name": "Armenia",
-    "slug": "armenia-electric-plug-types",
+    "slug": "armenia-electric-socket-types-do-you-need-to-pack-an-adapter",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "Post-Soviet standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "Post-Soviet standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following European standardization."
   },
   "au": {
     "name": "Australia",
-    "slug": "australia-electric-plug-types-travel-adapter",
+    "slug": "australia-electric-plug-types-do-you-need-adapter",
     "plugTypes": [
-      { "type": "I", "status": "primary", "note": "100% usage, AS/NZS 3112 standard" }
+      {
+        "type": "I",
+        "status": "primary",
+        "note": "100% usage, AS/NZS 3112 standard"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type I exclusively. Mandatory safety shutters in all outlets."
   },
   "at": {
     "name": "Austria",
-    "slug": "austria-electric-plug-types",
+    "slug": "austria-electric-power-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "Schuko standard, 95%+ of installations" },
-      { "type": "C", "status": "secondary", "note": "Works in Type F sockets" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "Schuko standard, 95%+ of installations"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Works in Type F sockets"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F (Schuko) dominates. Type C compatible for low-power devices."
   },
   "az": {
     "name": "Azerbaijan",
-    "slug": "azerbaijan-electric-plug-types",
+    "slug": "azerbaijan-electric-socket-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "Modern standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "Modern standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F is standard following post-Soviet modernization."
   },
   "bs": {
     "name": "Bahamas",
-    "slug": "bahamas-electric-plug-types",
+    "slug": "bahamas-electric-socket-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "Modern standard, required in new construction" },
-      { "type": "A", "status": "secondary", "note": "Still common, works in Type B sockets" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "Modern standard, required in new construction"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Still common, works in Type B sockets"
+      }
     ],
-    "voltage": { "standard": 120, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 120,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B dominates in modern buildings. Type A plugs work in Type B sockets."
   },
   "bh": {
     "name": "Bahrain",
-    "slug": "bahrain-electric-plug-types",
+    "slug": "bahrain-electric-plug-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British standard, 100% usage" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British standard, 100% usage"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, following British colonial legacy."
   },
   "bd": {
     "name": "Bangladesh",
-    "slug": "bangladesh-electric-plug-types",
+    "slug": "bangladesh-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard, dominant" },
-      { "type": "C", "status": "secondary", "note": "Some newer buildings" },
-      { "type": "D", "status": "legacy", "note": "Old installations" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard, dominant"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Some newer buildings"
+      },
+      {
+        "type": "D",
+        "status": "legacy",
+        "note": "Old installations"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G is primary due to British colonial influence."
   },
   "bb": {
     "name": "Barbados",
-    "slug": "barbados-electric-plug-types",
+    "slug": "barbados-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "Standard for modern installations" },
-      { "type": "A", "status": "secondary", "note": "Compatible, still common" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "Standard for modern installations"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible, still common"
+      }
     ],
-    "voltage": { "standard": 115, "range": [110, 120] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 115,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type B is primary. Unusual 50Hz frequency with low voltage."
   },
   "by": {
     "name": "Belarus",
-    "slug": "belarus-electric-plug-types",
+    "slug": "belarus-electric-plug-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "Post-Soviet European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "Post-Soviet European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following European standardization."
   },
   "be": {
     "name": "Belgium",
-    "slug": "belgium-electric-plug-types",
+    "slug": "belgium-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "Belgian/French standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "Belgian/French standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E with grounding pin in socket. Type C compatible."
   },
   "bz": {
     "name": "Belize",
-    "slug": "belize-electric-plug-types",
+    "slug": "belize-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US standard dominates" },
-      { "type": "A", "status": "secondary", "note": "Works in Type B sockets" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US standard dominates"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Works in Type B sockets"
+      }
     ],
-    "voltage": { "standard": 110, "range": [110, 220] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 110,
+      "range": [
+        110,
+        220
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "US standard. Some areas have 220V for heavy appliances."
   },
   "bj": {
     "name": "Benin",
-    "slug": "benin-electric-plug-types",
+    "slug": "benin-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French colonial legacy" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French colonial legacy"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E dominates due to French colonial influence."
   },
   "bt": {
     "name": "Bhutan",
-    "slug": "bhutan-electric-plug-types",
+    "slug": "bhutan-electric-plug-types-do-you-need-an-adapter-in-bhutan",
     "plugTypes": [
-      { "type": "D", "status": "primary", "note": "Indian standard" },
-      { "type": "C", "status": "secondary", "note": "Some modern buildings" },
-      { "type": "G", "status": "secondary", "note": "Hotels and tourist areas" }
+      {
+        "type": "D",
+        "status": "primary",
+        "note": "Indian standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Some modern buildings"
+      },
+      {
+        "type": "G",
+        "status": "secondary",
+        "note": "Hotels and tourist areas"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type D dominant, following Indian influence."
   },
   "bo": {
     "name": "Bolivia",
-    "slug": "bolivia-electric-plug-types",
+    "slug": "bolivia-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "A", "status": "primary", "note": "Most common in residential areas" },
-      { "type": "C", "status": "secondary", "note": "Some newer buildings" }
+      {
+        "type": "A",
+        "status": "primary",
+        "note": "Most common in residential areas"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Some newer buildings"
+      }
     ],
-    "voltage": { "standard": 230, "range": [115, 230] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        115,
+        230
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Mixed voltage system. Type A most common despite higher voltage."
   },
   "ba": {
     "name": "Bosnia and Herzegovina",
-    "slug": "bosnia-and-herzegovina-electric-plug-types",
+    "slug": "bosnia-and-herzegovina-electric-plug-types-is-adapter-needed",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following European integration."
   },
   "bw": {
     "name": "Botswana",
-    "slug": "botswana-electric-plug-types",
+    "slug": "botswana-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "D", "status": "primary", "note": "British colonial legacy" },
-      { "type": "G", "status": "secondary", "note": "Modern buildings and hotels" },
-      { "type": "M", "status": "secondary", "note": "South African influence for heavy appliances" }
+      {
+        "type": "D",
+        "status": "primary",
+        "note": "British colonial legacy"
+      },
+      {
+        "type": "G",
+        "status": "secondary",
+        "note": "Modern buildings and hotels"
+      },
+      {
+        "type": "M",
+        "status": "secondary",
+        "note": "South African influence for heavy appliances"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type D most common, transitioning to Type G in newer areas."
   },
   "br": {
     "name": "Brazil",
-    "slug": "brazil-electric-plug-types-type-n-plugs",
+    "slug": "brazil-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "N", "status": "primary", "note": "Official standard since 2011, mandatory in all new construction" },
-      { "type": "C", "status": "legacy", "note": "Pre-2011 buildings, being phased out" },
-      { "type": "A", "status": "legacy", "note": "Old installations only" }
+      {
+        "type": "N",
+        "status": "primary",
+        "note": "Official standard since 2011, mandatory in all new construction"
+      },
+      {
+        "type": "C",
+        "status": "legacy",
+        "note": "Pre-2011 buildings, being phased out"
+      },
+      {
+        "type": "A",
+        "status": "legacy",
+        "note": "Old installations only"
+      }
     ],
-    "voltage": { "standard": 127, "range": [110, 220] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 127,
+      "range": [
+        110,
+        220
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Brazil adopted Type N (NBR 14136) in 2011. All new buildings use Type N. Voltage varies by region (127V south, 220V north)."
   },
   "bn": {
     "name": "Brunei",
-    "slug": "brunei-darussalam-electric-plug-types",
+    "slug": "brunei-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British standard, 100% usage" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British standard, 100% usage"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British colonial standard maintained."
   },
   "bg": {
     "name": "Bulgaria",
-    "slug": "bulgaria-electric-plug-types",
+    "slug": "bulgaria-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following EU standardization."
   },
   "bf": {
     "name": "Burkina Faso",
-    "slug": "burkina-faso-electric-plug-types",
+    "slug": "burkina-faso-electric-plug-type-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French colonial legacy" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French colonial legacy"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E dominates due to French colonial influence."
   },
   "bi": {
     "name": "Burundi",
-    "slug": "burundi-electric-plug-types",
+    "slug": "burundi-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" },
-      { "type": "E", "status": "secondary", "note": "Some areas" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "E",
+        "status": "secondary",
+        "note": "Some areas"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C most widespread, some Type E from colonial period."
   },
   "cv": {
     "name": "Cabo Verde",
-    "slug": "cabo-verde-electric-plug-types",
+    "slug": "cabo-verde-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F is standard, following European influence."
   },
   "kh": {
     "name": "Cambodia",
-    "slug": "cambodia-electric-plug-types",
+    "slug": "cambodia-electric-plug-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "A", "status": "primary", "note": "Most common, especially in cities" },
-      { "type": "C", "status": "secondary", "note": "Some modern buildings" },
-      { "type": "G", "status": "secondary", "note": "Hotels and upscale areas" }
+      {
+        "type": "A",
+        "status": "primary",
+        "note": "Most common, especially in cities"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Some modern buildings"
+      },
+      {
+        "type": "G",
+        "status": "secondary",
+        "note": "Hotels and upscale areas"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type A dominates despite higher voltage. Mixed standards reflect various influences."
   },
   "cm": {
     "name": "Cameroon",
-    "slug": "cameroon-electric-plug-types",
+    "slug": "cameroon-electric-plug-types-do-you-need-to-pack-an-adapter",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French colonial legacy" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French colonial legacy"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E dominates due to French colonial influence."
   },
   "ca": {
     "name": "Canada",
-    "slug": "canada-electric-plug-types",
+    "slug": "canada-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "Required in all new construction since 1965" },
-      { "type": "A", "status": "secondary", "note": "Legacy, works in Type B sockets" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "Required in all new construction since 1965"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Legacy, works in Type B sockets"
+      }
     ],
-    "voltage": { "standard": 120, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 120,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B is standard for safety/grounding. Type A plugs work in Type B sockets."
   },
   "cf": {
     "name": "Central African Republic",
-    "slug": "central-african-republic-electric-plug-types",
+    "slug": "central-african-republic-electric-plug-types-need-an-adapter",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French colonial legacy" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French colonial legacy"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E dominates due to French colonial influence."
   },
   "td": {
     "name": "Chad",
-    "slug": "chad-electric-plug-types",
+    "slug": "chad-electric-plug-types-do-you-need-to-pack-an-adapter",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French colonial legacy" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French colonial legacy"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E dominates due to French colonial influence."
   },
   "cl": {
     "name": "Chile",
-    "slug": "chile-electric-plug-types",
+    "slug": "chile-electric-plug-types-do-you-need-an-adapter-while-traveling",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common standard" },
-      { "type": "L", "status": "secondary", "note": "Italian standard, some areas" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common standard"
+      },
+      {
+        "type": "L",
+        "status": "secondary",
+        "note": "Italian standard, some areas"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C dominates. Type L found in some areas due to Italian influence."
   },
   "cn": {
     "name": "China",
     "slug": "3-electric-plug-types-in-china-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "A", "status": "primary", "note": "Most common, ubiquitous in hotels and public spaces" },
-      { "type": "I", "status": "primary", "note": "Australian-style, standard for grounded appliances" },
-      { "type": "C", "status": "secondary", "note": "European-style, less common" }
+      {
+        "type": "A",
+        "status": "primary",
+        "note": "Most common, ubiquitous in hotels and public spaces"
+      },
+      {
+        "type": "I",
+        "status": "primary",
+        "note": "Australian-style, standard for grounded appliances"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "European-style, less common"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type A is most prevalent, especially in hotels and tourist areas. Type I for grounded devices. Type C exists but much less common."
   },
   "co": {
     "name": "Colombia",
-    "slug": "colombia-electric-plug-types",
+    "slug": "colombia-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "A", "status": "primary", "note": "70%+ of installations" },
-      { "type": "B", "status": "secondary", "note": "Growing in modern buildings" }
+      {
+        "type": "A",
+        "status": "primary",
+        "note": "70%+ of installations"
+      },
+      {
+        "type": "B",
+        "status": "secondary",
+        "note": "Growing in modern buildings"
+      }
     ],
-    "voltage": { "standard": 110, "range": [110, 220] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 110,
+      "range": [
+        110,
+        220
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type A dominates. Type B increasing in new construction for safety."
   },
   "km": {
     "name": "Comoros",
-    "slug": "comoros-electric-plug-types",
+    "slug": "comoros-electric-plug-type-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French influence" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French influence"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E standard following French influence."
   },
   "cg": {
     "name": "Congo",
-    "slug": "congo-electric-plug-types",
+    "slug": "congo-electric-plug-type-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French colonial legacy" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French colonial legacy"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E dominates due to French colonial influence."
   },
   "cd": {
     "name": "Democratic Republic of the Congo",
     "slug": "democratic-republic-of-congo-electric-plug-types",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" },
-      { "type": "E", "status": "secondary", "note": "Some areas" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "E",
+        "status": "secondary",
+        "note": "Some areas"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C most widespread, mixed with Type E in some regions."
   },
   "ck": {
     "name": "Cook Islands",
     "slug": "cook-islands-electric-plug-types",
     "plugTypes": [
-      { "type": "I", "status": "primary", "note": "New Zealand standard" }
+      {
+        "type": "I",
+        "status": "primary",
+        "note": "New Zealand standard"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type I exclusively, following New Zealand administration."
   },
   "cr": {
     "name": "Costa Rica",
-    "slug": "costa-rica-electric-plug-types",
+    "slug": "costa-rica-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "Standard for modern installations" },
-      { "type": "A", "status": "secondary", "note": "Compatible, still common" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "Standard for modern installations"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible, still common"
+      }
     ],
-    "voltage": { "standard": 120, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 120,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B is primary for safety. Type A plugs work in Type B sockets."
   },
   "ci": {
     "name": "Côte d'Ivoire",
-    "slug": "cote-d-ivoire-electric-plug-types",
+    "slug": "cote-divoire-electric-plug-type-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French colonial legacy" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French colonial legacy"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E dominates due to French colonial influence."
   },
   "hr": {
     "name": "Croatia",
-    "slug": "croatia-electric-plug-types",
+    "slug": "croatia-electric-plug-types-do-you-need-to-take-adapter-on-trip",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following EU standardization."
   },
   "cu": {
     "name": "Cuba",
-    "slug": "cuba-electric-plug-types",
+    "slug": "cuba-electric-plug-type-do-you-need-an-adapter-for-trip",
     "plugTypes": [
-      { "type": "A", "status": "primary", "note": "Most common in older areas" },
-      { "type": "B", "status": "secondary", "note": "Growing in modern areas" },
-      { "type": "C", "status": "secondary", "note": "Some hotels and modern buildings" }
+      {
+        "type": "A",
+        "status": "primary",
+        "note": "Most common in older areas"
+      },
+      {
+        "type": "B",
+        "status": "secondary",
+        "note": "Growing in modern areas"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Some hotels and modern buildings"
+      }
     ],
-    "voltage": { "standard": 110, "range": [110, 220] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 110,
+      "range": [
+        110,
+        220
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type A dominates but Type B increasing. Mixed voltage system."
   },
   "cy": {
     "name": "Cyprus",
-    "slug": "cyprus-electric-plug-types",
+    "slug": "cyprus-electric-plug-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British colonial legacy maintained."
   },
   "cz": {
     "name": "Czech Republic",
-    "slug": "czech-republic-electric-plug-types",
+    "slug": "czech-republic-electric-plug-type-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following EU integration."
   },
   "dk": {
     "name": "Denmark",
-    "slug": "denmark-electric-plug-types",
+    "slug": "denmark-electric-plug-type-will-you-need-an-adapter-2",
     "plugTypes": [
-      { "type": "K", "status": "primary", "note": "Danish standard with side grounding pin" },
-      { "type": "C", "status": "secondary", "note": "Works in Type K sockets" },
-      { "type": "F", "status": "secondary", "note": "Some compatibility" }
+      {
+        "type": "K",
+        "status": "primary",
+        "note": "Danish standard with side grounding pin"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Works in Type K sockets"
+      },
+      {
+        "type": "F",
+        "status": "secondary",
+        "note": "Some compatibility"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type K is uniquely Danish. Type C plugs work in Type K sockets."
   },
   "dj": {
     "name": "Djibouti",
-    "slug": "djibouti-electric-plug-types",
+    "slug": "djibouti-electric-plug-types-do-you-need-to-take-an-adapter",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French influence" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French influence"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E standard following French influence."
   },
   "dm": {
     "name": "Dominica",
-    "slug": "dominica-electric-plug-types",
+    "slug": "dominica-electric-plug-types-will-you-need-an-adapter-with-you",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British colonial legacy."
   },
   "do": {
     "name": "Dominican Republic",
-    "slug": "dominican-republic-electric-plug-types",
+    "slug": "dominican-republic-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US standard dominates" },
-      { "type": "A", "status": "secondary", "note": "Compatible, still common" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US standard dominates"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible, still common"
+      }
     ],
-    "voltage": { "standard": 110, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 110,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B is primary. US electrical standard."
   },
   "ec": {
     "name": "Ecuador",
-    "slug": "ecuador-electric-plug-types",
+    "slug": "ecuador-electric-plug-type-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "A", "status": "primary", "note": "Most common standard" },
-      { "type": "B", "status": "secondary", "note": "Some modern buildings" }
+      {
+        "type": "A",
+        "status": "primary",
+        "note": "Most common standard"
+      },
+      {
+        "type": "B",
+        "status": "secondary",
+        "note": "Some modern buildings"
+      }
     ],
-    "voltage": { "standard": 120, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 120,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type A dominates. Type B growing in new construction."
   },
   "eg": {
     "name": "Egypt",
-    "slug": "egypt-electric-plug-types",
+    "slug": "egypt-electric-plug-type-will-you-need-an-adapter-in-egypt",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "70%+ usage" },
-      { "type": "F", "status": "secondary", "note": "Modern hotels and tourist areas" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "70%+ usage"
+      },
+      {
+        "type": "F",
+        "status": "secondary",
+        "note": "Modern hotels and tourist areas"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C dominates. Type F in modern tourist infrastructure."
   },
   "sv": {
     "name": "El Salvador",
-    "slug": "el-salvador-electric-plug-types",
+    "slug": "el-salvador-electric-plug-type-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US standard" },
-      { "type": "A", "status": "secondary", "note": "Compatible, still common" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US standard"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible, still common"
+      }
     ],
-    "voltage": { "standard": 115, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 115,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B is primary following US standard."
   },
   "gq": {
     "name": "Equatorial Guinea",
-    "slug": "equatorial-guinea-electric-plug-types",
+    "slug": "equatorial-guinea-electric-plug-types-will-you-need-to-take-an-adapter-with-you",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "Spanish/French influence" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "Spanish/French influence"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E standard due to Spanish/French colonial influence."
   },
   "er": {
     "name": "Eritrea",
-    "slug": "eritrea-electric-plug-types",
+    "slug": "eritrea-electric-plug-types-will-you-need-an-adapter-in-eritrea",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" },
-      { "type": "L", "status": "secondary", "note": "Italian colonial legacy" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "L",
+        "status": "secondary",
+        "note": "Italian colonial legacy"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C dominates with some Italian Type L influence."
   },
   "ee": {
     "name": "Estonia",
-    "slug": "estonia-electric-plug-types",
+    "slug": "estonia-electric-plug-types-will-you-need-an-adapter-in-estonia",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following EU integration."
   },
   "sz": {
     "name": "Eswatini",
-    "slug": "eswatini-electric-plug-types",
+    "slug": "eswatini-electric-plug-types-will-you-need-an-adapter-in-mbabane",
     "plugTypes": [
-      { "type": "M", "status": "primary", "note": "South African influence" },
-      { "type": "D", "status": "secondary", "note": "Some older installations" }
+      {
+        "type": "M",
+        "status": "primary",
+        "note": "South African influence"
+      },
+      {
+        "type": "D",
+        "status": "secondary",
+        "note": "Some older installations"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type M dominates due to South African influence."
   },
   "et": {
     "name": "Ethiopia",
-    "slug": "ethiopia-electric-plug-types",
+    "slug": "ethiopia-electric-plug-types-will-you-need-an-adapter-in-addis-abeba",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most widespread" },
-      { "type": "F", "status": "secondary", "note": "Some modern areas" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most widespread"
+      },
+      {
+        "type": "F",
+        "status": "secondary",
+        "note": "Some modern areas"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C is most common standard."
   },
   "fj": {
     "name": "Fiji",
-    "slug": "fiji-electric-plug-types",
+    "slug": "fiji-electric-plug-types-will-you-need-an-adapter-in-suva",
     "plugTypes": [
-      { "type": "I", "status": "primary", "note": "Australian standard, 100% usage" }
+      {
+        "type": "I",
+        "status": "primary",
+        "note": "Australian standard, 100% usage"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type I exclusively, following Australian influence."
   },
   "fi": {
     "name": "Finland",
-    "slug": "finland-electric-plug-types",
+    "slug": "finland-electric-plug-type-will-you-need-an-adapter-in-helsinki",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates. Type C compatible for low-power devices."
   },
   "fr": {
     "name": "France",
-    "slug": "france-electric-plug-types",
+    "slug": "france-electric-plug-type-will-you-need-an-adapter-in-paris",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French standard, 90%+ of modern installations" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E, common in older buildings" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French standard, 90%+ of modern installations"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E, common in older buildings"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E with grounding pin in socket vs. Type F's side clips. Type C compatible."
   },
   "ga": {
     "name": "Gabon",
-    "slug": "gabon-electric-plug-types",
+    "slug": "gabon-electric-plug-types-will-you-need-an-adapter-libreville",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C is the standard."
   },
   "gm": {
     "name": "Gambia",
-    "slug": "gambia-electric-plug-types",
+    "slug": "gambia-electric-plug-types-will-you-need-an-adapter-in-banjul",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British colonial legacy."
   },
   "ge": {
     "name": "Georgia",
-    "slug": "georgia-electric-plug-types",
+    "slug": "georgia-electric-plug-types-will-you-need-an-adapter-in-tbilisi",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following European integration."
   },
   "de": {
     "name": "Germany",
-    "slug": "germany-electric-plug-types",
+    "slug": "germany-electric-plug-types-will-you-need-an-adapter-in-germany",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "Schuko standard, 95%+ of installations" },
-      { "type": "C", "status": "secondary", "note": "Works in Type F sockets" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "Schuko standard, 95%+ of installations"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Works in Type F sockets"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F (Schuko) dominates. Type C compatible for low-power devices."
   },
   "gh": {
     "name": "Ghana",
-    "slug": "ghana-electric-plug-types",
+    "slug": "ghana-electric-plug-types-will-you-need-an-adapter-in-accra",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" },
-      { "type": "D", "status": "secondary", "note": "Some older installations" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      },
+      {
+        "type": "D",
+        "status": "secondary",
+        "note": "Some older installations"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G dominates due to British colonial influence."
   },
   "gr": {
     "name": "Greece",
-    "slug": "greece-electric-plug-types",
+    "slug": "greece-electric-plug-types-will-you-need-an-adapter-in-greece",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following European standardization."
   },
   "gl": {
     "name": "Greenland",
     "slug": "greenland-electric-plug-types",
     "plugTypes": [
-      { "type": "K", "status": "primary", "note": "Danish standard" },
-      { "type": "C", "status": "secondary", "note": "Works in Type K sockets" }
+      {
+        "type": "K",
+        "status": "primary",
+        "note": "Danish standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Works in Type K sockets"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type K following Danish administration."
   },
   "gd": {
     "name": "Grenada",
-    "slug": "grenada-electric-plug-types",
+    "slug": "grenada-electric-plug-types-will-you-need-an-adapter-in-grenada",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British colonial legacy."
   },
   "gt": {
     "name": "Guatemala",
-    "slug": "guatemala-electric-plug-types",
+    "slug": "guatemala-electric-plug-types-will-you-need-an-adapter-in-guatemala-city",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US standard" },
-      { "type": "A", "status": "secondary", "note": "Compatible, still common" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US standard"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible, still common"
+      }
     ],
-    "voltage": { "standard": 120, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 120,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B is primary following US standard."
   },
   "gn": {
     "name": "Guinea",
-    "slug": "guinea-electric-plug-types",
+    "slug": "guinea-electric-plug-types-will-you-need-an-adapter-in-conakry",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French colonial legacy" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French colonial legacy"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E dominates due to French colonial influence."
   },
   "gw": {
     "name": "Guinea-Bissau",
-    "slug": "guinea-bissau-electric-plug-types",
+    "slug": "guinea-bissau-electric-plug-type-will-you-need-an-adapter-in-bissau",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C is the primary standard."
   },
   "gy": {
     "name": "Guyana",
-    "slug": "guyana-electric-plug-types",
+    "slug": "guyana-electric-plug-types-will-you-need-an-adapter-in-georgetown",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" },
-      { "type": "A", "status": "secondary", "note": "Some areas" },
-      { "type": "B", "status": "secondary", "note": "US influence" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Some areas"
+      },
+      {
+        "type": "B",
+        "status": "secondary",
+        "note": "US influence"
+      }
     ],
-    "voltage": { "standard": 240, "range": [110, 240] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        110,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type G primary, but mixed voltage system with some US influence."
   },
   "ht": {
     "name": "Haiti",
-    "slug": "haiti-electric-plug-types",
+    "slug": "haiti-electric-plug-types-do-you-need-an-adapter-for-haiti",
     "plugTypes": [
-      { "type": "A", "status": "primary", "note": "Most common" },
-      { "type": "B", "status": "secondary", "note": "Some modern areas" }
+      {
+        "type": "A",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "B",
+        "status": "secondary",
+        "note": "Some modern areas"
+      }
     ],
-    "voltage": { "standard": 110, "range": [110, 220] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 110,
+      "range": [
+        110,
+        220
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type A dominates. Mixed voltage system."
   },
   "hn": {
     "name": "Honduras",
-    "slug": "honduras-electric-plug-types",
+    "slug": "honduras-electric-plug-types-do-you-need-an-adapter-in-honduras",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US standard" },
-      { "type": "A", "status": "secondary", "note": "Compatible, still common" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US standard"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible, still common"
+      }
     ],
-    "voltage": { "standard": 120, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 120,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B is primary following US standard."
   },
   "hk": {
     "name": "Hong Kong",
     "slug": "hong-kong-electric-plug-types",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard, 100% usage" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard, 100% usage"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British colonial legacy maintained."
   },
   "hu": {
     "name": "Hungary",
-    "slug": "hungary-electric-plug-types",
+    "slug": "hungary-electric-plug-types-will-you-need-an-adapter-in-budapest",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following EU integration."
   },
   "is": {
     "name": "Iceland",
-    "slug": "iceland-electric-plug-types",
+    "slug": "iceland-electric-plug-types-will-you-need-an-adapter-in-reykjavik",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates. Type C compatible."
   },
   "in": {
     "name": "India",
     "slug": "india-electric-plug-types-will-you-need-an-adapter-traveling-to-india",
     "plugTypes": [
-      { "type": "D", "status": "primary", "note": "Most common, especially in homes and hotels" },
-      { "type": "M", "status": "primary", "note": "Heavy-duty appliances, air conditioning" },
-      { "type": "C", "status": "secondary", "note": "Some modern buildings, varies by region" }
+      {
+        "type": "D",
+        "status": "primary",
+        "note": "Most common, especially in homes and hotels"
+      },
+      {
+        "type": "M",
+        "status": "primary",
+        "note": "Heavy-duty appliances, air conditioning"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Some modern buildings, varies by region"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type D (three round pins, 5mm) is most common for general use. Type M (larger version) for high-power appliances. Type C found in some modern buildings but not universal."
   },
   "id": {
     "name": "Indonesia",
-    "slug": "indonesia-electric-plug-types",
+    "slug": "indonesia-electric-plug-types-will-you-need-an-adapter-in-indonesia",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "60%+ usage" },
-      { "type": "F", "status": "secondary", "note": "Modern buildings, hotels" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "60%+ usage"
+      },
+      {
+        "type": "F",
+        "status": "secondary",
+        "note": "Modern buildings, hotels"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C dominates. Type F in modern tourist infrastructure."
   },
   "ir": {
     "name": "Iran",
-    "slug": "iran-electric-plug-types",
+    "slug": "iran-electric-plug-types-will-you-need-an-adapter-traveling-to-iran",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" },
-      { "type": "F", "status": "secondary", "note": "Some modern buildings" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "F",
+        "status": "secondary",
+        "note": "Some modern buildings"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C is the primary standard."
   },
   "iq": {
     "name": "Iraq",
-    "slug": "iraq-electric-plug-types",
+    "slug": "iraq-electric-plug-types-will-you-need-an-adapter-traveling-to-iraq",
     "plugTypes": [
-      { "type": "D", "status": "primary", "note": "British influence" },
-      { "type": "G", "status": "secondary", "note": "Modern areas" }
+      {
+        "type": "D",
+        "status": "primary",
+        "note": "British influence"
+      },
+      {
+        "type": "G",
+        "status": "secondary",
+        "note": "Modern areas"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type D primary due to British influence. Type G in newer areas."
   },
   "ie": {
     "name": "Ireland",
-    "slug": "ireland-electric-plug-types",
+    "slug": "ireland-electric-plug-types-will-you-need-an-adapter-for-ireland",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British standard, 100% usage" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British standard, 100% usage"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, following UK standard."
   },
   "im": {
     "name": "Isle of Man",
     "slug": "isle-of-man-electric-plug-types",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British standard" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British standard"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British Crown dependency."
   },
   "il": {
     "name": "Israel",
-    "slug": "israel-electric-plug-types",
+    "slug": "israel-electric-plug-type-will-you-need-an-adapter-for-israel",
     "plugTypes": [
-      { "type": "H", "status": "primary", "note": "Israeli standard, mandatory since 1989" }
+      {
+        "type": "H",
+        "status": "primary",
+        "note": "Israeli standard, mandatory since 1989"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Israel uses exclusively Type H (three flat pins in triangle). Very few exceptions. Type C adapters won't work - need specific Type H adapter."
   },
   "it": {
     "name": "Italy",
     "slug": "italy-electric-plug-types-which-outlets-they-use-in-italy-adapters",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "Schuko standard, most common in modern buildings" },
-      { "type": "L", "status": "primary", "note": "Italian standard, especially for high-power devices" },
-      { "type": "C", "status": "secondary", "note": "Works in most Italian outlets but not always secure fit" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "Schuko standard, most common in modern buildings"
+      },
+      {
+        "type": "L",
+        "status": "primary",
+        "note": "Italian standard, especially for high-power devices"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Works in most Italian outlets but not always secure fit"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Italy primarily uses Type F (Schuko) and Type L (Italian 3-pin). Type C Europlugs work in most outlets but may not fit securely. Type L has 10A and 16A variants."
   },
   "jm": {
     "name": "Jamaica",
-    "slug": "jamaica-electric-plug-types",
+    "slug": "jamaica-electric-plug-types-will-you-need-an-adapter-for-charging",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US standard" },
-      { "type": "A", "status": "secondary", "note": "Compatible, still common" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US standard"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible, still common"
+      }
     ],
-    "voltage": { "standard": 110, "range": [110, 110] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 110,
+      "range": [
+        110,
+        110
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type B is primary. Unusual 50Hz frequency with US voltage."
   },
   "jp": {
     "name": "Japan",
     "slug": "japan-electric-plug-types-will-you-need-an-adapter-probably-yes",
     "plugTypes": [
-      { "type": "A", "status": "primary", "note": "Standard for most appliances and outlets" },
-      { "type": "B", "status": "secondary", "note": "Grounded outlets, mainly for heavy appliances" }
+      {
+        "type": "A",
+        "status": "primary",
+        "note": "Standard for most appliances and outlets"
+      },
+      {
+        "type": "B",
+        "status": "secondary",
+        "note": "Grounded outlets, mainly for heavy appliances"
+      }
     ],
-    "voltage": { "standard": 100, "range": [100, 100] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 100,
+      "range": [
+        100,
+        100
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Japan primarily uses Type A. Type B exists mainly for grounded appliances but most outlets are Type A only. Unique 100V voltage requires converters for many devices."
   },
   "je": {
     "name": "Jersey",
     "slug": "jersey-electric-plug-types",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British standard" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British standard"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British Crown dependency."
   },
   "jo": {
     "name": "Jordan",
-    "slug": "jordan-electric-plug-types",
+    "slug": "jordan-electric-plug-types-will-you-need-adapter-traveling-to-jordan",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British influence" },
-      { "type": "C", "status": "secondary", "note": "Some areas" },
-      { "type": "D", "status": "secondary", "note": "Older installations" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British influence"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Some areas"
+      },
+      {
+        "type": "D",
+        "status": "secondary",
+        "note": "Older installations"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G dominates due to British influence."
   },
   "kz": {
     "name": "Kazakhstan",
-    "slug": "kazakhstan-electric-plug-types",
+    "slug": "kazakhstan-electric-plug-types-will-you-need-an-adapter-probably-yes",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following European integration."
   },
   "ke": {
     "name": "Kenya",
-    "slug": "kenya-electric-plug-types",
+    "slug": "kenya-electric-plug-types-will-you-need-an-adapter-traveling-to-kenya",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "95%+ usage" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "95%+ usage"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British colonial legacy strongly maintained."
   },
   "ki": {
     "name": "Kiribati",
-    "slug": "kiribati-electric-plug-types",
+    "slug": "kiribati-electric-plug-types-will-you-need-an-adapter-for-kiribati",
     "plugTypes": [
-      { "type": "I", "status": "primary", "note": "Australian influence" }
+      {
+        "type": "I",
+        "status": "primary",
+        "note": "Australian influence"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type I following Australian influence."
   },
   "kp": {
     "name": "North Korea",
-    "slug": "north-korea-electric-plug-types",
+    "slug": "north-korea-electric-plug-types-will-you-need-an-adapter-yup",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" },
-      { "type": "F", "status": "secondary", "note": "Some modern areas" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "F",
+        "status": "secondary",
+        "note": "Some modern areas"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C primary. Limited electrical infrastructure."
   },
   "kr": {
     "name": "South Korea",
-    "slug": "south-korea-electric-plug-types",
+    "slug": "south-korea-electric-plug-types-will-you-need-an-adapter-in-seoul",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "Official standard for safety (grounded)" },
-      { "type": "C", "status": "secondary", "note": "Compatible, common for small devices" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "Official standard for safety (grounded)"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible, common for small devices"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type F is official standard for safety. Type C compatible for small appliances."
   },
   "kw": {
     "name": "Kuwait",
-    "slug": "kuwait-electric-plug-types",
+    "slug": "kuwait-electric-plug-types-will-you-need-an-adapter-in-kuwait-city",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British influence" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British influence"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British colonial influence."
   },
   "kg": {
     "name": "Kyrgyzstan",
-    "slug": "kyrgyzstan-electric-plug-types",
+    "slug": "kyrgyzstan-electric-plug-type-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" },
-      { "type": "F", "status": "secondary", "note": "Some modern areas" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "F",
+        "status": "secondary",
+        "note": "Some modern areas"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C primary with some Type F modernization."
   },
   "la": {
     "name": "Laos",
-    "slug": "laos-electric-plug-types",
+    "slug": "laos-electric-plug-types-which-adapter-will-you-need-in-laos",
     "plugTypes": [
-      { "type": "A", "status": "primary", "note": "Most common" },
-      { "type": "B", "status": "secondary", "note": "Some areas" },
-      { "type": "C", "status": "secondary", "note": "European influence" }
+      {
+        "type": "A",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "B",
+        "status": "secondary",
+        "note": "Some areas"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "European influence"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type A dominates despite higher voltage. Mixed standards."
   },
   "lv": {
     "name": "Latvia",
-    "slug": "latvia-electric-plug-types",
+    "slug": "latvia-electric-plug-type-will-you-need-an-adapter-in-riga",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following EU integration."
   },
   "lb": {
     "name": "Lebanon",
-    "slug": "lebanon-electric-plug-types",
+    "slug": "lebanon-electric-plug-types-will-you-need-an-adapter-in-beirut",
     "plugTypes": [
-      { "type": "D", "status": "primary", "note": "British influence" },
-      { "type": "G", "status": "secondary", "note": "Modern buildings" },
-      { "type": "A", "status": "secondary", "note": "Some areas" }
+      {
+        "type": "D",
+        "status": "primary",
+        "note": "British influence"
+      },
+      {
+        "type": "G",
+        "status": "secondary",
+        "note": "Modern buildings"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Some areas"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type D primary, Type G growing in modern areas."
   },
   "ls": {
     "name": "Lesotho",
-    "slug": "lesotho-electric-plug-types",
+    "slug": "lesotho-electric-plug-types-which-adapter-do-you-need-for-lesotho",
     "plugTypes": [
-      { "type": "M", "status": "primary", "note": "South African influence" }
+      {
+        "type": "M",
+        "status": "primary",
+        "note": "South African influence"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type M exclusively, following South African standard."
   },
   "lr": {
     "name": "Liberia",
-    "slug": "liberia-electric-plug-types",
+    "slug": "liberia-electric-plug-types-will-you-need-an-adapter-in-liberia",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US influence" },
-      { "type": "A", "status": "secondary", "note": "Compatible, still common" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US influence"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible, still common"
+      }
     ],
-    "voltage": { "standard": 120, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 120,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B primary due to US historical influence."
   },
   "ly": {
     "name": "Libya",
-    "slug": "libya-electric-plug-types",
+    "slug": "libya-electric-plug-types-will-you-need-an-adapter-in-libya",
     "plugTypes": [
-      { "type": "D", "status": "primary", "note": "British colonial legacy" },
-      { "type": "C", "status": "secondary", "note": "Some areas" }
+      {
+        "type": "D",
+        "status": "primary",
+        "note": "British colonial legacy"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Some areas"
+      }
     ],
-    "voltage": { "standard": 127, "range": [127, 230] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 127,
+      "range": [
+        127,
+        230
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type D primary. Complex voltage system varies by region."
   },
   "li": {
     "name": "Liechtenstein",
-    "slug": "liechtenstein-electric-plug-types",
+    "slug": "liechtenstein-electric-plug-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "J", "status": "primary", "note": "Swiss standard" },
-      { "type": "C", "status": "secondary", "note": "Works in Type J sockets" }
+      {
+        "type": "J",
+        "status": "primary",
+        "note": "Swiss standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Works in Type J sockets"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type J following Swiss standard."
   },
   "lt": {
     "name": "Lithuania",
-    "slug": "lithuania-electric-plug-types",
+    "slug": "lithuania-electric-plug-types-will-you-need-an-adapter-in-vilnius-2",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following EU integration."
   },
   "lu": {
     "name": "Luxembourg",
-    "slug": "luxembourg-electric-plug-types",
+    "slug": "luxembourg-electric-plug-types-will-you-need-an-adapter-in-luxembourg",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates. Type C compatible."
   },
   "mo": {
     "name": "Macao",
     "slug": "macao-electric-plug-types",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British influence maintained" },
-      { "type": "D", "status": "secondary", "note": "Some older areas" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British influence maintained"
+      },
+      {
+        "type": "D",
+        "status": "secondary",
+        "note": "Some older areas"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G primary, British colonial influence maintained despite Chinese administration."
   },
   "mg": {
     "name": "Madagascar",
-    "slug": "madagascar-electric-plug-types",
+    "slug": "madagascar-electric-plug-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" },
-      { "type": "E", "status": "secondary", "note": "French influence" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "E",
+        "status": "secondary",
+        "note": "French influence"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C dominates with some French Type E influence."
   },
   "mw": {
     "name": "Malawi",
-    "slug": "malawi-electric-plug-types",
+    "slug": "malawi-electric-plug-types-which-adapter-will-you-need-in-malawi",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British colonial legacy."
   },
   "my": {
     "name": "Malaysia",
-    "slug": "malaysia-electric-plug-types",
+    "slug": "malaysia-electric-plug-types-will-you-need-an-adapter-in-kuala-lumpur",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "100% usage" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "100% usage"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British colonial standard maintained."
   },
   "mv": {
     "name": "Maldives",
-    "slug": "maldives-electric-plug-types",
+    "slug": "maldives-electric-plug-types-will-you-need-an-adapter-for-maldives",
     "plugTypes": [
-      { "type": "D", "status": "primary", "note": "British influence" },
-      { "type": "G", "status": "secondary", "note": "Tourist resorts" }
+      {
+        "type": "D",
+        "status": "primary",
+        "note": "British influence"
+      },
+      {
+        "type": "G",
+        "status": "secondary",
+        "note": "Tourist resorts"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type D primary, Type G in tourist areas."
   },
   "ml": {
     "name": "Mali",
-    "slug": "mali-electric-plug-types",
+    "slug": "mali-electric-plug-types-which-adapter-will-you-need-in-mali",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French colonial legacy" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French colonial legacy"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E dominates due to French colonial influence."
   },
   "mt": {
     "name": "Malta",
-    "slug": "malta-electric-plug-types",
+    "slug": "malta-electric-plug-types-will-you-need-an-adapter-for-valletta",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British colonial legacy maintained."
   },
   "mh": {
     "name": "Marshall Islands",
-    "slug": "marshall-islands-electric-plug-types",
+    "slug": "marshall-islands-electric-plug-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US administration" },
-      { "type": "A", "status": "secondary", "note": "Compatible" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US administration"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible"
+      }
     ],
-    "voltage": { "standard": 120, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 120,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B primary following US administration."
   },
   "mr": {
     "name": "Mauritania",
-    "slug": "mauritania-electric-plug-types",
+    "slug": "mauritania-electric-plug-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C is the primary standard."
   },
   "mu": {
     "name": "Mauritius",
-    "slug": "mauritius-electric-plug-types",
+    "slug": "mauritius-electric-plug-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" },
-      { "type": "C", "status": "secondary", "note": "Some universal sockets" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Some universal sockets"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G dominates, British colonial legacy."
   },
   "mx": {
     "name": "Mexico",
-    "slug": "mexico-electric-plug-types-will-you-need-an-adapter-for-mexico",
+    "slug": "mexico-electric-plug-types-will-you-need-an-adapter-in-mexico",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "Modern buildings, hotels, offices" },
-      { "type": "A", "status": "secondary", "note": "Still common, especially residential" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "Modern buildings, hotels, offices"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Still common, especially residential"
+      }
     ],
-    "voltage": { "standard": 127, "range": [110, 127] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 127,
+      "range": [
+        110,
+        127
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B is primary in modern buildings. Type A still common in residential areas."
   },
   "fm": {
     "name": "Micronesia",
-    "slug": "micronesia-electric-plug-types",
+    "slug": "micronesia-electric-plug-types-will-you-need-an-adapter-on-the-islands",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US administration" },
-      { "type": "A", "status": "secondary", "note": "Compatible" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US administration"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible"
+      }
     ],
-    "voltage": { "standard": 120, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 120,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B primary following US administration."
   },
   "md": {
     "name": "Moldova",
-    "slug": "moldova-electric-plug-types",
+    "slug": "moldova-electric-plug-types-will-you-need-an-adapter-for-moldova",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following European integration."
   },
   "mc": {
     "name": "Monaco",
-    "slug": "monaco-electric-plug-types",
+    "slug": "monaco-electric-plug-types-will-you-need-an-adapter-in-monaco",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E following French standard."
   },
   "mn": {
     "name": "Mongolia",
-    "slug": "mongolia-electric-plug-types",
+    "slug": "mongolia-electric-plug-types-will-you-need-an-adapter-in-the-steppe",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" },
-      { "type": "E", "status": "secondary", "note": "Some areas" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "E",
+        "status": "secondary",
+        "note": "Some areas"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C primary with some Type E variation."
   },
   "me": {
     "name": "Montenegro",
-    "slug": "montenegro-electric-plug-types",
+    "slug": "montenegro-electric-plug-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following European integration."
   },
   "ma": {
     "name": "Morocco",
-    "slug": "morocco-electric-plug-types",
+    "slug": "morocco-electric-plug-types-will-you-need-an-adapter-in-morocco",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "Official standard (French legacy)" },
-      { "type": "C", "status": "secondary", "note": "Compatible, widespread" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "Official standard (French legacy)"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible, widespread"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E is official standard due to French colonial influence. Type C compatible."
   },
   "mz": {
     "name": "Mozambique",
-    "slug": "mozambique-electric-plug-types",
+    "slug": "mozambique-electric-plug-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" },
-      { "type": "F", "status": "secondary", "note": "Some modern areas" },
-      { "type": "M", "status": "secondary", "note": "South African influence" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "F",
+        "status": "secondary",
+        "note": "Some modern areas"
+      },
+      {
+        "type": "M",
+        "status": "secondary",
+        "note": "South African influence"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C primary with mixed South African and European influence."
   },
   "mm": {
     "name": "Myanmar",
-    "slug": "myanmar-electric-plug-types",
+    "slug": "myanmar-electric-plug-types-will-you-need-an-adapter-for-myanmar",
     "plugTypes": [
-      { "type": "D", "status": "primary", "note": "British colonial legacy" },
-      { "type": "G", "status": "secondary", "note": "Modern buildings" },
-      { "type": "C", "status": "secondary", "note": "Some areas" }
+      {
+        "type": "D",
+        "status": "primary",
+        "note": "British colonial legacy"
+      },
+      {
+        "type": "G",
+        "status": "secondary",
+        "note": "Modern buildings"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Some areas"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type D primary due to British colonial influence."
   },
   "na": {
     "name": "Namibia",
-    "slug": "namibia-electric-plug-types",
+    "slug": "namibia-electric-plug-types-which-adapter-will-you-need",
     "plugTypes": [
-      { "type": "M", "status": "primary", "note": "South African standard" }
+      {
+        "type": "M",
+        "status": "primary",
+        "note": "South African standard"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type M exclusively, following South African standard."
   },
   "nr": {
     "name": "Nauru",
-    "slug": "nauru-electric-plug-types",
+    "slug": "nauru-electric-plug-types-which-adapter-will-you-need-in-nauru",
     "plugTypes": [
-      { "type": "I", "status": "primary", "note": "Australian administration" }
+      {
+        "type": "I",
+        "status": "primary",
+        "note": "Australian administration"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type I following Australian administration."
   },
   "np": {
     "name": "Nepal",
-    "slug": "nepal-electric-plug-types",
+    "slug": "nepal-electric-plug-types-will-you-need-an-adapter-in-nepal",
     "plugTypes": [
-      { "type": "D", "status": "primary", "note": "Indian influence" },
-      { "type": "C", "status": "secondary", "note": "Some modern buildings" }
+      {
+        "type": "D",
+        "status": "primary",
+        "note": "Indian influence"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Some modern buildings"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type D dominates following Indian influence."
   },
   "nl": {
     "name": "Netherlands",
-    "slug": "netherlands-electric-plug-types",
+    "slug": "netherlands-electric-plug-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "Schuko standard, 95%+ of installations" },
-      { "type": "C", "status": "secondary", "note": "Works in Type F sockets" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "Schuko standard, 95%+ of installations"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Works in Type F sockets"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F (Schuko) dominates. Type C compatible for low-power devices."
   },
   "nz": {
     "name": "New Zealand",
-    "slug": "new-zealand-electric-plug-types",
+    "slug": "new-zealand-electric-plug-types-which-adapter-should-you-get",
     "plugTypes": [
-      { "type": "I", "status": "primary", "note": "100% usage, AS/NZS 3112 standard" }
+      {
+        "type": "I",
+        "status": "primary",
+        "note": "100% usage, AS/NZS 3112 standard"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type I exclusively. Mandatory safety shutters in all outlets."
   },
   "ni": {
     "name": "Nicaragua",
-    "slug": "nicaragua-electric-plug-types",
+    "slug": "nicaragua-electric-plug-types-will-you-need-an-adapter-in-nicaragua",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US standard" },
-      { "type": "A", "status": "secondary", "note": "Compatible, still common" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US standard"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible, still common"
+      }
     ],
-    "voltage": { "standard": 120, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 120,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B is primary following US standard."
   },
   "ne": {
     "name": "Niger",
-    "slug": "niger-electric-plug-types",
+    "slug": "niger-electric-plug-types-will-you-need-an-adapter-for-niger",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French colonial legacy" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French colonial legacy"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E dominates due to French colonial influence."
   },
   "ng": {
     "name": "Nigeria",
-    "slug": "nigeria-electric-plug-types",
+    "slug": "nigeria-electric-plug-types-which-adapter-will-you-need",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "Official standard" },
-      { "type": "D", "status": "secondary", "note": "Some older areas" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "Official standard"
+      },
+      {
+        "type": "D",
+        "status": "secondary",
+        "note": "Some older areas"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G is official standard due to British colonial influence."
   },
   "nu": {
     "name": "Niue",
     "slug": "niue-electric-plug-types",
     "plugTypes": [
-      { "type": "I", "status": "primary", "note": "New Zealand administration" }
+      {
+        "type": "I",
+        "status": "primary",
+        "note": "New Zealand administration"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type I following New Zealand administration."
   },
   "nf": {
     "name": "Norfolk Island",
     "slug": "norfolk-island-electric-plug-types",
     "plugTypes": [
-      { "type": "I", "status": "primary", "note": "Australian standard" }
+      {
+        "type": "I",
+        "status": "primary",
+        "note": "Australian standard"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type I following Australian administration."
   },
   "mk": {
     "name": "North Macedonia",
-    "slug": "north-macedonia-electric-plug-types",
+    "slug": "north-macedonia-electric-plug-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following European integration."
   },
   "mp": {
     "name": "Northern Mariana Islands",
     "slug": "northern-mariana-islands-electric-plug-types",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US administration" },
-      { "type": "A", "status": "secondary", "note": "Compatible" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US administration"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible"
+      }
     ],
-    "voltage": { "standard": 120, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 120,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B primary following US administration."
   },
   "no": {
     "name": "Norway",
-    "slug": "norway-electric-plug-types",
+    "slug": "norway-electric-plug-types-will-you-need-an-adapter-for-oslo",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard, 95%+ of installations" },
-      { "type": "C", "status": "secondary", "note": "Works in Type F sockets" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard, 95%+ of installations"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Works in Type F sockets"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates. Type C compatible for low-power devices."
   },
   "om": {
     "name": "Oman",
-    "slug": "oman-electric-plug-types",
+    "slug": "oman-electric-plug-types-which-adapter-will-you-need",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British influence" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British influence"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British influence."
   },
   "pk": {
     "name": "Pakistan",
-    "slug": "pakistan-electric-plug-types",
+    "slug": "pakistan-electric-plug-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "D", "status": "primary", "note": "British colonial legacy" },
-      { "type": "G", "status": "secondary", "note": "Modern buildings and urban areas" }
+      {
+        "type": "D",
+        "status": "primary",
+        "note": "British colonial legacy"
+      },
+      {
+        "type": "G",
+        "status": "secondary",
+        "note": "Modern buildings and urban areas"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type D primary due to British colonial influence. Type G growing in urban areas."
   },
   "pw": {
     "name": "Palau",
-    "slug": "palau-electric-plug-types",
+    "slug": "palau-electric-plug-types-will-you-need-an-adapter-for-palau",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US administration" },
-      { "type": "A", "status": "secondary", "note": "Compatible" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US administration"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible"
+      }
     ],
-    "voltage": { "standard": 120, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 120,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B primary following US administration."
   },
   "ps": {
     "name": "Palestine",
     "slug": "palestine-electric-plug-types",
     "plugTypes": [
-      { "type": "H", "status": "primary", "note": "Israeli infrastructure" },
-      { "type": "C", "status": "secondary", "note": "Some areas" }
+      {
+        "type": "H",
+        "status": "primary",
+        "note": "Israeli infrastructure"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Some areas"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type H dominates due to Israeli electrical infrastructure."
   },
   "pa": {
     "name": "Panama",
-    "slug": "panama-electric-plug-types",
+    "slug": "panama-electric-plug-types-will-you-need-an-adapter-for-panama",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US standard" },
-      { "type": "A", "status": "secondary", "note": "Compatible, still common" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US standard"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible, still common"
+      }
     ],
-    "voltage": { "standard": 120, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 120,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B is primary following US standard."
   },
   "pg": {
     "name": "Papua New Guinea",
-    "slug": "papua-new-guinea-electric-plug-types",
+    "slug": "papua-new-guinea-electric-plug-types-which-adapter-will-you-need",
     "plugTypes": [
-      { "type": "I", "status": "primary", "note": "Australian standard" }
+      {
+        "type": "I",
+        "status": "primary",
+        "note": "Australian standard"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type I exclusively, Australian colonial legacy."
   },
   "py": {
     "name": "Paraguay",
-    "slug": "paraguay-electric-plug-types",
+    "slug": "paraguay-electric-plug-types-which-adapter-will-you-need",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common standard" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common standard"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C dominates."
   },
   "pe": {
     "name": "Peru",
-    "slug": "peru-electric-plug-types",
+    "slug": "peru-electric-plug-types-will-you-need-an-adapter-for-peru",
     "plugTypes": [
-      { "type": "A", "status": "primary", "note": "Dominant in Peru" },
-      { "type": "B", "status": "secondary", "note": "Some modern buildings" },
-      { "type": "C", "status": "secondary", "note": "Some areas" }
+      {
+        "type": "A",
+        "status": "primary",
+        "note": "Dominant in Peru"
+      },
+      {
+        "type": "B",
+        "status": "secondary",
+        "note": "Some modern buildings"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Some areas"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type A dominates despite higher voltage. Some Type B in modern construction."
   },
   "ph": {
     "name": "Philippines",
-    "slug": "philippines-electric-plug-types",
+    "slug": "philippines-electric-plug-types-will-you-need-an-adapter-for-philippines",
     "plugTypes": [
-      { "type": "A", "status": "primary", "note": "60%+ usage" },
-      { "type": "B", "status": "secondary", "note": "Growing in modern buildings" },
-      { "type": "C", "status": "secondary", "note": "Some areas, tourist accommodations" }
+      {
+        "type": "A",
+        "status": "primary",
+        "note": "60%+ usage"
+      },
+      {
+        "type": "B",
+        "status": "secondary",
+        "note": "Growing in modern buildings"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Some areas, tourist accommodations"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type A dominates despite higher voltage. Type B increasing in modern buildings."
   },
   "pn": {
     "name": "Pitcairn Islands",
     "slug": "pitcairn-islands-electric-plug-types",
     "plugTypes": [
-      { "type": "I", "status": "primary", "note": "New Zealand standard" }
+      {
+        "type": "I",
+        "status": "primary",
+        "note": "New Zealand standard"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type I following New Zealand administration."
   },
   "pl": {
     "name": "Poland",
-    "slug": "poland-electric-plug-types",
+    "slug": "poland-electric-plug-types-will-you-need-an-adapter-in-poland",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following EU integration."
   },
   "pt": {
     "name": "Portugal",
-    "slug": "portugal-electric-plug-types-travel-adapter-for-portugal",
+    "slug": "portugal-electric-plug-types-will-you-need-adapter-in-lisbon-porto",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "Schuko standard, modern buildings" },
-      { "type": "C", "status": "secondary", "note": "Legacy but still common, works in Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "Schuko standard, modern buildings"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Legacy but still common, works in Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates in modern construction. Type C legacy but compatible."
   },
   "pr": {
     "name": "Puerto Rico",
     "slug": "puerto-rico-electric-plug-types",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US standard" },
-      { "type": "A", "status": "secondary", "note": "Compatible" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US standard"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible"
+      }
     ],
-    "voltage": { "standard": 120, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 120,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B primary following US standard."
   },
   "qa": {
     "name": "Qatar",
-    "slug": "qatar-electric-plug-types",
+    "slug": "qatar-electric-plug-types-which-adapter-will-you-need-in-qatar",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British influence" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British influence"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British influence."
   },
   "ro": {
     "name": "Romania",
-    "slug": "romania-electric-plug-types",
+    "slug": "romania-electric-plug-types-will-you-need-an-adapter-in-romania",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following EU integration."
   },
   "ru": {
     "name": "Russia",
-    "slug": "russia-electric-plug-types",
+    "slug": "russia-electric-plug-types-will-you-need-an-adapter-in-russia",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following European standardization."
   },
   "rw": {
     "name": "Rwanda",
-    "slug": "rwanda-electric-plug-types",
+    "slug": "rwanda-electric-plug-types-will-you-need-to-bring-an-adapter-with-you",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" },
-      { "type": "J", "status": "secondary", "note": "Some areas" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "J",
+        "status": "secondary",
+        "note": "Some areas"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C primary with some Type J variation."
   },
   "bl": {
     "name": "Saint Barthélemy",
     "slug": "saint-barthelemy-electric-plug-types",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type E following French administration."
   },
   "sh": {
     "name": "Saint Helena",
     "slug": "saint-helena-electric-plug-types",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British territory" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British territory"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British overseas territory."
   },
   "kn": {
     "name": "Saint Kitts and Nevis",
-    "slug": "saint-kitts-and-nevis-electric-plug-types",
+    "slug": "saint-kitts-and-nevis-electric-plug-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" },
-      { "type": "D", "status": "secondary", "note": "Some older installations" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      },
+      {
+        "type": "D",
+        "status": "secondary",
+        "note": "Some older installations"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type G primary, British colonial legacy."
   },
   "lc": {
     "name": "Saint Lucia",
-    "slug": "saint-lucia-electric-plug-types",
+    "slug": "saint-lucia-electric-plug-types-which-adapter-will-you-need",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British colonial legacy."
   },
   "mf": {
     "name": "Saint Martin",
     "slug": "saint-martin-electric-plug-types",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type E following French administration."
   },
   "pm": {
     "name": "Saint Pierre and Miquelon",
     "slug": "saint-pierre-and-miquelon-electric-plug-types",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French standard" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French standard"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E exclusively, French overseas territory."
   },
   "vc": {
     "name": "Saint Vincent and the Grenadines",
-    "slug": "saint-vincent-and-the-grenadines-electric-plug-types",
+    "slug": "saint-vincent-and-the-grenadines-electric-plug-types-adapter-a-must",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" },
-      { "type": "A", "status": "secondary", "note": "Some areas" },
-      { "type": "B", "status": "secondary", "note": "Some modern buildings" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Some areas"
+      },
+      {
+        "type": "B",
+        "status": "secondary",
+        "note": "Some modern buildings"
+      }
     ],
-    "voltage": { "standard": 230, "range": [110, 230] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        110,
+        230
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G primary, mixed voltage system."
   },
   "ws": {
     "name": "Samoa",
-    "slug": "samoa-electric-plug-types",
+    "slug": "samoa-electric-plug-types-will-you-need-an-adapter-for-samoa",
     "plugTypes": [
-      { "type": "I", "status": "primary", "note": "New Zealand/Australian influence" }
+      {
+        "type": "I",
+        "status": "primary",
+        "note": "New Zealand/Australian influence"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type I exclusively, New Zealand/Australian influence."
   },
   "sm": {
     "name": "San Marino",
-    "slug": "san-marino-electric-plug-types",
+    "slug": "san-marino-electric-plug-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "Italian/European standard" },
-      { "type": "L", "status": "secondary", "note": "Italian influence" },
-      { "type": "C", "status": "secondary", "note": "Compatible" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "Italian/European standard"
+      },
+      {
+        "type": "L",
+        "status": "secondary",
+        "note": "Italian influence"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F primary, following Italian and European standards."
   },
   "st": {
     "name": "São Tomé and Príncipe",
-    "slug": "sao-tome-and-principe-electric-plug-types",
+    "slug": "sao-tome-and-principe-electric-plug-types-which-adapter-will-you-need",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" },
-      { "type": "F", "status": "secondary", "note": "Some modern areas" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "F",
+        "status": "secondary",
+        "note": "Some modern areas"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C primary with some Type F modernization."
   },
   "sa": {
     "name": "Saudi Arabia",
-    "slug": "saudi-arabia-electric-plug-types",
+    "slug": "saudi-arabia-electric-plug-types-which-adapter-will-you-need",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British influence" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British influence"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type G exclusively, British technical influence."
   },
   "sn": {
     "name": "Senegal",
-    "slug": "senegal-electric-plug-types",
+    "slug": "senegal-electric-plug-types-which-adapter-will-you-need-in-dakar",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French colonial legacy" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French colonial legacy"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E dominates due to French colonial influence."
   },
   "rs": {
     "name": "Serbia",
-    "slug": "serbia-electric-plug-types",
+    "slug": "serbia-electric-plug-types-which-adapter-will-you-need-in-belgrade",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following European integration."
   },
   "sc": {
     "name": "Seychelles",
-    "slug": "seychelles-electric-plug-types",
+    "slug": "seychelles-electric-plug-types-which-adapter-will-you-need-with-you",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British colonial legacy."
   },
   "sl": {
     "name": "Sierra Leone",
-    "slug": "sierra-leone-electric-plug-types",
+    "slug": "sierra-leone-electric-plug-types-which-adapter-will-you-need-with-you",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" },
-      { "type": "D", "status": "secondary", "note": "Some older installations" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      },
+      {
+        "type": "D",
+        "status": "secondary",
+        "note": "Some older installations"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G dominates due to British colonial influence."
   },
   "sg": {
     "name": "Singapore",
-    "slug": "singapore-electric-plug-types",
+    "slug": "singapore-electric-plug-types-will-you-need-an-adapter-for-singapore",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "100% usage" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "100% usage"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British colonial standard maintained."
   },
   "sx": {
     "name": "Sint Maarten",
     "slug": "sint-maarten-electric-plug-types",
     "plugTypes": [
-      { "type": "A", "status": "primary", "note": "Dutch Caribbean standard" },
-      { "type": "B", "status": "secondary", "note": "Some modern buildings" }
+      {
+        "type": "A",
+        "status": "primary",
+        "note": "Dutch Caribbean standard"
+      },
+      {
+        "type": "B",
+        "status": "secondary",
+        "note": "Some modern buildings"
+      }
     ],
-    "voltage": { "standard": 110, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 110,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type A primary in Dutch Caribbean territories."
   },
   "sk": {
     "name": "Slovakia",
-    "slug": "slovakia-electric-plug-types",
+    "slug": "slovakia-electric-plug-types-will-you-need-an-adapter-for-bratislava",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following EU integration."
   },
   "si": {
     "name": "Slovenia",
-    "slug": "slovenia-electric-plug-types",
+    "slug": "slovenia-electric-plug-types-will-you-need-an-adapter-for-slovenia",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following EU integration."
   },
   "sb": {
     "name": "Solomon Islands",
-    "slug": "solomon-islands-electric-plug-types",
+    "slug": "solomon-islands-electric-plug-types-will-you-need-an-adapter-with-you",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" },
-      { "type": "I", "status": "secondary", "note": "Australian influence" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      },
+      {
+        "type": "I",
+        "status": "secondary",
+        "note": "Australian influence"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G primary due to British colonial influence."
   },
   "so": {
     "name": "Somalia",
-    "slug": "somalia-electric-plug-types",
+    "slug": "somalia-electric-plug-types-which-adapter-will-you-need-in-somalia",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C primary. Limited electrical infrastructure."
   },
   "za": {
     "name": "South Africa",
-    "slug": "south-africa-electric-plug-types",
+    "slug": "south-africa-electric-plug-types-which-adapter-will-you-need-for-south-africa",
     "plugTypes": [
-      { "type": "M", "status": "primary", "note": "80%+ usage, official standard" },
-      { "type": "C", "status": "secondary", "note": "Universal sockets, tourist areas" },
-      { "type": "N", "status": "secondary", "note": "Some modern buildings" }
+      {
+        "type": "M",
+        "status": "primary",
+        "note": "80%+ usage, official standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Universal sockets, tourist areas"
+      },
+      {
+        "type": "N",
+        "status": "secondary",
+        "note": "Some modern buildings"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type M is the official standard and dominates. Type C in universal sockets for tourists."
   },
   "gs": {
     "name": "South Georgia",
     "slug": "south-georgia-electric-plug-types",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British territory" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British territory"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British overseas territory."
   },
   "ss": {
     "name": "South Sudan",
     "slug": "south-sudan-electric-plug-types",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" },
-      { "type": "D", "status": "secondary", "note": "Some areas" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "D",
+        "status": "secondary",
+        "note": "Some areas"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C primary. Limited electrical infrastructure."
   },
   "es": {
     "name": "Spain",
-    "slug": "spain-electric-plug-types",
+    "slug": "spain-electric-plug-types-will-you-need-an-adapter-for-spain",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "Schuko standard, modern buildings" },
-      { "type": "C", "status": "secondary", "note": "Legacy but still common, works in Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "Schuko standard, modern buildings"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Legacy but still common, works in Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates in modern construction. Type C legacy but compatible."
   },
   "lk": {
     "name": "Sri Lanka",
-    "slug": "sri-lanka-electric-plug-types",
+    "slug": "sri-lanka-electric-plug-types-will-you-need-an-adapter-in-sri-lanka",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" },
-      { "type": "D", "status": "secondary", "note": "Some older installations" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      },
+      {
+        "type": "D",
+        "status": "secondary",
+        "note": "Some older installations"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G dominates due to British colonial influence."
   },
   "sd": {
     "name": "Sudan",
-    "slug": "sudan-electric-plug-types",
+    "slug": "sudan-electric-plug-types-which-adapter-will-you-need-in-sudan",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" },
-      { "type": "D", "status": "secondary", "note": "British influence" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "D",
+        "status": "secondary",
+        "note": "British influence"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C primary with some British Type D influence."
   },
   "sr": {
     "name": "Suriname",
-    "slug": "suriname-electric-plug-types",
+    "slug": "suriname-electric-plug-types-will-you-need-an-adapter-for-suriname",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Dutch colonial legacy" },
-      { "type": "F", "status": "secondary", "note": "Some modern areas" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Dutch colonial legacy"
+      },
+      {
+        "type": "F",
+        "status": "secondary",
+        "note": "Some modern areas"
+      }
     ],
-    "voltage": { "standard": 127, "range": [110, 127] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 127,
+      "range": [
+        110,
+        127
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type C primary despite low voltage. Dutch colonial influence."
   },
   "sj": {
     "name": "Svalbard",
     "slug": "svalbard-electric-plug-types",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "Norwegian standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "Norwegian standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F following Norwegian administration."
   },
   "se": {
     "name": "Sweden",
-    "slug": "sweden-electric-plug-types",
+    "slug": "sweden-electric-plug-types-will-you-need-an-adapter-for-sweden",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard, 95%+ of installations" },
-      { "type": "C", "status": "secondary", "note": "Works in Type F sockets" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard, 95%+ of installations"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Works in Type F sockets"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates. Type C compatible for low-power devices."
   },
   "ch": {
     "name": "Switzerland",
-    "slug": "switzerland-electric-plug-types",
+    "slug": "switzerland-electric-plug-types-will-you-need-an-adapter-with-you",
     "plugTypes": [
-      { "type": "J", "status": "primary", "note": "Swiss standard, 95%+ exclusive usage" },
-      { "type": "C", "status": "secondary", "note": "Works in Type J sockets for low power" }
+      {
+        "type": "J",
+        "status": "primary",
+        "note": "Swiss standard, 95%+ exclusive usage"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Works in Type J sockets for low power"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type J is uniquely Swiss standard. Type C plugs work in Type J sockets."
   },
   "sy": {
     "name": "Syria",
-    "slug": "syria-electric-plug-types",
+    "slug": "syria-electric-plug-types-which-adapter-will-you-need-in-syria",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" },
-      { "type": "E", "status": "secondary", "note": "French influence" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "E",
+        "status": "secondary",
+        "note": "French influence"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C primary with some French Type E influence."
   },
   "tw": {
     "name": "Taiwan",
-    "slug": "taiwan-electric-plug-types",
+    "slug": "taiwan-electric-plug-types-which-adaptor-you-need-for-taiwan",
     "plugTypes": [
-      { "type": "A", "status": "primary", "note": "Most common standard" },
-      { "type": "B", "status": "secondary", "note": "Grounded outlets, modern buildings" }
+      {
+        "type": "A",
+        "status": "primary",
+        "note": "Most common standard"
+      },
+      {
+        "type": "B",
+        "status": "secondary",
+        "note": "Grounded outlets, modern buildings"
+      }
     ],
-    "voltage": { "standard": 110, "range": [110, 110] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 110,
+      "range": [
+        110,
+        110
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type A dominates. Type B for grounded appliances in modern buildings."
   },
   "tj": {
     "name": "Tajikistan",
-    "slug": "tajikistan-electric-plug-types",
+    "slug": "tajikistan-electric-plug-types-which-adapter-will-you-need-in-tajikistan",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" },
-      { "type": "F", "status": "secondary", "note": "Some modern areas" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "F",
+        "status": "secondary",
+        "note": "Some modern areas"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C primary with gradual Type F modernization."
   },
   "tz": {
     "name": "Tanzania",
-    "slug": "tanzania-electric-plug-types",
+    "slug": "tanzania-electric-plug-types-which-adapter-will-you-need-in-tanzania",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" },
-      { "type": "D", "status": "secondary", "note": "Some older installations" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      },
+      {
+        "type": "D",
+        "status": "secondary",
+        "note": "Some older installations"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G dominates due to British colonial influence."
   },
   "th": {
     "name": "Thailand",
-    "slug": "thailand-electric-plug-types-which-type-of-travel-adapter-to-pack",
+    "slug": "thailand-electric-plug-type-will-you-need-an-adapter-for-thailand",
     "plugTypes": [
-      { "type": "A", "status": "primary", "note": "Most common, especially in hotels and tourist areas" },
-      { "type": "B", "status": "primary", "note": "Standard with grounding, widely used" },
-      { "type": "C", "status": "secondary", "note": "European-style outlets in some buildings" },
-      { "type": "O", "status": "secondary", "note": "Thai-specific standard, less common in practice" }
+      {
+        "type": "A",
+        "status": "primary",
+        "note": "Most common, especially in hotels and tourist areas"
+      },
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "Standard with grounding, widely used"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "European-style outlets in some buildings"
+      },
+      {
+        "type": "O",
+        "status": "secondary",
+        "note": "Thai-specific standard, less common in practice"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Despite Type O being the 'official' Thai standard, Types A and B (American-style) are actually dominant in practice, especially in hotels, malls, and tourist areas. Type C also common."
   },
   "tl": {
     "name": "Timor-Leste",
-    "slug": "timor-leste-electric-plug-types",
+    "slug": "east-timor-electric-plug-types-do-you-need-an-adapter",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Portuguese legacy" },
-      { "type": "E", "status": "secondary", "note": "Some areas" },
-      { "type": "F", "status": "secondary", "note": "Modern buildings" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Portuguese legacy"
+      },
+      {
+        "type": "E",
+        "status": "secondary",
+        "note": "Some areas"
+      },
+      {
+        "type": "F",
+        "status": "secondary",
+        "note": "Modern buildings"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C primary due to Portuguese colonial influence."
   },
   "tg": {
     "name": "Togo",
-    "slug": "togo-electric-plug-types",
+    "slug": "togo-electric-plug-types-which-adapter-will-you-need-for-togo",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C is the primary standard."
   },
   "tk": {
     "name": "Tokelau",
     "slug": "tokelau-electric-plug-types",
     "plugTypes": [
-      { "type": "I", "status": "primary", "note": "New Zealand administration" }
+      {
+        "type": "I",
+        "status": "primary",
+        "note": "New Zealand administration"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type I following New Zealand administration."
   },
   "to": {
     "name": "Tonga",
-    "slug": "tonga-electric-plug-types",
+    "slug": "tongo-electric-plug-types-which-adapter-will-you-need-for-tongo",
     "plugTypes": [
-      { "type": "I", "status": "primary", "note": "Australian/New Zealand influence" }
+      {
+        "type": "I",
+        "status": "primary",
+        "note": "Australian/New Zealand influence"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type I following Australian/New Zealand influence."
   },
   "tt": {
     "name": "Trinidad and Tobago",
-    "slug": "trinidad-and-tobago-electric-plug-types",
+    "slug": "trinidad-and-tobago-electric-plug-types-will-you-need-an-adapter",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US standard" },
-      { "type": "A", "status": "secondary", "note": "Compatible, still common" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US standard"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible, still common"
+      }
     ],
-    "voltage": { "standard": 115, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 115,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B is primary following US standard."
   },
   "tn": {
     "name": "Tunisia",
-    "slug": "tunisia-electric-plug-types",
+    "slug": "tunisia-electric-plug-types-which-adapter-will-you-need-for-tunisia",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French colonial legacy" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French colonial legacy"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E dominates due to French colonial influence."
   },
   "tr": {
     "name": "Turkey",
-    "slug": "turkey-electric-plug-types-outlets-in-istanbul-and-antalya",
+    "slug": "turkey-electric-plug-types-will-you-need-an-adapter-for-turkey",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard dominates" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F, common" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard dominates"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F, common"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F (Schuko) is primary standard. Type C compatible and common."
   },
   "tm": {
     "name": "Turkmenistan",
-    "slug": "turkmenistan-electric-plug-types",
+    "slug": "turkmenistan-electric-plug-types-which-adapter-will-you-need",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US influence" },
-      { "type": "F", "status": "secondary", "note": "European influence" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US influence"
+      },
+      {
+        "type": "F",
+        "status": "secondary",
+        "note": "European influence"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type B primary despite higher voltage. Mixed US and European influence."
   },
   "tc": {
     "name": "Turks and Caicos Islands",
     "slug": "turks-and-caicos-islands-electric-plug-types",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US standard" },
-      { "type": "A", "status": "secondary", "note": "Compatible" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US standard"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible"
+      }
     ],
-    "voltage": { "standard": 120, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 120,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B primary following US standard."
   },
   "tv": {
     "name": "Tuvalu",
-    "slug": "tuvalu-electric-plug-types",
+    "slug": "tuvalu-electric-plug-types-which-adapter-will-you-need-for-tuvalu",
     "plugTypes": [
-      { "type": "I", "status": "primary", "note": "Australian influence" }
+      {
+        "type": "I",
+        "status": "primary",
+        "note": "Australian influence"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type I following Australian influence."
   },
   "ug": {
     "name": "Uganda",
-    "slug": "uganda-electric-plug-types",
+    "slug": "uganda-electric-plug-types-which-adapter-do-you-need-in-uganda",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British colonial legacy."
   },
   "ua": {
     "name": "Ukraine",
-    "slug": "ukraine-electric-plug-types",
+    "slug": "ukraine-electric-plug-types-what-kind-of-adapter-do-you-need",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "European standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type F" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "European standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type F"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F dominates following European integration."
   },
   "ae": {
     "name": "United Arab Emirates",
-    "slug": "united-arab-emirates-electric-plug-types",
+    "slug": "united-arab-emirates-electric-plug-types-which-adapter-for-uae",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British influence" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British influence"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively, British technical influence."
   },
   "gb": {
     "name": "United Kingdom",
     "slug": "united-kingdom-electric-plug-types-which-adapter-do-you-need-in-uk",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "100% usage, no alternatives" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "100% usage, no alternatives"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G exclusively. Most secure plug system globally, mandatory shutters."
   },
   "us": {
     "name": "United States",
-    "slug": "united-states-electric-plug-types",
+    "slug": "usa-electric-plug-types-will-you-need-an-adapter-traveling-to-the-us",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "Required in all new construction since 1965" },
-      { "type": "A", "status": "secondary", "note": "Legacy in older buildings, still functional" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "Required in all new construction since 1965"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Legacy in older buildings, still functional"
+      }
     ],
-    "voltage": { "standard": 120, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 120,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B required in new construction for safety. Type A plugs work in Type B sockets."
   },
   "uy": {
     "name": "Uruguay",
-    "slug": "uruguay-electric-plug-types",
+    "slug": "uruguay-electric-plug-types-which-adapter-will-you-need-in-uruguay",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common standard" },
-      { "type": "F", "status": "secondary", "note": "Some modern buildings" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common standard"
+      },
+      {
+        "type": "F",
+        "status": "secondary",
+        "note": "Some modern buildings"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C dominates. Some Type F in modern construction."
   },
   "uz": {
     "name": "Uzbekistan",
-    "slug": "uzbekistan-electric-plug-types",
+    "slug": "uzbekistan-electric-plug-types-which-adapter-for-uzbekistan",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" },
-      { "type": "F", "status": "secondary", "note": "Some modern areas" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "F",
+        "status": "secondary",
+        "note": "Some modern areas"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C primary with gradual Type F modernization."
   },
   "vu": {
     "name": "Vanuatu",
-    "slug": "vanuatu-electric-plug-types",
+    "slug": "vanuatu-electric-plug-types-which-adapter-do-you-need-for-vanuatu",
     "plugTypes": [
-      { "type": "I", "status": "primary", "note": "Australian standard" }
+      {
+        "type": "I",
+        "status": "primary",
+        "note": "Australian standard"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type I exclusively, Australian influence."
   },
   "va": {
     "name": "Vatican City",
-    "slug": "vatican-city-electric-plug-types",
+    "slug": "vatican-city-electric-plug-types-do-you-need-an-adapter-for-vatican-city",
     "plugTypes": [
-      { "type": "F", "status": "primary", "note": "Italian/European standard" },
-      { "type": "L", "status": "secondary", "note": "Italian standard" },
-      { "type": "C", "status": "secondary", "note": "Compatible" }
+      {
+        "type": "F",
+        "status": "primary",
+        "note": "Italian/European standard"
+      },
+      {
+        "type": "L",
+        "status": "secondary",
+        "note": "Italian standard"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type F primary, following Italian and European standards."
   },
   "ve": {
     "name": "Venezuela",
-    "slug": "venezuela-electric-plug-types",
+    "slug": "venezuela-electric-plug-types-will-you-need-an-adapter-for-venezuela",
     "plugTypes": [
-      { "type": "A", "status": "primary", "note": "70%+ of installations" },
-      { "type": "B", "status": "secondary", "note": "Growing in modern buildings" }
+      {
+        "type": "A",
+        "status": "primary",
+        "note": "70%+ of installations"
+      },
+      {
+        "type": "B",
+        "status": "secondary",
+        "note": "Growing in modern buildings"
+      }
     ],
-    "voltage": { "standard": 120, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 120,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type A dominates. Type B increasing in new construction."
   },
   "vn": {
     "name": "Vietnam",
     "slug": "vietnam-electric-plug-types-which-adapter-will-you-need-for-vietnam",
     "plugTypes": [
-      { "type": "A", "status": "primary", "note": "50%+ especially in cities" },
-      { "type": "C", "status": "secondary", "note": "Common in hotels, modern buildings" },
-      { "type": "D", "status": "secondary", "note": "Some older areas" }
+      {
+        "type": "A",
+        "status": "primary",
+        "note": "50%+ especially in cities"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Common in hotels, modern buildings"
+      },
+      {
+        "type": "D",
+        "status": "secondary",
+        "note": "Some older areas"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type A dominates despite higher voltage. Type C common in tourist areas. Mixed French colonial legacy."
   },
   "vi": {
     "name": "US Virgin Islands",
     "slug": "us-virgin-islands-electric-plug-types",
     "plugTypes": [
-      { "type": "B", "status": "primary", "note": "US standard" },
-      { "type": "A", "status": "secondary", "note": "Compatible" }
+      {
+        "type": "B",
+        "status": "primary",
+        "note": "US standard"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Compatible"
+      }
     ],
-    "voltage": { "standard": 110, "range": [110, 120] },
-    "frequency": { "standard": 60 },
+    "voltage": {
+      "standard": 110,
+      "range": [
+        110,
+        120
+      ]
+    },
+    "frequency": {
+      "standard": 60
+    },
     "notes": "Type B primary following US standard."
   },
   "wf": {
     "name": "Wallis and Futuna",
     "slug": "wallis-and-futuna-electric-plug-types",
     "plugTypes": [
-      { "type": "E", "status": "primary", "note": "French overseas territory" },
-      { "type": "C", "status": "secondary", "note": "Compatible with Type E" }
+      {
+        "type": "E",
+        "status": "primary",
+        "note": "French overseas territory"
+      },
+      {
+        "type": "C",
+        "status": "secondary",
+        "note": "Compatible with Type E"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type E following French administration."
   },
   "eh": {
     "name": "Western Sahara",
     "slug": "western-sahara-electric-plug-types",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C primary. Limited electrical infrastructure."
   },
   "ye": {
     "name": "Yemen",
-    "slug": "yemen-electric-plug-types",
+    "slug": "yemen-electric-plug-types-do-you-need-an-adapter-for-yemen",
     "plugTypes": [
-      { "type": "D", "status": "primary", "note": "British influence" },
-      { "type": "A", "status": "secondary", "note": "Some areas" },
-      { "type": "G", "status": "secondary", "note": "Modern buildings where available" }
+      {
+        "type": "D",
+        "status": "primary",
+        "note": "British influence"
+      },
+      {
+        "type": "A",
+        "status": "secondary",
+        "note": "Some areas"
+      },
+      {
+        "type": "G",
+        "status": "secondary",
+        "note": "Modern buildings where available"
+      }
     ],
-    "voltage": { "standard": 220, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 220,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type D primary due to British influence. Limited electrical infrastructure."
   },
   "zm": {
     "name": "Zambia",
-    "slug": "zambia-electric-plug-types",
+    "slug": "zambia-electric-plug-types-which-adapter-do-you-need-in-zambia",
     "plugTypes": [
-      { "type": "C", "status": "primary", "note": "Most common" },
-      { "type": "D", "status": "secondary", "note": "British influence" },
-      { "type": "G", "status": "secondary", "note": "Some modern areas" }
+      {
+        "type": "C",
+        "status": "primary",
+        "note": "Most common"
+      },
+      {
+        "type": "D",
+        "status": "secondary",
+        "note": "British influence"
+      },
+      {
+        "type": "G",
+        "status": "secondary",
+        "note": "Some modern areas"
+      }
     ],
-    "voltage": { "standard": 230, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 230,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type C primary with mixed British colonial influence."
   },
   "zw": {
     "name": "Zimbabwe",
-    "slug": "zimbabwe-electric-plug-types",
+    "slug": "zimbabwe-electric-plug-types-which-adapter-do-you-need-for-zimbabwe",
     "plugTypes": [
-      { "type": "G", "status": "primary", "note": "British colonial standard" },
-      { "type": "D", "status": "secondary", "note": "Some older installations" }
+      {
+        "type": "G",
+        "status": "primary",
+        "note": "British colonial standard"
+      },
+      {
+        "type": "D",
+        "status": "secondary",
+        "note": "Some older installations"
+      }
     ],
-    "voltage": { "standard": 240, "range": [220, 240] },
-    "frequency": { "standard": 50 },
+    "voltage": {
+      "standard": 240,
+      "range": [
+        220,
+        240
+      ]
+    },
+    "frequency": {
+      "standard": 50
+    },
     "notes": "Type G dominates due to British colonial influence."
   }
 }
