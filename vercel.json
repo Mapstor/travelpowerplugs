@@ -68,6 +68,19 @@
       ]
     },
     {
+      "source": "/animations/(.*)\\.html",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Content-Type",
+          "value": "text/html"
+        }
+      ]
+    },
+    {
       "source": "/(.*)\\.(jpg|jpeg|png|gif|ico|svg)",
       "headers": [
         {
