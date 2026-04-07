@@ -14,8 +14,10 @@ const HTMLAnimatedPlug: React.FC<HTMLAnimatedPlugProps> = ({
   width = 700, 
   height = 240 
 }) => {
-  const animationPath = `/animations/type-${plugType.toLowerCase()}-plug-animation.html`;
-  const imagePath = `/images/plugs/type-${plugType.toLowerCase()}-electric-plug-and-socket.webp`;
+  // Ensure plugType is lowercase for file paths
+  const normalizedPlugType = plugType.toLowerCase();
+  const animationPath = `/animations/type-${normalizedPlugType}-plug-animation.html`;
+  const imagePath = `/images/plugs/type-${normalizedPlugType}-electric-plug-and-socket.webp`;
   
   return (
     <div className="w-full flex items-center justify-center gap-4 bg-white dark:bg-gray-800 rounded-xl p-4">

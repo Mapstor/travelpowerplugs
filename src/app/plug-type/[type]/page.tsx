@@ -428,7 +428,7 @@ export default async function EnhancedPlugTypePage({ params }: PageProps) {
           </h2>
           <div className="bg-gray-50 rounded-lg p-4">
             <HTMLAnimatedPlug 
-              plugType={plugType.type.toLowerCase()} 
+              plugType={plugType.type} 
               width={700} 
               height={240}
             />
