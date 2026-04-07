@@ -128,7 +128,7 @@ const WorldMap: React.FC<WorldMapProps> = ({
         COUNTRIES.forEach(country => {
           nameMapping.set(country.name.toLowerCase(), country);
           iso2Mapping.set(country.iso2.toLowerCase(), country);
-          iso3Mapping.set(country.iso3.toLowerCase(), country);
+          // Note: our countries data doesn't have iso3 field
           
           // Add common name variations
           if (country.name === 'United States') {
@@ -220,9 +220,6 @@ const WorldMap: React.FC<WorldMapProps> = ({
           // Try matching by ISO codes if available in properties
           if (!countryData && d.properties.iso_a2) {
             countryData = iso2Mapping.get(d.properties.iso_a2.toLowerCase());
-          }
-          if (!countryData && d.properties.iso_a3) {
-            countryData = iso3Mapping.get(d.properties.iso_a3.toLowerCase());
           }
           
           // Special cases for countries with different names in the map data
