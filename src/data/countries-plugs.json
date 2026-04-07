@@ -24,7 +24,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C (Europlug) is most common. Type F (Schuko) in newer construction."
+    "notes": "Type C (Europlug) is most common. Type F (Schuko) in newer construction.",
+    "continent": "asia"
   },
   "al": {
     "name": "Albania",
@@ -51,7 +52,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F (Schuko) is the primary standard. Type C plugs work in Type F sockets."
+    "notes": "Type F (Schuko) is the primary standard. Type C plugs work in Type F sockets.",
+    "continent": "europe"
   },
   "dz": {
     "name": "Algeria",
@@ -78,7 +80,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F (Schuko) is primary. French colonial legacy mixed with modern German standard."
+    "notes": "Type F (Schuko) is primary. French colonial legacy mixed with modern German standard.",
+    "continent": "africa"
   },
   "ar": {
     "name": "Argentina",
@@ -105,7 +108,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Argentina switched to Type I (three angled flat pins) in 1998. Type C exists in very old buildings but don't rely on it. Type I is mandatory for all new construction."
+    "notes": "Argentina switched to Type I (three angled flat pins) in 1998. Type C exists in very old buildings but don't rely on it. Type I is mandatory for all new construction.",
+    "continent": "south-america"
   },
   "am": {
     "name": "Armenia",
@@ -132,7 +136,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following European standardization."
+    "notes": "Type F dominates following European standardization.",
+    "continent": "middle-east"
   },
   "au": {
     "name": "Australia",
@@ -154,7 +159,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type I exclusively. Mandatory safety shutters in all outlets."
+    "notes": "Type I exclusively. Mandatory safety shutters in all outlets.",
+    "continent": "oceania"
   },
   "at": {
     "name": "Austria",
@@ -181,7 +187,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F (Schuko) dominates. Type C compatible for low-power devices."
+    "notes": "Type F (Schuko) dominates. Type C compatible for low-power devices.",
+    "continent": "europe"
   },
   "az": {
     "name": "Azerbaijan",
@@ -208,7 +215,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F is standard following post-Soviet modernization."
+    "notes": "Type F is standard following post-Soviet modernization.",
+    "continent": "middle-east"
   },
   "bs": {
     "name": "Bahamas",
@@ -235,7 +243,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B dominates in modern buildings. Type A plugs work in Type B sockets."
+    "notes": "Type B dominates in modern buildings. Type A plugs work in Type B sockets.",
+    "continent": "north-america"
   },
   "bh": {
     "name": "Bahrain",
@@ -257,7 +266,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, following British colonial legacy."
+    "notes": "Type G exclusively, following British colonial legacy.",
+    "continent": "middle-east"
   },
   "bd": {
     "name": "Bangladesh",
@@ -289,7 +299,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G is primary due to British colonial influence."
+    "notes": "Type G is primary due to British colonial influence.",
+    "continent": "asia"
   },
   "bb": {
     "name": "Barbados",
@@ -316,7 +327,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type B is primary. Unusual 50Hz frequency with low voltage."
+    "notes": "Type B is primary. Unusual 50Hz frequency with low voltage.",
+    "continent": "north-america"
   },
   "by": {
     "name": "Belarus",
@@ -343,7 +355,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following European standardization."
+    "notes": "Type F dominates following European standardization.",
+    "continent": "europe"
   },
   "be": {
     "name": "Belgium",
@@ -370,7 +383,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E with grounding pin in socket. Type C compatible."
+    "notes": "Type E with grounding pin in socket. Type C compatible.",
+    "continent": "europe"
   },
   "bz": {
     "name": "Belize",
@@ -397,7 +411,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "US standard. Some areas have 220V for heavy appliances."
+    "notes": "US standard. Some areas have 220V for heavy appliances.",
+    "continent": "north-america"
   },
   "bj": {
     "name": "Benin",
@@ -424,7 +439,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E dominates due to French colonial influence."
+    "notes": "Type E dominates due to French colonial influence.",
+    "continent": "africa"
   },
   "bt": {
     "name": "Bhutan",
@@ -456,7 +472,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type D dominant, following Indian influence."
+    "notes": "Type D dominant, following Indian influence.",
+    "continent": "asia"
   },
   "bo": {
     "name": "Bolivia",
@@ -483,7 +500,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Mixed voltage system. Type A most common despite higher voltage."
+    "notes": "Mixed voltage system. Type A most common despite higher voltage.",
+    "continent": "south-america"
   },
   "ba": {
     "name": "Bosnia and Herzegovina",
@@ -510,7 +528,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following European integration."
+    "notes": "Type F dominates following European integration.",
+    "continent": "europe"
   },
   "bw": {
     "name": "Botswana",
@@ -542,7 +561,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type D most common, transitioning to Type G in newer areas."
+    "notes": "Type D most common, transitioning to Type G in newer areas.",
+    "continent": "africa"
   },
   "br": {
     "name": "Brazil",
@@ -574,7 +594,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Brazil adopted Type N (NBR 14136) in 2011. All new buildings use Type N. Voltage varies by region (127V south, 220V north)."
+    "notes": "Brazil adopted Type N (NBR 14136) in 2011. All new buildings use Type N. Voltage varies by region (127V south, 220V north).",
+    "continent": "south-america"
   },
   "bn": {
     "name": "Brunei",
@@ -596,7 +617,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British colonial standard maintained."
+    "notes": "Type G exclusively, British colonial standard maintained.",
+    "continent": "asia"
   },
   "bg": {
     "name": "Bulgaria",
@@ -623,7 +645,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following EU standardization."
+    "notes": "Type F dominates following EU standardization.",
+    "continent": "europe"
   },
   "bf": {
     "name": "Burkina Faso",
@@ -650,7 +673,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E dominates due to French colonial influence."
+    "notes": "Type E dominates due to French colonial influence.",
+    "continent": "africa"
   },
   "bi": {
     "name": "Burundi",
@@ -677,7 +701,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C most widespread, some Type E from colonial period."
+    "notes": "Type C most widespread, some Type E from colonial period.",
+    "continent": "africa"
   },
   "cv": {
     "name": "Cabo Verde",
@@ -704,7 +729,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F is standard, following European influence."
+    "notes": "Type F is standard, following European influence.",
+    "continent": "africa"
   },
   "kh": {
     "name": "Cambodia",
@@ -736,7 +762,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type A dominates despite higher voltage. Mixed standards reflect various influences."
+    "notes": "Type A dominates despite higher voltage. Mixed standards reflect various influences.",
+    "continent": "asia"
   },
   "cm": {
     "name": "Cameroon",
@@ -763,7 +790,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E dominates due to French colonial influence."
+    "notes": "Type E dominates due to French colonial influence.",
+    "continent": "africa"
   },
   "ca": {
     "name": "Canada",
@@ -790,7 +818,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B is standard for safety/grounding. Type A plugs work in Type B sockets."
+    "notes": "Type B is standard for safety/grounding. Type A plugs work in Type B sockets.",
+    "continent": "north-america"
   },
   "cf": {
     "name": "Central African Republic",
@@ -817,7 +846,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E dominates due to French colonial influence."
+    "notes": "Type E dominates due to French colonial influence.",
+    "continent": "africa"
   },
   "td": {
     "name": "Chad",
@@ -844,7 +874,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E dominates due to French colonial influence."
+    "notes": "Type E dominates due to French colonial influence.",
+    "continent": "africa"
   },
   "cl": {
     "name": "Chile",
@@ -871,7 +902,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C dominates. Type L found in some areas due to Italian influence."
+    "notes": "Type C dominates. Type L found in some areas due to Italian influence.",
+    "continent": "south-america"
   },
   "cn": {
     "name": "China",
@@ -903,7 +935,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type A is most prevalent, especially in hotels and tourist areas. Type I for grounded devices. Type C exists but much less common."
+    "notes": "Type A is most prevalent, especially in hotels and tourist areas. Type I for grounded devices. Type C exists but much less common.",
+    "continent": "asia"
   },
   "co": {
     "name": "Colombia",
@@ -930,7 +963,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type A dominates. Type B increasing in new construction for safety."
+    "notes": "Type A dominates. Type B increasing in new construction for safety.",
+    "continent": "south-america"
   },
   "km": {
     "name": "Comoros",
@@ -957,7 +991,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E standard following French influence."
+    "notes": "Type E standard following French influence.",
+    "continent": "africa"
   },
   "cg": {
     "name": "Congo",
@@ -984,7 +1019,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E dominates due to French colonial influence."
+    "notes": "Type E dominates due to French colonial influence.",
+    "continent": "africa"
   },
   "cd": {
     "name": "Democratic Republic of the Congo",
@@ -1011,7 +1047,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C most widespread, mixed with Type E in some regions."
+    "notes": "Type C most widespread, mixed with Type E in some regions.",
+    "continent": "africa"
   },
   "ck": {
     "name": "Cook Islands",
@@ -1033,7 +1070,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type I exclusively, following New Zealand administration."
+    "notes": "Type I exclusively, following New Zealand administration.",
+    "continent": "oceania"
   },
   "cr": {
     "name": "Costa Rica",
@@ -1060,7 +1098,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B is primary for safety. Type A plugs work in Type B sockets."
+    "notes": "Type B is primary for safety. Type A plugs work in Type B sockets.",
+    "continent": "north-america"
   },
   "ci": {
     "name": "Côte d'Ivoire",
@@ -1087,7 +1126,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E dominates due to French colonial influence."
+    "notes": "Type E dominates due to French colonial influence.",
+    "continent": "africa"
   },
   "hr": {
     "name": "Croatia",
@@ -1114,7 +1154,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following EU standardization."
+    "notes": "Type F dominates following EU standardization.",
+    "continent": "europe"
   },
   "cu": {
     "name": "Cuba",
@@ -1146,7 +1187,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type A dominates but Type B increasing. Mixed voltage system."
+    "notes": "Type A dominates but Type B increasing. Mixed voltage system.",
+    "continent": "north-america"
   },
   "cy": {
     "name": "Cyprus",
@@ -1168,7 +1210,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British colonial legacy maintained."
+    "notes": "Type G exclusively, British colonial legacy maintained.",
+    "continent": "europe"
   },
   "cz": {
     "name": "Czech Republic",
@@ -1195,7 +1238,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following EU integration."
+    "notes": "Type F dominates following EU integration.",
+    "continent": "europe"
   },
   "dk": {
     "name": "Denmark",
@@ -1227,7 +1271,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type K is uniquely Danish. Type C plugs work in Type K sockets."
+    "notes": "Type K is uniquely Danish. Type C plugs work in Type K sockets.",
+    "continent": "europe"
   },
   "dj": {
     "name": "Djibouti",
@@ -1254,7 +1299,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E standard following French influence."
+    "notes": "Type E standard following French influence.",
+    "continent": "africa"
   },
   "dm": {
     "name": "Dominica",
@@ -1276,7 +1322,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British colonial legacy."
+    "notes": "Type G exclusively, British colonial legacy.",
+    "continent": "north-america"
   },
   "do": {
     "name": "Dominican Republic",
@@ -1303,7 +1350,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B is primary. US electrical standard."
+    "notes": "Type B is primary. US electrical standard.",
+    "continent": "north-america"
   },
   "ec": {
     "name": "Ecuador",
@@ -1330,7 +1378,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type A dominates. Type B growing in new construction."
+    "notes": "Type A dominates. Type B growing in new construction.",
+    "continent": "south-america"
   },
   "eg": {
     "name": "Egypt",
@@ -1357,7 +1406,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C dominates. Type F in modern tourist infrastructure."
+    "notes": "Type C dominates. Type F in modern tourist infrastructure.",
+    "continent": "africa"
   },
   "sv": {
     "name": "El Salvador",
@@ -1384,7 +1434,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B is primary following US standard."
+    "notes": "Type B is primary following US standard.",
+    "continent": "north-america"
   },
   "gq": {
     "name": "Equatorial Guinea",
@@ -1411,7 +1462,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E standard due to Spanish/French colonial influence."
+    "notes": "Type E standard due to Spanish/French colonial influence.",
+    "continent": "africa"
   },
   "er": {
     "name": "Eritrea",
@@ -1438,7 +1490,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C dominates with some Italian Type L influence."
+    "notes": "Type C dominates with some Italian Type L influence.",
+    "continent": "africa"
   },
   "ee": {
     "name": "Estonia",
@@ -1465,7 +1518,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following EU integration."
+    "notes": "Type F dominates following EU integration.",
+    "continent": "europe"
   },
   "sz": {
     "name": "Eswatini",
@@ -1492,7 +1546,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type M dominates due to South African influence."
+    "notes": "Type M dominates due to South African influence.",
+    "continent": "africa"
   },
   "et": {
     "name": "Ethiopia",
@@ -1519,7 +1574,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C is most common standard."
+    "notes": "Type C is most common standard.",
+    "continent": "africa"
   },
   "fj": {
     "name": "Fiji",
@@ -1541,7 +1597,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type I exclusively, following Australian influence."
+    "notes": "Type I exclusively, following Australian influence.",
+    "continent": "oceania"
   },
   "fi": {
     "name": "Finland",
@@ -1568,7 +1625,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates. Type C compatible for low-power devices."
+    "notes": "Type F dominates. Type C compatible for low-power devices.",
+    "continent": "europe"
   },
   "fr": {
     "name": "France",
@@ -1595,7 +1653,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E with grounding pin in socket vs. Type F's side clips. Type C compatible."
+    "notes": "Type E with grounding pin in socket vs. Type F's side clips. Type C compatible.",
+    "continent": "europe"
   },
   "ga": {
     "name": "Gabon",
@@ -1617,7 +1676,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C is the standard."
+    "notes": "Type C is the standard.",
+    "continent": "africa"
   },
   "gm": {
     "name": "Gambia",
@@ -1639,7 +1699,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British colonial legacy."
+    "notes": "Type G exclusively, British colonial legacy.",
+    "continent": "africa"
   },
   "ge": {
     "name": "Georgia",
@@ -1666,7 +1727,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following European integration."
+    "notes": "Type F dominates following European integration.",
+    "continent": "middle-east"
   },
   "de": {
     "name": "Germany",
@@ -1693,7 +1755,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F (Schuko) dominates. Type C compatible for low-power devices."
+    "notes": "Type F (Schuko) dominates. Type C compatible for low-power devices.",
+    "continent": "europe"
   },
   "gh": {
     "name": "Ghana",
@@ -1720,7 +1783,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G dominates due to British colonial influence."
+    "notes": "Type G dominates due to British colonial influence.",
+    "continent": "africa"
   },
   "gr": {
     "name": "Greece",
@@ -1747,7 +1811,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following European standardization."
+    "notes": "Type F dominates following European standardization.",
+    "continent": "europe"
   },
   "gl": {
     "name": "Greenland",
@@ -1774,7 +1839,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type K following Danish administration."
+    "notes": "Type K following Danish administration.",
+    "continent": "africa"
   },
   "gd": {
     "name": "Grenada",
@@ -1796,7 +1862,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British colonial legacy."
+    "notes": "Type G exclusively, British colonial legacy.",
+    "continent": "north-america"
   },
   "gt": {
     "name": "Guatemala",
@@ -1823,7 +1890,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B is primary following US standard."
+    "notes": "Type B is primary following US standard.",
+    "continent": "north-america"
   },
   "gn": {
     "name": "Guinea",
@@ -1850,7 +1918,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E dominates due to French colonial influence."
+    "notes": "Type E dominates due to French colonial influence.",
+    "continent": "africa"
   },
   "gw": {
     "name": "Guinea-Bissau",
@@ -1872,7 +1941,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C is the primary standard."
+    "notes": "Type C is the primary standard.",
+    "continent": "africa"
   },
   "gy": {
     "name": "Guyana",
@@ -1904,7 +1974,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type G primary, but mixed voltage system with some US influence."
+    "notes": "Type G primary, but mixed voltage system with some US influence.",
+    "continent": "south-america"
   },
   "ht": {
     "name": "Haiti",
@@ -1931,7 +2002,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type A dominates. Mixed voltage system."
+    "notes": "Type A dominates. Mixed voltage system.",
+    "continent": "north-america"
   },
   "hn": {
     "name": "Honduras",
@@ -1958,7 +2030,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B is primary following US standard."
+    "notes": "Type B is primary following US standard.",
+    "continent": "north-america"
   },
   "hk": {
     "name": "Hong Kong",
@@ -1980,7 +2053,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British colonial legacy maintained."
+    "notes": "Type G exclusively, British colonial legacy maintained.",
+    "continent": "asia"
   },
   "hu": {
     "name": "Hungary",
@@ -2007,7 +2081,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following EU integration."
+    "notes": "Type F dominates following EU integration.",
+    "continent": "europe"
   },
   "is": {
     "name": "Iceland",
@@ -2034,7 +2109,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates. Type C compatible."
+    "notes": "Type F dominates. Type C compatible.",
+    "continent": "europe"
   },
   "in": {
     "name": "India",
@@ -2066,7 +2142,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type D (three round pins, 5mm) is most common for general use. Type M (larger version) for high-power appliances. Type C found in some modern buildings but not universal."
+    "notes": "Type D (three round pins, 5mm) is most common for general use. Type M (larger version) for high-power appliances. Type C found in some modern buildings but not universal.",
+    "continent": "asia"
   },
   "id": {
     "name": "Indonesia",
@@ -2093,7 +2170,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C dominates. Type F in modern tourist infrastructure."
+    "notes": "Type C dominates. Type F in modern tourist infrastructure.",
+    "continent": "asia"
   },
   "ir": {
     "name": "Iran",
@@ -2120,7 +2198,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C is the primary standard."
+    "notes": "Type C is the primary standard.",
+    "continent": "middle-east"
   },
   "iq": {
     "name": "Iraq",
@@ -2147,7 +2226,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type D primary due to British influence. Type G in newer areas."
+    "notes": "Type D primary due to British influence. Type G in newer areas.",
+    "continent": "middle-east"
   },
   "ie": {
     "name": "Ireland",
@@ -2169,7 +2249,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, following UK standard."
+    "notes": "Type G exclusively, following UK standard.",
+    "continent": "europe"
   },
   "im": {
     "name": "Isle of Man",
@@ -2191,7 +2272,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British Crown dependency."
+    "notes": "Type G exclusively, British Crown dependency.",
+    "continent": "africa"
   },
   "il": {
     "name": "Israel",
@@ -2213,7 +2295,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Israel uses exclusively Type H (three flat pins in triangle). Very few exceptions. Type C adapters won't work - need specific Type H adapter."
+    "notes": "Israel uses exclusively Type H (three flat pins in triangle). Very few exceptions. Type C adapters won't work - need specific Type H adapter.",
+    "continent": "middle-east"
   },
   "it": {
     "name": "Italy",
@@ -2245,7 +2328,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Italy primarily uses Type F (Schuko) and Type L (Italian 3-pin). Type C Europlugs work in most outlets but may not fit securely. Type L has 10A and 16A variants."
+    "notes": "Italy primarily uses Type F (Schuko) and Type L (Italian 3-pin). Type C Europlugs work in most outlets but may not fit securely. Type L has 10A and 16A variants.",
+    "continent": "europe"
   },
   "jm": {
     "name": "Jamaica",
@@ -2272,7 +2356,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type B is primary. Unusual 50Hz frequency with US voltage."
+    "notes": "Type B is primary. Unusual 50Hz frequency with US voltage.",
+    "continent": "north-america"
   },
   "jp": {
     "name": "Japan",
@@ -2299,7 +2384,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Japan primarily uses Type A. Type B exists mainly for grounded appliances but most outlets are Type A only. Unique 100V voltage requires converters for many devices."
+    "notes": "Japan primarily uses Type A. Type B exists mainly for grounded appliances but most outlets are Type A only. Unique 100V voltage requires converters for many devices.",
+    "continent": "asia"
   },
   "je": {
     "name": "Jersey",
@@ -2321,7 +2407,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British Crown dependency."
+    "notes": "Type G exclusively, British Crown dependency.",
+    "continent": "africa"
   },
   "jo": {
     "name": "Jordan",
@@ -2353,7 +2440,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G dominates due to British influence."
+    "notes": "Type G dominates due to British influence.",
+    "continent": "middle-east"
   },
   "kz": {
     "name": "Kazakhstan",
@@ -2380,7 +2468,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following European integration."
+    "notes": "Type F dominates following European integration.",
+    "continent": "asia"
   },
   "ke": {
     "name": "Kenya",
@@ -2402,7 +2491,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British colonial legacy strongly maintained."
+    "notes": "Type G exclusively, British colonial legacy strongly maintained.",
+    "continent": "africa"
   },
   "ki": {
     "name": "Kiribati",
@@ -2424,7 +2514,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type I following Australian influence."
+    "notes": "Type I following Australian influence.",
+    "continent": "oceania"
   },
   "kp": {
     "name": "North Korea",
@@ -2451,7 +2542,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C primary. Limited electrical infrastructure."
+    "notes": "Type C primary. Limited electrical infrastructure.",
+    "continent": "asia"
   },
   "kr": {
     "name": "South Korea",
@@ -2478,7 +2570,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type F is official standard for safety. Type C compatible for small appliances."
+    "notes": "Type F is official standard for safety. Type C compatible for small appliances.",
+    "continent": "asia"
   },
   "kw": {
     "name": "Kuwait",
@@ -2500,7 +2593,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British colonial influence."
+    "notes": "Type G exclusively, British colonial influence.",
+    "continent": "middle-east"
   },
   "kg": {
     "name": "Kyrgyzstan",
@@ -2527,7 +2621,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C primary with some Type F modernization."
+    "notes": "Type C primary with some Type F modernization.",
+    "continent": "asia"
   },
   "la": {
     "name": "Laos",
@@ -2559,7 +2654,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type A dominates despite higher voltage. Mixed standards."
+    "notes": "Type A dominates despite higher voltage. Mixed standards.",
+    "continent": "asia"
   },
   "lv": {
     "name": "Latvia",
@@ -2586,7 +2682,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following EU integration."
+    "notes": "Type F dominates following EU integration.",
+    "continent": "europe"
   },
   "lb": {
     "name": "Lebanon",
@@ -2618,7 +2715,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type D primary, Type G growing in modern areas."
+    "notes": "Type D primary, Type G growing in modern areas.",
+    "continent": "middle-east"
   },
   "ls": {
     "name": "Lesotho",
@@ -2640,7 +2738,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type M exclusively, following South African standard."
+    "notes": "Type M exclusively, following South African standard.",
+    "continent": "africa"
   },
   "lr": {
     "name": "Liberia",
@@ -2667,7 +2766,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B primary due to US historical influence."
+    "notes": "Type B primary due to US historical influence.",
+    "continent": "africa"
   },
   "ly": {
     "name": "Libya",
@@ -2694,7 +2794,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type D primary. Complex voltage system varies by region."
+    "notes": "Type D primary. Complex voltage system varies by region.",
+    "continent": "africa"
   },
   "li": {
     "name": "Liechtenstein",
@@ -2721,7 +2822,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type J following Swiss standard."
+    "notes": "Type J following Swiss standard.",
+    "continent": "europe"
   },
   "lt": {
     "name": "Lithuania",
@@ -2748,7 +2850,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following EU integration."
+    "notes": "Type F dominates following EU integration.",
+    "continent": "europe"
   },
   "lu": {
     "name": "Luxembourg",
@@ -2775,7 +2878,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates. Type C compatible."
+    "notes": "Type F dominates. Type C compatible.",
+    "continent": "europe"
   },
   "mo": {
     "name": "Macao",
@@ -2802,7 +2906,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G primary, British colonial influence maintained despite Chinese administration."
+    "notes": "Type G primary, British colonial influence maintained despite Chinese administration.",
+    "continent": "asia"
   },
   "mg": {
     "name": "Madagascar",
@@ -2829,7 +2934,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C dominates with some French Type E influence."
+    "notes": "Type C dominates with some French Type E influence.",
+    "continent": "africa"
   },
   "mw": {
     "name": "Malawi",
@@ -2851,7 +2957,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British colonial legacy."
+    "notes": "Type G exclusively, British colonial legacy.",
+    "continent": "africa"
   },
   "my": {
     "name": "Malaysia",
@@ -2873,7 +2980,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British colonial standard maintained."
+    "notes": "Type G exclusively, British colonial standard maintained.",
+    "continent": "asia"
   },
   "mv": {
     "name": "Maldives",
@@ -2900,7 +3008,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type D primary, Type G in tourist areas."
+    "notes": "Type D primary, Type G in tourist areas.",
+    "continent": "asia"
   },
   "ml": {
     "name": "Mali",
@@ -2927,7 +3036,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E dominates due to French colonial influence."
+    "notes": "Type E dominates due to French colonial influence.",
+    "continent": "africa"
   },
   "mt": {
     "name": "Malta",
@@ -2949,7 +3059,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British colonial legacy maintained."
+    "notes": "Type G exclusively, British colonial legacy maintained.",
+    "continent": "europe"
   },
   "mh": {
     "name": "Marshall Islands",
@@ -2976,7 +3087,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B primary following US administration."
+    "notes": "Type B primary following US administration.",
+    "continent": "oceania"
   },
   "mr": {
     "name": "Mauritania",
@@ -2998,7 +3110,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C is the primary standard."
+    "notes": "Type C is the primary standard.",
+    "continent": "africa"
   },
   "mu": {
     "name": "Mauritius",
@@ -3025,7 +3138,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G dominates, British colonial legacy."
+    "notes": "Type G dominates, British colonial legacy.",
+    "continent": "africa"
   },
   "mx": {
     "name": "Mexico",
@@ -3052,7 +3166,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B is primary in modern buildings. Type A still common in residential areas."
+    "notes": "Type B is primary in modern buildings. Type A still common in residential areas.",
+    "continent": "north-america"
   },
   "fm": {
     "name": "Micronesia",
@@ -3079,7 +3194,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B primary following US administration."
+    "notes": "Type B primary following US administration.",
+    "continent": "oceania"
   },
   "md": {
     "name": "Moldova",
@@ -3106,7 +3222,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following European integration."
+    "notes": "Type F dominates following European integration.",
+    "continent": "europe"
   },
   "mc": {
     "name": "Monaco",
@@ -3133,7 +3250,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E following French standard."
+    "notes": "Type E following French standard.",
+    "continent": "europe"
   },
   "mn": {
     "name": "Mongolia",
@@ -3160,7 +3278,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C primary with some Type E variation."
+    "notes": "Type C primary with some Type E variation.",
+    "continent": "asia"
   },
   "me": {
     "name": "Montenegro",
@@ -3187,7 +3306,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following European integration."
+    "notes": "Type F dominates following European integration.",
+    "continent": "europe"
   },
   "ma": {
     "name": "Morocco",
@@ -3214,7 +3334,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E is official standard due to French colonial influence. Type C compatible."
+    "notes": "Type E is official standard due to French colonial influence. Type C compatible.",
+    "continent": "africa"
   },
   "mz": {
     "name": "Mozambique",
@@ -3246,7 +3367,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C primary with mixed South African and European influence."
+    "notes": "Type C primary with mixed South African and European influence.",
+    "continent": "africa"
   },
   "mm": {
     "name": "Myanmar",
@@ -3278,7 +3400,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type D primary due to British colonial influence."
+    "notes": "Type D primary due to British colonial influence.",
+    "continent": "asia"
   },
   "na": {
     "name": "Namibia",
@@ -3300,7 +3423,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type M exclusively, following South African standard."
+    "notes": "Type M exclusively, following South African standard.",
+    "continent": "africa"
   },
   "nr": {
     "name": "Nauru",
@@ -3322,7 +3446,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type I following Australian administration."
+    "notes": "Type I following Australian administration.",
+    "continent": "oceania"
   },
   "np": {
     "name": "Nepal",
@@ -3349,7 +3474,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type D dominates following Indian influence."
+    "notes": "Type D dominates following Indian influence.",
+    "continent": "asia"
   },
   "nl": {
     "name": "Netherlands",
@@ -3376,7 +3502,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F (Schuko) dominates. Type C compatible for low-power devices."
+    "notes": "Type F (Schuko) dominates. Type C compatible for low-power devices.",
+    "continent": "europe"
   },
   "nz": {
     "name": "New Zealand",
@@ -3398,7 +3525,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type I exclusively. Mandatory safety shutters in all outlets."
+    "notes": "Type I exclusively. Mandatory safety shutters in all outlets.",
+    "continent": "oceania"
   },
   "ni": {
     "name": "Nicaragua",
@@ -3425,7 +3553,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B is primary following US standard."
+    "notes": "Type B is primary following US standard.",
+    "continent": "north-america"
   },
   "ne": {
     "name": "Niger",
@@ -3452,7 +3581,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E dominates due to French colonial influence."
+    "notes": "Type E dominates due to French colonial influence.",
+    "continent": "africa"
   },
   "ng": {
     "name": "Nigeria",
@@ -3479,7 +3609,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G is official standard due to British colonial influence."
+    "notes": "Type G is official standard due to British colonial influence.",
+    "continent": "africa"
   },
   "nu": {
     "name": "Niue",
@@ -3501,7 +3632,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type I following New Zealand administration."
+    "notes": "Type I following New Zealand administration.",
+    "continent": "oceania"
   },
   "nf": {
     "name": "Norfolk Island",
@@ -3523,7 +3655,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type I following Australian administration."
+    "notes": "Type I following Australian administration.",
+    "continent": "africa"
   },
   "mk": {
     "name": "North Macedonia",
@@ -3550,7 +3683,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following European integration."
+    "notes": "Type F dominates following European integration.",
+    "continent": "europe"
   },
   "mp": {
     "name": "Northern Mariana Islands",
@@ -3577,7 +3711,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B primary following US administration."
+    "notes": "Type B primary following US administration.",
+    "continent": "oceania"
   },
   "no": {
     "name": "Norway",
@@ -3604,7 +3739,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates. Type C compatible for low-power devices."
+    "notes": "Type F dominates. Type C compatible for low-power devices.",
+    "continent": "europe"
   },
   "om": {
     "name": "Oman",
@@ -3626,7 +3762,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British influence."
+    "notes": "Type G exclusively, British influence.",
+    "continent": "middle-east"
   },
   "pk": {
     "name": "Pakistan",
@@ -3653,7 +3790,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type D primary due to British colonial influence. Type G growing in urban areas."
+    "notes": "Type D primary due to British colonial influence. Type G growing in urban areas.",
+    "continent": "asia"
   },
   "pw": {
     "name": "Palau",
@@ -3680,7 +3818,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B primary following US administration."
+    "notes": "Type B primary following US administration.",
+    "continent": "oceania"
   },
   "ps": {
     "name": "Palestine",
@@ -3707,7 +3846,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type H dominates due to Israeli electrical infrastructure."
+    "notes": "Type H dominates due to Israeli electrical infrastructure.",
+    "continent": "middle-east"
   },
   "pa": {
     "name": "Panama",
@@ -3734,7 +3874,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B is primary following US standard."
+    "notes": "Type B is primary following US standard.",
+    "continent": "north-america"
   },
   "pg": {
     "name": "Papua New Guinea",
@@ -3756,7 +3897,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type I exclusively, Australian colonial legacy."
+    "notes": "Type I exclusively, Australian colonial legacy.",
+    "continent": "oceania"
   },
   "py": {
     "name": "Paraguay",
@@ -3778,7 +3920,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C dominates."
+    "notes": "Type C dominates.",
+    "continent": "south-america"
   },
   "pe": {
     "name": "Peru",
@@ -3810,7 +3953,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type A dominates despite higher voltage. Some Type B in modern construction."
+    "notes": "Type A dominates despite higher voltage. Some Type B in modern construction.",
+    "continent": "south-america"
   },
   "ph": {
     "name": "Philippines",
@@ -3842,7 +3986,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type A dominates despite higher voltage. Type B increasing in modern buildings."
+    "notes": "Type A dominates despite higher voltage. Type B increasing in modern buildings.",
+    "continent": "asia"
   },
   "pn": {
     "name": "Pitcairn Islands",
@@ -3864,7 +4009,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type I following New Zealand administration."
+    "notes": "Type I following New Zealand administration.",
+    "continent": "africa"
   },
   "pl": {
     "name": "Poland",
@@ -3891,7 +4037,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following EU integration."
+    "notes": "Type F dominates following EU integration.",
+    "continent": "europe"
   },
   "pt": {
     "name": "Portugal",
@@ -3918,7 +4065,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates in modern construction. Type C legacy but compatible."
+    "notes": "Type F dominates in modern construction. Type C legacy but compatible.",
+    "continent": "europe"
   },
   "pr": {
     "name": "Puerto Rico",
@@ -3945,7 +4093,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B primary following US standard."
+    "notes": "Type B primary following US standard.",
+    "continent": "africa"
   },
   "qa": {
     "name": "Qatar",
@@ -3967,7 +4116,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British influence."
+    "notes": "Type G exclusively, British influence.",
+    "continent": "middle-east"
   },
   "ro": {
     "name": "Romania",
@@ -3994,7 +4144,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following EU integration."
+    "notes": "Type F dominates following EU integration.",
+    "continent": "europe"
   },
   "ru": {
     "name": "Russia",
@@ -4021,7 +4172,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following European standardization."
+    "notes": "Type F dominates following European standardization.",
+    "continent": "europe"
   },
   "rw": {
     "name": "Rwanda",
@@ -4048,7 +4200,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C primary with some Type J variation."
+    "notes": "Type C primary with some Type J variation.",
+    "continent": "africa"
   },
   "bl": {
     "name": "Saint Barthélemy",
@@ -4075,7 +4228,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type E following French administration."
+    "notes": "Type E following French administration.",
+    "continent": "africa"
   },
   "sh": {
     "name": "Saint Helena",
@@ -4097,7 +4251,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British overseas territory."
+    "notes": "Type G exclusively, British overseas territory.",
+    "continent": "africa"
   },
   "kn": {
     "name": "Saint Kitts and Nevis",
@@ -4124,7 +4279,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type G primary, British colonial legacy."
+    "notes": "Type G primary, British colonial legacy.",
+    "continent": "north-america"
   },
   "lc": {
     "name": "Saint Lucia",
@@ -4146,7 +4302,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British colonial legacy."
+    "notes": "Type G exclusively, British colonial legacy.",
+    "continent": "north-america"
   },
   "mf": {
     "name": "Saint Martin",
@@ -4173,7 +4330,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type E following French administration."
+    "notes": "Type E following French administration.",
+    "continent": "africa"
   },
   "pm": {
     "name": "Saint Pierre and Miquelon",
@@ -4195,7 +4353,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E exclusively, French overseas territory."
+    "notes": "Type E exclusively, French overseas territory.",
+    "continent": "africa"
   },
   "vc": {
     "name": "Saint Vincent and the Grenadines",
@@ -4227,7 +4386,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G primary, mixed voltage system."
+    "notes": "Type G primary, mixed voltage system.",
+    "continent": "north-america"
   },
   "ws": {
     "name": "Samoa",
@@ -4249,7 +4409,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type I exclusively, New Zealand/Australian influence."
+    "notes": "Type I exclusively, New Zealand/Australian influence.",
+    "continent": "oceania"
   },
   "sm": {
     "name": "San Marino",
@@ -4281,7 +4442,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F primary, following Italian and European standards."
+    "notes": "Type F primary, following Italian and European standards.",
+    "continent": "europe"
   },
   "st": {
     "name": "São Tomé and Príncipe",
@@ -4308,7 +4470,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C primary with some Type F modernization."
+    "notes": "Type C primary with some Type F modernization.",
+    "continent": "africa"
   },
   "sa": {
     "name": "Saudi Arabia",
@@ -4330,7 +4493,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type G exclusively, British technical influence."
+    "notes": "Type G exclusively, British technical influence.",
+    "continent": "middle-east"
   },
   "sn": {
     "name": "Senegal",
@@ -4357,7 +4521,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E dominates due to French colonial influence."
+    "notes": "Type E dominates due to French colonial influence.",
+    "continent": "africa"
   },
   "rs": {
     "name": "Serbia",
@@ -4384,7 +4549,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following European integration."
+    "notes": "Type F dominates following European integration.",
+    "continent": "europe"
   },
   "sc": {
     "name": "Seychelles",
@@ -4406,7 +4572,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British colonial legacy."
+    "notes": "Type G exclusively, British colonial legacy.",
+    "continent": "africa"
   },
   "sl": {
     "name": "Sierra Leone",
@@ -4433,7 +4600,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G dominates due to British colonial influence."
+    "notes": "Type G dominates due to British colonial influence.",
+    "continent": "africa"
   },
   "sg": {
     "name": "Singapore",
@@ -4455,7 +4623,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British colonial standard maintained."
+    "notes": "Type G exclusively, British colonial standard maintained.",
+    "continent": "asia"
   },
   "sx": {
     "name": "Sint Maarten",
@@ -4482,7 +4651,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type A primary in Dutch Caribbean territories."
+    "notes": "Type A primary in Dutch Caribbean territories.",
+    "continent": "africa"
   },
   "sk": {
     "name": "Slovakia",
@@ -4509,7 +4679,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following EU integration."
+    "notes": "Type F dominates following EU integration.",
+    "continent": "europe"
   },
   "si": {
     "name": "Slovenia",
@@ -4536,7 +4707,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following EU integration."
+    "notes": "Type F dominates following EU integration.",
+    "continent": "europe"
   },
   "sb": {
     "name": "Solomon Islands",
@@ -4563,7 +4735,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G primary due to British colonial influence."
+    "notes": "Type G primary due to British colonial influence.",
+    "continent": "oceania"
   },
   "so": {
     "name": "Somalia",
@@ -4585,7 +4758,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C primary. Limited electrical infrastructure."
+    "notes": "Type C primary. Limited electrical infrastructure.",
+    "continent": "africa"
   },
   "za": {
     "name": "South Africa",
@@ -4617,7 +4791,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type M is the official standard and dominates. Type C in universal sockets for tourists."
+    "notes": "Type M is the official standard and dominates. Type C in universal sockets for tourists.",
+    "continent": "africa"
   },
   "gs": {
     "name": "South Georgia",
@@ -4639,7 +4814,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British overseas territory."
+    "notes": "Type G exclusively, British overseas territory.",
+    "continent": "africa"
   },
   "ss": {
     "name": "South Sudan",
@@ -4666,7 +4842,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C primary. Limited electrical infrastructure."
+    "notes": "Type C primary. Limited electrical infrastructure.",
+    "continent": "africa"
   },
   "es": {
     "name": "Spain",
@@ -4693,7 +4870,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates in modern construction. Type C legacy but compatible."
+    "notes": "Type F dominates in modern construction. Type C legacy but compatible.",
+    "continent": "europe"
   },
   "lk": {
     "name": "Sri Lanka",
@@ -4720,7 +4898,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G dominates due to British colonial influence."
+    "notes": "Type G dominates due to British colonial influence.",
+    "continent": "asia"
   },
   "sd": {
     "name": "Sudan",
@@ -4747,7 +4926,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C primary with some British Type D influence."
+    "notes": "Type C primary with some British Type D influence.",
+    "continent": "africa"
   },
   "sr": {
     "name": "Suriname",
@@ -4774,7 +4954,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type C primary despite low voltage. Dutch colonial influence."
+    "notes": "Type C primary despite low voltage. Dutch colonial influence.",
+    "continent": "south-america"
   },
   "sj": {
     "name": "Svalbard",
@@ -4801,7 +4982,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F following Norwegian administration."
+    "notes": "Type F following Norwegian administration.",
+    "continent": "africa"
   },
   "se": {
     "name": "Sweden",
@@ -4828,7 +5010,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates. Type C compatible for low-power devices."
+    "notes": "Type F dominates. Type C compatible for low-power devices.",
+    "continent": "europe"
   },
   "ch": {
     "name": "Switzerland",
@@ -4855,7 +5038,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type J is uniquely Swiss standard. Type C plugs work in Type J sockets."
+    "notes": "Type J is uniquely Swiss standard. Type C plugs work in Type J sockets.",
+    "continent": "europe"
   },
   "sy": {
     "name": "Syria",
@@ -4882,7 +5066,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C primary with some French Type E influence."
+    "notes": "Type C primary with some French Type E influence.",
+    "continent": "middle-east"
   },
   "tw": {
     "name": "Taiwan",
@@ -4909,7 +5094,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type A dominates. Type B for grounded appliances in modern buildings."
+    "notes": "Type A dominates. Type B for grounded appliances in modern buildings.",
+    "continent": "asia"
   },
   "tj": {
     "name": "Tajikistan",
@@ -4936,7 +5122,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C primary with gradual Type F modernization."
+    "notes": "Type C primary with gradual Type F modernization.",
+    "continent": "asia"
   },
   "tz": {
     "name": "Tanzania",
@@ -4963,7 +5150,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G dominates due to British colonial influence."
+    "notes": "Type G dominates due to British colonial influence.",
+    "continent": "africa"
   },
   "th": {
     "name": "Thailand",
@@ -5000,7 +5188,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Despite Type O being the 'official' Thai standard, Types A and B (American-style) are actually dominant in practice, especially in hotels, malls, and tourist areas. Type C also common."
+    "notes": "Despite Type O being the 'official' Thai standard, Types A and B (American-style) are actually dominant in practice, especially in hotels, malls, and tourist areas. Type C also common.",
+    "continent": "asia"
   },
   "tl": {
     "name": "Timor-Leste",
@@ -5032,7 +5221,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C primary due to Portuguese colonial influence."
+    "notes": "Type C primary due to Portuguese colonial influence.",
+    "continent": "asia"
   },
   "tg": {
     "name": "Togo",
@@ -5054,7 +5244,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C is the primary standard."
+    "notes": "Type C is the primary standard.",
+    "continent": "africa"
   },
   "tk": {
     "name": "Tokelau",
@@ -5076,7 +5267,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type I following New Zealand administration."
+    "notes": "Type I following New Zealand administration.",
+    "continent": "oceania"
   },
   "to": {
     "name": "Tonga",
@@ -5098,7 +5290,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type I following Australian/New Zealand influence."
+    "notes": "Type I following Australian/New Zealand influence.",
+    "continent": "oceania"
   },
   "tt": {
     "name": "Trinidad and Tobago",
@@ -5125,7 +5318,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B is primary following US standard."
+    "notes": "Type B is primary following US standard.",
+    "continent": "north-america"
   },
   "tn": {
     "name": "Tunisia",
@@ -5152,7 +5346,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E dominates due to French colonial influence."
+    "notes": "Type E dominates due to French colonial influence.",
+    "continent": "africa"
   },
   "tr": {
     "name": "Turkey",
@@ -5179,7 +5374,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F (Schuko) is primary standard. Type C compatible and common."
+    "notes": "Type F (Schuko) is primary standard. Type C compatible and common.",
+    "continent": "middle-east"
   },
   "tm": {
     "name": "Turkmenistan",
@@ -5206,7 +5402,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type B primary despite higher voltage. Mixed US and European influence."
+    "notes": "Type B primary despite higher voltage. Mixed US and European influence.",
+    "continent": "asia"
   },
   "tc": {
     "name": "Turks and Caicos Islands",
@@ -5233,7 +5430,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B primary following US standard."
+    "notes": "Type B primary following US standard.",
+    "continent": "africa"
   },
   "tv": {
     "name": "Tuvalu",
@@ -5255,7 +5453,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type I following Australian influence."
+    "notes": "Type I following Australian influence.",
+    "continent": "oceania"
   },
   "ug": {
     "name": "Uganda",
@@ -5277,7 +5476,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British colonial legacy."
+    "notes": "Type G exclusively, British colonial legacy.",
+    "continent": "africa"
   },
   "ua": {
     "name": "Ukraine",
@@ -5304,7 +5504,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F dominates following European integration."
+    "notes": "Type F dominates following European integration.",
+    "continent": "europe"
   },
   "ae": {
     "name": "United Arab Emirates",
@@ -5326,7 +5527,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively, British technical influence."
+    "notes": "Type G exclusively, British technical influence.",
+    "continent": "middle-east"
   },
   "gb": {
     "name": "United Kingdom",
@@ -5348,7 +5550,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G exclusively. Most secure plug system globally, mandatory shutters."
+    "notes": "Type G exclusively. Most secure plug system globally, mandatory shutters.",
+    "continent": "europe"
   },
   "us": {
     "name": "United States",
@@ -5375,7 +5578,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B required in new construction for safety. Type A plugs work in Type B sockets."
+    "notes": "Type B required in new construction for safety. Type A plugs work in Type B sockets.",
+    "continent": "north-america"
   },
   "uy": {
     "name": "Uruguay",
@@ -5402,7 +5606,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C dominates. Some Type F in modern construction."
+    "notes": "Type C dominates. Some Type F in modern construction.",
+    "continent": "south-america"
   },
   "uz": {
     "name": "Uzbekistan",
@@ -5429,7 +5634,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C primary with gradual Type F modernization."
+    "notes": "Type C primary with gradual Type F modernization.",
+    "continent": "asia"
   },
   "vu": {
     "name": "Vanuatu",
@@ -5451,7 +5657,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type I exclusively, Australian influence."
+    "notes": "Type I exclusively, Australian influence.",
+    "continent": "oceania"
   },
   "va": {
     "name": "Vatican City",
@@ -5483,7 +5690,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type F primary, following Italian and European standards."
+    "notes": "Type F primary, following Italian and European standards.",
+    "continent": "europe"
   },
   "ve": {
     "name": "Venezuela",
@@ -5510,7 +5718,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type A dominates. Type B increasing in new construction."
+    "notes": "Type A dominates. Type B increasing in new construction.",
+    "continent": "south-america"
   },
   "vn": {
     "name": "Vietnam",
@@ -5542,7 +5751,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type A dominates despite higher voltage. Type C common in tourist areas. Mixed French colonial legacy."
+    "notes": "Type A dominates despite higher voltage. Type C common in tourist areas. Mixed French colonial legacy.",
+    "continent": "asia"
   },
   "vi": {
     "name": "US Virgin Islands",
@@ -5569,7 +5779,8 @@
     "frequency": {
       "standard": 60
     },
-    "notes": "Type B primary following US standard."
+    "notes": "Type B primary following US standard.",
+    "continent": "africa"
   },
   "wf": {
     "name": "Wallis and Futuna",
@@ -5596,7 +5807,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type E following French administration."
+    "notes": "Type E following French administration.",
+    "continent": "africa"
   },
   "eh": {
     "name": "Western Sahara",
@@ -5618,7 +5830,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C primary. Limited electrical infrastructure."
+    "notes": "Type C primary. Limited electrical infrastructure.",
+    "continent": "africa"
   },
   "ye": {
     "name": "Yemen",
@@ -5650,7 +5863,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type D primary due to British influence. Limited electrical infrastructure."
+    "notes": "Type D primary due to British influence. Limited electrical infrastructure.",
+    "continent": "middle-east"
   },
   "zm": {
     "name": "Zambia",
@@ -5682,7 +5896,8 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type C primary with mixed British colonial influence."
+    "notes": "Type C primary with mixed British colonial influence.",
+    "continent": "africa"
   },
   "zw": {
     "name": "Zimbabwe",
@@ -5709,6 +5924,7 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type G dominates due to British colonial influence."
+    "notes": "Type G dominates due to British colonial influence.",
+    "continent": "africa"
   }
 }
