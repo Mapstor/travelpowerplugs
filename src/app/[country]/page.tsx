@@ -7,7 +7,7 @@ import CountryPlugDisplay from '@/components/plugs/CountryPlugDisplay';
 import AdapterFinder from '@/components/tools/AdapterFinder';
 import Breadcrumb from '@/components/Breadcrumb';
 import Header from '@/components/layout/Header';
-import AnimatedPlugDisplay from '@/components/plugs/AnimatedPlugDisplay';
+import HTMLAnimatedPlug from '@/components/plugs/HTMLAnimatedPlug';
 // Enhanced country pages removed - using practical data system
 import { getCountryPlugData } from '@/lib/compatibility';
 
@@ -234,111 +234,110 @@ export default async function CountryPage({ params }: PageProps) {
         </div>
 
         <article>
-          <h1 className="text-3xl md:text-4xl font-bold mb-6">
-            {country.name} Electric Plug Types
+          {/* SEO-Optimized H1 */}
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+            {country.name} Electric Power Plug Types: Do You Need an Adapter?
           </h1>
-
-          {/* ABOVE THE FOLD - Direct Answer */}
-          <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-8">
-            <p className="text-xl font-semibold text-gray-900 mb-2">
-              {practicalPlugData 
-                ? `${country.name} PRIMARY plugs: Type ${primaryPlugs.join(' and Type ')}. Voltage: ${practicalPlugData.voltage.standard}V at ${practicalPlugData.frequency.standard}Hz.`
-                : `${country.name} uses Type ${country.plugTypes.join(' and Type ')} electrical outlets. The standard voltage is ${country.voltage}V at ${country.frequency}Hz.`
-              }
-            </p>
-            <p className="text-lg text-gray-700">
-              {country.hasAdapter 
-                ? `Travelers from the US will need a travel adapter.`
-                : `Travelers from the US typically won't need a travel adapter.`
-              }
-              {country.voltage > 127 && ' Check voltage compatibility for your devices.'}
-            </p>
+          
+          {/* SEO-Focused Hero Answer */}
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 mb-12 border border-blue-100">
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0">
+                <img 
+                  src={`https://flagcdn.com/w80/${country.iso2.toLowerCase()}.png`}
+                  alt={`${country.name} flag`}
+                  className="w-16 h-12 rounded shadow-md"
+                />
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                  {practicalPlugData 
+                    ? `${country.name} uses Type ${primaryPlugs.join(' and Type ')} plugs`
+                    : `${country.name} uses Type ${country.plugTypes.join(' and Type ')} plugs`
+                  }
+                </h2>
+                <div className="grid md:grid-cols-3 gap-4 text-sm">
+                  <div>
+                    <span className="font-medium text-gray-700">Voltage:</span>
+                    <span className="ml-2 text-lg font-semibold text-blue-900">
+                      {practicalPlugData ? practicalPlugData.voltage.standard : country.voltage}V
+                    </span>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-700">Frequency:</span>
+                    <span className="ml-2 text-lg font-semibold text-blue-900">
+                      {practicalPlugData ? practicalPlugData.frequency.standard : country.frequency}Hz
+                    </span>
+                  </div>
+                  <div>
+                    <span className="font-medium text-gray-700">US Adapter:</span>
+                    <span className={`ml-2 text-lg font-semibold ${country.hasAdapter ? 'text-red-700' : 'text-green-700'}`}>
+                      {country.hasAdapter ? 'Required' : 'Not needed'}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* PRACTICAL PLUG CLASSIFICATION - Honest Compatibility */}
-          {practicalPlugData && (
-            <div className="bg-white border border-gray-300 rounded-lg p-6 mb-8 shadow-sm">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                  <span className="text-green-600 font-bold text-sm">✓</span>
-                </div>
-                <div>
-                  <h2 className="text-lg font-bold text-gray-900 mb-2">Real-World Plug Usage in {country.name}</h2>
-                  <p className="text-gray-700 text-sm mb-4">
-                    Most sources just list "official" plug types. Here's what you'll actually encounter:
-                  </p>
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-4">
-                {primaryPlugs.length > 0 && (
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                    <h3 className="font-semibold text-green-800 mb-2 flex items-center">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                      PRIMARY (90%+ of outlets)
-                    </h3>
-                    <div className="space-y-1">
-                      {primaryPlugs.map(type => (
-                        <div key={type} className="text-sm font-medium text-green-700">
-                          Type {type}
-                        </div>
-                      ))}
+          {/* SEO-Optimized Introduction with Beautiful Design */}
+          <div className="my-10">
+            <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100">
+              <div className="space-y-4">
+                <p className="text-lg text-gray-800 leading-relaxed">
+                  <span className="font-semibold text-gray-900">{country.name} uses {practicalPlugData ? `Type ${primaryPlugs.join(' and Type ')}` : `Type ${country.plugTypes.join(' and Type ')}`} electrical plugs</span> operating at {practicalPlugData ? practicalPlugData.voltage.standard : country.voltage}V and {practicalPlugData ? practicalPlugData.frequency.standard : country.frequency}Hz.
+                  {' '}The {country.name} plug type is {country.plugTypes.length > 1 ? 'part of the European standard' : 'the European standard'}, widely used across {country.continent === 'europe' ? 'the continent' : country.continent}.
+                </p>
+                
+                {country.hasAdapter && (
+                  <div className="flex items-start gap-3 p-4 bg-amber-50 rounded-xl border border-amber-100">
+                    <svg className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                    <div>
+                      <p className="text-amber-900 font-medium">
+                        US, UK, and Australian travelers need an adapter for {country.name}.
+                      </p>
+                      {country.voltage > 127 && (
+                        <p className="text-sm text-amber-800 mt-1">
+                          Check voltage compatibility – {country.name} uses {practicalPlugData ? practicalPlugData.voltage.standard : country.voltage}V (higher than US 120V).
+                        </p>
+                      )}
                     </div>
                   </div>
                 )}
                 
-                {secondaryPlugs.length > 0 && (
-                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                    <h3 className="font-semibold text-yellow-800 mb-2 flex items-center">
-                      <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
-                      SECONDARY (newer/specific buildings)
-                    </h3>
-                    <div className="space-y-1">
-                      {secondaryPlugs.map(type => (
-                        <div key={type} className="text-sm font-medium text-yellow-700">
-                          Type {type}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                
-                {legacyPlugs.length > 0 && (
-                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-                    <h3 className="font-semibold text-gray-800 mb-2 flex items-center">
-                      <span className="w-2 h-2 bg-gray-500 rounded-full mr-2"></span>
-                      LEGACY (old installations only)
-                    </h3>
-                    <div className="space-y-1">
-                      {legacyPlugs.map(type => (
-                        <div key={type} className="text-sm font-medium text-gray-700">
-                          Type {type}
-                        </div>
-                      ))}
-                    </div>
+                {practicalPlugData && (primaryPlugs.length > 0 || secondaryPlugs.length > 0) && (
+                  <div className="mt-4 text-sm text-gray-700">
+                    {primaryPlugs.length > 0 && (
+                      <span>
+                        <span className="font-semibold">Primary plug:</span> Type {primaryPlugs.join(' and Type ')} (found in most outlets)
+                      </span>
+                    )}
+                    {primaryPlugs.length > 0 && secondaryPlugs.length > 0 && (
+                      <span className="mx-2">•</span>
+                    )}
+                    {secondaryPlugs.length > 0 && (
+                      <span>
+                        <span className="font-semibold">Secondary:</span> Type {secondaryPlugs.join(' and Type ')} (also common)
+                      </span>
+                    )}
                   </div>
                 )}
               </div>
-              
-              {practicalPlugData.notes && practicalPlugData.notes.length > 0 && (
-                <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded text-sm text-blue-800">
-                  <strong>💡 Practical Note:</strong> {practicalPlugData.notes[0]}
-                </div>
-              )}
             </div>
-          )}
+          </div>
 
           {/* Animated Plug Display - Hero Section */}
           <div className="my-8">
-            <h2 className="text-2xl font-bold mb-3 text-center">Interactive Plug Demonstration</h2>
-            <AnimatedPlugDisplay plugTypes={country.plugTypes} width={400} height={300} loop={false} />
+            <h2 className="text-2xl font-bold mb-3 text-center">{country.name} Plug Types</h2>
+            <div className="space-y-6">
+              {country.plugTypes.map((plugType) => (
+                <HTMLAnimatedPlug key={plugType} plugType={plugType} />
+              ))}
+            </div>
           </div>
 
-          {/* Traditional SVG Display for quick reference */}
-          <div className="my-8 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6">
-            <h3 className="text-lg font-semibold mb-4 text-center">Quick Visual Reference</h3>
-            <CountryPlugDisplay country={country} size={100} animated={false} />
-          </div>
 
 
           {/* Enhanced Quick Facts Cards */}
@@ -462,60 +461,6 @@ export default async function CountryPage({ params }: PageProps) {
             <AdapterFinder destinationCountry={country} />
           </div>
 
-          {/* Electric Socket Types Section */}
-          <section id="plug-types" className="my-12">
-            <h2 className="text-3xl font-bold mb-6">Electric Socket Types in {country.name}</h2>
-            <p className="text-lg text-gray-700 mb-6">
-              {country.name} uses {country.plugTypes.length === 1 ? 'one type of' : 'multiple types of'} electrical outlet{country.plugTypes.length > 1 ? 's' : ''}. 
-              Understanding the specific plug types will help you choose the right travel adapter.
-            </p>
-            
-            <div className="grid gap-6">
-              {plugSpecs.map((spec) => spec && (
-                <div key={spec.id} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
-                        <span className="text-2xl font-bold text-blue-600">Type {spec.id}</span>
-                      </div>
-                    </div>
-                    <div className="flex-grow">
-                      <h3 className="text-xl font-semibold mb-2">
-                        {spec.name}
-                      </h3>
-                      <p className="text-gray-600 mb-3">{spec.aka}</p>
-                      <div className="grid grid-cols-2 gap-4 text-sm">
-                        <div>
-                          <span className="font-medium text-gray-700">Configuration:</span>
-                          <span className="ml-2">{spec.pins} pins, {spec.pinShape}</span>
-                        </div>
-                        <div>
-                          <span className="font-medium text-gray-700">Grounded:</span>
-                          <span className="ml-2">{spec.grounded ? 'Yes' : 'No'}</span>
-                        </div>
-                        <div>
-                          <span className="font-medium text-gray-700">Voltage:</span>
-                          <span className="ml-2">{spec.voltage}</span>
-                        </div>
-                        <div>
-                          <span className="font-medium text-gray-700">Amperage:</span>
-                          <span className="ml-2">{spec.amperage}A</span>
-                        </div>
-                      </div>
-                      <div className="mt-3">
-                        <Link 
-                          href={`/plug-type/type-${spec.id.toLowerCase()}`} 
-                          className="text-blue-600 hover:text-blue-800 text-sm font-medium"
-                        >
-                          Learn more about Type {spec.id} plugs →
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
 
           {/* Do I Need an Adapter Section */}
           <section id="do-i-need-adapter" className="my-12">

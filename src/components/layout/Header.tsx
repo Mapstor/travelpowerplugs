@@ -39,6 +39,14 @@ const plugTypes = [
   { name: 'Type O - Thai', slug: 'type-o', icon: '🇹🇭' },
 ];
 
+const comparisons = [
+  { name: 'Type A vs Type B', slug: 'type-a-vs-type-b-plug', icon: '🇺🇸' },
+  { name: 'Type C vs Type F', slug: 'type-c-vs-type-f-plug', icon: '🇪🇺' },
+  { name: 'Type C vs Type E', slug: 'type-c-vs-type-e-plug', icon: '🇫🇷' },
+  { name: 'Type E vs Type F', slug: 'type-e-vs-type-f-plug', icon: '🇩🇪' },
+  { name: 'Type D vs Type M', slug: 'type-d-vs-type-m-plug', icon: '🇿🇦' },
+];
+
 interface HeaderProps {
   showFullNav?: boolean;
 }
@@ -46,6 +54,7 @@ interface HeaderProps {
 export default function Header({ showFullNav = true }: HeaderProps) {
   const [isToolsOpen, setIsToolsOpen] = useState(false);
   const [isPlugTypesOpen, setIsPlugTypesOpen] = useState(false);
+  const [isComparisonsOpen, setIsComparisonsOpen] = useState(false);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -54,6 +63,7 @@ export default function Header({ showFullNav = true }: HeaderProps) {
       if (!target.closest('.dropdown-container')) {
         setIsToolsOpen(false);
         setIsPlugTypesOpen(false);
+        setIsComparisonsOpen(false);
       }
     };
 
@@ -64,11 +74,19 @@ export default function Header({ showFullNav = true }: HeaderProps) {
   const toggleToolsDropdown = () => {
     setIsToolsOpen(!isToolsOpen);
     setIsPlugTypesOpen(false);
+    setIsComparisonsOpen(false);
   };
 
   const togglePlugTypesDropdown = () => {
     setIsPlugTypesOpen(!isPlugTypesOpen);
     setIsToolsOpen(false);
+    setIsComparisonsOpen(false);
+  };
+
+  const toggleComparisonsDropdown = () => {
+    setIsComparisonsOpen(!isComparisonsOpen);
+    setIsToolsOpen(false);
+    setIsPlugTypesOpen(false);
   };
 
   return (
@@ -130,13 +148,41 @@ export default function Header({ showFullNav = true }: HeaderProps) {
               )}
             </div>
             
-            {/* About Link */}
-            <Link
-              href="/about"
-              className="text-sm text-gray-700 hover:text-blue-600 transition-colors"
-            >
-              About
-            </Link>
+            {/* Comparisons Dropdown */}
+            <div className="relative dropdown-container">
+              <button 
+                onClick={toggleComparisonsDropdown}
+                className="text-sm text-gray-700 hover:text-blue-600 transition-colors flex items-center"
+              >
+                Comparisons <span className="ml-1">▼</span>
+              </button>
+              
+              {isComparisonsOpen && (
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                  {comparisons.map((comparison) => (
+                    <Link
+                      key={comparison.slug}
+                      href={`/${comparison.slug}`}
+                      className="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors first:rounded-t-lg last:rounded-b-lg"
+                      onClick={() => setIsComparisonsOpen(false)}
+                    >
+                      <span className="mr-3">{comparison.icon}</span>
+                      {comparison.name}
+                    </Link>
+                  ))}
+                  <div className="border-t border-gray-200 mt-2 pt-2">
+                    <Link
+                      href="/about"
+                      className="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors last:rounded-b-lg"
+                      onClick={() => setIsComparisonsOpen(false)}
+                    >
+                      <span className="mr-3">ℹ️</span>
+                      About
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
             
             {/* Tools Dropdown */}
             <div className="relative dropdown-container">

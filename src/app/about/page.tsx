@@ -223,15 +223,15 @@ export default function AboutPage() {
           <div className="flex flex-wrap gap-4 justify-center">
             <Link 
               href="/" 
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
             >
-              Explore World Map
+              <span className="text-white">Explore World Map</span>
             </Link>
             <Link 
               href="/tools/adapter-finder" 
-              className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors"
+              className="inline-block bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors font-medium"
             >
-              Find Your Adapter
+              <span className="text-white">Find Your Adapter</span>
             </Link>
           </div>
         </div>

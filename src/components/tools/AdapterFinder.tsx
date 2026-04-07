@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Country } from '@/data/countries';
+import { Country, COUNTRIES } from '@/data/countries';
 
 interface AdapterFinderProps {
   destinationCountry: Country;
@@ -13,32 +13,39 @@ const AdapterFinder: React.FC<AdapterFinderProps> = ({
   destinationCountry, 
   className = '' 
 }) => {
-  const [originRegion, setOriginRegion] = useState('');
+  const [originCountry, setOriginCountry] = useState('');
+  
+  const origin = originCountry ? COUNTRIES.find(c => c.iso2 === originCountry) : null;
 
   const getAdapterRecommendation = () => {
-    switch (originRegion) {
-      case 'us':
-        return destinationCountry.hasAdapter 
-          ? { needed: true, message: `You need a Type ${destinationCountry.plugTypes.join('/')} adapter for your US plugs` }
-          : { needed: false, message: 'Your US plugs will work without an adapter' };
-      
-      case 'uk':
-        return destinationCountry.plugTypes.includes('G')
-          ? { needed: false, message: 'Your UK plugs will work without an adapter' }
-          : { needed: true, message: `You need a Type ${destinationCountry.plugTypes.join('/')} adapter for your UK plugs` };
-      
-      case 'eu':
-        return destinationCountry.plugTypes.some(p => ['C', 'E', 'F'].includes(p))
-          ? { needed: false, message: 'Your EU plugs will work without an adapter' }
-          : { needed: true, message: `You need a Type ${destinationCountry.plugTypes.join('/')} adapter for your EU plugs` };
-      
-      case 'au':
-        return destinationCountry.plugTypes.includes('I')
-          ? { needed: false, message: 'Your Australian plugs will work without an adapter' }
-          : { needed: true, message: `You need a Type ${destinationCountry.plugTypes.join('/')} adapter for your Australian plugs` };
-      
-      default:
-        return null;
+    if (!origin) return null;
+
+    // Check if plug types are compatible
+    const hasCompatiblePlugs = origin.plugTypes.some(plugType => 
+      destinationCountry.plugTypes.includes(plugType)
+    );
+
+    // Check voltage compatibility
+    const voltageCompatible = Math.abs(origin.voltage - destinationCountry.voltage) <= 20;
+
+    if (hasCompatiblePlugs && voltageCompatible) {
+      return { 
+        needed: false, 
+        message: `Your ${origin.name} plugs (Type ${origin.plugTypes.join('/')}) will work in ${destinationCountry.name}`,
+        voltageCompatible
+      };
+    } else if (hasCompatiblePlugs && !voltageCompatible) {
+      return { 
+        needed: true, 
+        message: `Plugs fit, but you need a voltage converter: ${origin.name} uses ${origin.voltage}V vs ${destinationCountry.name} ${destinationCountry.voltage}V`,
+        voltageCompatible
+      };
+    } else {
+      return { 
+        needed: true, 
+        message: `You need a Type ${destinationCountry.plugTypes.join('/')} adapter for your ${origin.name} plugs (Type ${origin.plugTypes.join('/')})`,
+        voltageCompatible
+      };
     }
   };
 
@@ -55,15 +62,31 @@ const AdapterFinder: React.FC<AdapterFinderProps> = ({
           Where are you traveling from?
         </label>
         <select 
-          value={originRegion}
-          onChange={(e) => setOriginRegion(e.target.value)}
+          value={originCountry}
+          onChange={(e) => setOriginCountry(e.target.value)}
           className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         >
-          <option value="">Select your home region...</option>
-          <option value="us">🇺🇸 United States</option>
-          <option value="uk">🇬🇧 United Kingdom</option>
-          <option value="eu">🇪🇺 Europe</option>
-          <option value="au">🇦🇺 Australia</option>
+          <option value="">Select your home country...</option>
+          <optgroup label="Popular Countries">
+            <option value="US">🇺🇸 United States</option>
+            <option value="GB">🇬🇧 United Kingdom</option>
+            <option value="CA">🇨🇦 Canada</option>
+            <option value="AU">🇦🇺 Australia</option>
+            <option value="DE">🇩🇪 Germany</option>
+            <option value="FR">🇫🇷 France</option>
+            <option value="JP">🇯🇵 Japan</option>
+            <option value="CN">🇨🇳 China</option>
+          </optgroup>
+          <optgroup label="All Countries">
+            {COUNTRIES
+              .sort((a, b) => a.name.localeCompare(b.name))
+              .map(country => (
+                <option key={country.iso2} value={country.iso2}>
+                  {country.name}
+                </option>
+              ))
+            }
+          </optgroup>
         </select>
       </div>
 
@@ -87,9 +110,9 @@ const AdapterFinder: React.FC<AdapterFinderProps> = ({
                 {recommendation.message}
               </p>
               
-              {destinationCountry.voltage > 127 && originRegion === 'us' && (
+              {!recommendation.voltageCompatible && origin && (
                 <p className="text-orange-700 mt-2 text-sm">
-                  ⚡ Also check voltage: {destinationCountry.name} uses {destinationCountry.voltage}V vs US 120V
+                  ⚡ Voltage difference: {origin.name} uses {origin.voltage}V vs {destinationCountry.name} {destinationCountry.voltage}V
                 </p>
               )}
             </div>
@@ -108,9 +131,9 @@ const AdapterFinder: React.FC<AdapterFinderProps> = ({
         </div>
       )}
 
-      {!originRegion && (
+      {!originCountry && (
         <div className="text-center py-8 text-gray-500">
-          <p>Select your home region above to see if you need an adapter</p>
+          <p>Select your home country above to see if you need an adapter</p>
         </div>
       )}
     </div>

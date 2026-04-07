@@ -148,7 +148,7 @@ export const COUNTRIES: Country[] = [
     hasAdapter: true
   },
   {
-    slug: 'austria-electric-plug-types',
+    slug: 'austria-electric-power-plug-types-do-you-need-an-adapter',
     name: 'Austria',
     iso2: 'AT',
     iso3: 'AUT',
