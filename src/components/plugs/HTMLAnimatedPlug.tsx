@@ -46,7 +46,6 @@ const HTMLAnimatedPlug: React.FC<HTMLAnimatedPlugProps> = ({
           }}
           title={`Type ${plugType} Plug Animation`}
           loading="eager"
-          sandbox="allow-scripts allow-same-origin"
         />
       </div>
     </div>

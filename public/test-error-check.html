@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error Check Test</title>
+    <style>
+        body { font-family: monospace; padding: 20px; }
+        .test { margin: 20px 0; padding: 10px; border: 1px solid #ccc; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>Animation Error Check</h1>
+    <div id="results"></div>
+    
+    <script>
+        const types = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'];
+        const results = document.getElementById('results');
+        
+        types.forEach(type => {
+            const div = document.createElement('div');
+            div.className = 'test';
+            div.innerHTML = `<h3>Type ${type.toUpperCase()}</h3>`;
+            
+            const iframe = document.createElement('iframe');
+            iframe.src = `/animations/type-${type}-plug-animation.html`;
+            iframe.style.width = '700px';
+            iframe.style.height = '250px';
+            iframe.style.border = '1px solid #ddd';
+            
+            iframe.onload = function() {
+                try {
+                    // Try to access the iframe's window
+                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    const canvas = iframeDoc.getElementById('cv');
+                    
+                    if (canvas) {
+                        const ctx = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+                        if (ctx) {
+                            div.innerHTML += '<p class="success">✓ WebGL context created successfully</p>';
+                        } else {
+                            div.innerHTML += '<p class="error">✗ Failed to create WebGL context</p>';
+                        }
+                    } else {
+                        div.innerHTML += '<p class="error">✗ Canvas element not found</p>';
+                    }
+                } catch(e) {
+                    div.innerHTML += `<p class="error">✗ Error: ${e.message}</p>`;
+                }
+            };
+            
+            div.appendChild(iframe);
+            results.appendChild(div);
+        });
+    </script>
+</body>
+</html>
