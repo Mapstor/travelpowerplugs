@@ -830,18 +830,21 @@ export default function TypeCvsTypeEComparison() {
             <Link 
               href="/france-electric-plug-types"
               className="bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-colors font-bold text-lg"
+              style={{ color: '#ffffff !important' }}
             >
               Explore France Plugs
             </Link>
             <Link 
               href="/tools/adapter-finder"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-bold text-lg"
+              style={{ color: '#ffffff !important' }}
             >
               Find Your Adapter
             </Link>
             <Link 
               href="/type-e-vs-type-f-plug"
               className="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-colors font-bold text-lg"
+              style={{ color: '#ffffff !important' }}
             >
               Compare E vs F
             </Link>

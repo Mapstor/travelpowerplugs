@@ -156,7 +156,8 @@ export default function TypeEvsTypeFComparison() {
           
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-lg overflow-hidden">
-              <thead className="bg-gradient-to-r from-blue-600 to-red-600 text-white">
+              <thead className="bg-gradient-to-r from-blue-600 to-red-600 text-white"
+              style={{ color: '#ffffff !important' }}>
                 <tr>
                   <th className="px-6 py-4 text-left">Technical Aspect</th>
                   <th className="px-6 py-4 text-center">Type E (French)</th>
@@ -522,7 +523,8 @@ export default function TypeEvsTypeFComparison() {
           
           <div className="overflow-x-auto mb-8">
             <table className="w-full bg-white rounded-lg overflow-hidden shadow-lg">
-              <thead className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+              <thead className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white"
+              style={{ color: '#ffffff !important' }}>
                 <tr>
                   <th className="px-4 py-3 text-left">Scenario</th>
                   <th className="px-4 py-3 text-center">Works?</th>
@@ -863,18 +865,21 @@ export default function TypeEvsTypeFComparison() {
             <Link 
               href="/france-electric-plug-types"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-bold text-lg"
+              style={{ color: '#ffffff !important' }}
             >
               Explore France (Type E)
             </Link>
             <Link 
               href="/germany-electric-plug-types"
               className="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-colors font-bold text-lg"
+              style={{ color: '#ffffff !important' }}
             >
               Explore Germany (Type F)
             </Link>
             <Link 
               href="/tools/adapter-finder"
               className="bg-purple-600 text-white px-8 py-4 rounded-lg hover:bg-purple-700 transition-colors font-bold text-lg"
+              style={{ color: '#ffffff !important' }}
             >
               Find Your Adapter
             </Link>

@@ -150,7 +150,8 @@ export default function TypeCvsTypeFComparison() {
           
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-lg overflow-hidden">
-              <thead className="bg-blue-600 text-white">
+              <thead className="bg-blue-600 text-white"
+              style={{ color: '#ffffff !important' }}>
                 <tr>
                   <th className="px-6 py-4 text-left">Specification</th>
                   <th className="px-6 py-4 text-center">Type C (Europlug)</th>
@@ -419,7 +420,8 @@ export default function TypeCvsTypeFComparison() {
           
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-lg overflow-hidden">
-              <thead className="bg-purple-600 text-white">
+              <thead className="bg-purple-600 text-white"
+              style={{ color: '#ffffff !important' }}>
                 <tr>
                   <th className="px-4 py-3 text-left">Plug Type</th>
                   <th className="px-4 py-3 text-center">Type C Socket</th>
@@ -698,18 +700,21 @@ export default function TypeCvsTypeFComparison() {
             <Link 
               href="/tools/adapter-finder"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-bold text-lg"
+              style={{ color: '#ffffff !important' }}
             >
               Find Your Adapter
             </Link>
             <Link 
               href="/continent/europe"
               className="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-colors font-bold text-lg"
+              style={{ color: '#ffffff !important' }}
             >
               Explore European Countries
             </Link>
             <Link 
               href="/tools/voltage-calculator"
               className="bg-purple-600 text-white px-8 py-4 rounded-lg hover:bg-purple-700 transition-colors font-bold text-lg"
+              style={{ color: '#ffffff !important' }}
             >
               Check Voltage Compatibility
             </Link>
