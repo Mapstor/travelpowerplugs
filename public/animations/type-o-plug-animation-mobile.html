@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Type O Animation (Mobile)</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#f7f5f2;margin:0;padding:0;overflow:hidden}
+  .plug-scene{width:100%;height:100%;position:relative;background:#f4f2ef}
+  .plug-scene canvas{display:block;width:100%;height:100%}
+  .replay-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(244,242,239,0.45);opacity:0;transition:opacity 0.4s;pointer-events:none;z-index:2}
+  .replay-overlay.visible{opacity:1;pointer-events:auto}
+  .replay-btn{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.95);border:1.5px solid #ddd;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+  .replay-btn:hover{border-color:#c85a3a;background:#fff;transform:scale(1.08)}
+  .replay-btn svg{width:14px;height:14px;fill:none;stroke:#999;stroke-width:2;stroke-linecap:round}
+  .replay-btn:hover svg{stroke:#c85a3a}
+</style>
+</head>
+<body>
+<div class="plug-scene" id="scene">
+  <canvas id="cv"></canvas>
+  <div class="replay-overlay" id="ro">
+    <div class="replay-btn" id="rb">
+      <svg viewBox="0 0 24 24"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const canvas = document.getElementById('cv');
+const sceneEl = document.getElementById('scene');
+const replayOverlay = document.getElementById('ro');
+const replayBtn = document.getElementById('rb');
+
+const w = window.innerWidth;
+const h = window.innerHeight;
+canvas.width = w; 
+canvas.height = h;
+
+const scene3 = new THREE.Scene();
+scene3.background = new THREE.Color(0xf4f2ef);
+
+const camera = new THREE.PerspectiveCamera(32, w/h, 0.1, 100);
+camera.position.set(-0.2, 1.2, 7.5);
+camera.lookAt(0.3, -0.1, 0);
+
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+renderer.setSize(w, h);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.15;
+
+scene3.add(new THREE.AmbientLight(0xffffff, 0.45));
+const keyL = new THREE.DirectionalLight(0xfff8ee, 0.95);
+keyL.position.set(3, 6, 5); 
+keyL.castShadow = true; 
+keyL.shadow.mapSize.set(512, 512);
+scene3.add(keyL);
+scene3.add(new THREE.DirectionalLight(0xe0ecff, 0.3).translateX(-5).translateY(2).translateZ(3));
+
+const mW = new THREE.MeshStandardMaterial({ color: 0xf2f2f2, roughness: 0.38 });
+const mP = new THREE.MeshStandardMaterial({ color: 0xf0eeea, roughness: 0.3 });
+const mPin = new THREE.MeshStandardMaterial({ color: 0xccaa55, roughness: 0.18, metalness: 0.92 });
+const mD = new THREE.MeshStandardMaterial({ color: 0x060606, roughness: 0.95 });
+const mCbl = new THREE.MeshStandardMaterial({ color: 0x1c1c1c, roughness: 0.6 });
+const mWall = new THREE.MeshStandardMaterial({ color: 0xe2dfd9, roughness: 0.55 });
+
+const PIN_R = 0.065;
+const PIN_Z = 0.4;
+
+// SOCKET
+const sG = new THREE.Group();
+const wallM = new THREE.Mesh(new THREE.BoxGeometry(0.4, 3.2, 3.2), mWall);
+wallM.position.x = 0.2; 
+wallM.receiveShadow = true; 
+sG.add(wallM);
+
+const fpGeo = new THREE.CylinderGeometry(1.2, 1.2, 0.14, 32);
+const fpMesh = new THREE.Mesh(fpGeo, mP);
+fpMesh.rotation.z = Math.PI / 2;
+fpMesh.castShadow = true; 
+fpMesh.receiveShadow = true;
+sG.add(fpMesh);
+
+// Generic three-pin configuration
+for (let i = 0; i < 3; i++) {
+  const angle = (i * 120 - 90) * Math.PI / 180;
+  const holeGeo = new THREE.CylinderGeometry(PIN_R + 0.02, PIN_R + 0.02, 0.03, 24);
+  const holeMesh = new THREE.Mesh(holeGeo, mD);
+  holeMesh.rotation.z = Math.PI / 2;
+  holeMesh.position.set(-0.08, Math.sin(angle) * PIN_Z, Math.cos(angle) * PIN_Z);
+  sG.add(holeMesh);
+}
+
+sG.position.set(2.8, 0, 0);
+scene3.add(sG);
+
+// PLUG
+const pG = new THREE.Group();
+const bGeo = new THREE.CylinderGeometry(0.55, 0.55, 0.4, 32);
+const bMesh = new THREE.Mesh(bGeo, mW);
+bMesh.rotation.z = Math.PI / 2;
+bMesh.castShadow = true;
+pG.add(bMesh);
+
+// Pins facing socket
+for (let i = 0; i < 3; i++) {
+  const angle = (i * 120 - 90) * Math.PI / 180;
+  const pinGeo = new THREE.CylinderGeometry(PIN_R, PIN_R, 0.75, 24);
+  const pinMesh = new THREE.Mesh(pinGeo, mPin);
+  pinMesh.rotation.z = Math.PI / 2;
+  pinMesh.position.set(0.5, Math.sin(angle) * PIN_Z, Math.cos(angle) * PIN_Z);
+  pinMesh.castShadow = true;
+  pG.add(pinMesh);
+}
+
+const cGeo = new THREE.CylinderGeometry(0.12, 0.12, 1.8, 16);
+const cMesh = new THREE.Mesh(cGeo, mCbl);
+cMesh.rotation.z = Math.PI / 2;
+cMesh.position.x = -0.7;
+cMesh.castShadow = true;
+pG.add(cMesh);
+
+pG.position.set(-1.2, 0, 0);
+scene3.add(pG);
+
+let playing = false;
+let aId;
+let st;
+const DUR = 2500;
+
+function eInOut(t) {
+  return t < 0.5 ? 2*t*t : -1+(4-2*t)*t;
+}
+
+function rf(t) {
+  const e = eInOut(t);
+  pG.position.x = -1.2 + e * 2.9;
+  renderer.render(scene3, camera);
+}
+
+function animate(ts) {
+  if (!st) st = ts;
+  const t = Math.min((ts - st) / DUR, 1);
+  rf(t);
+  if (t < 1) aId = requestAnimationFrame(animate);
+  else { 
+    playing = false; 
+    setTimeout(() => replayOverlay.classList.add('visible'), 500); 
+  }
+}
+
+function play() {
+  if (playing) return;
+  playing = true;
+  replayOverlay.classList.remove('visible');
+  st = null;
+  rf(0);
+  aId = requestAnimationFrame(animate);
+}
+
+sceneEl.addEventListener('click', play);
+replayBtn.addEventListener('click', e => { e.stopPropagation(); play(); });
+setTimeout(play, 400);
+</script>
+</body>
+</html>

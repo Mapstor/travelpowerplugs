@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from '@/components/layout/Header';
 import HTMLAnimatedPlug from '@/components/plugs/HTMLAnimatedPlug';
+import ComparisonAnimation from '@/components/plugs/ComparisonAnimation';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
@@ -125,14 +126,7 @@ export default function TypeAvsTypeBPage() {
                   </div>
                   {/* Animation */}
                   <div className="mt-4">
-                    <iframe
-                      src="/animations/type-a-plug-animation.html"
-                      width="100%"
-                      height="200"
-                      className="border-0 rounded-lg"
-                      title="Type A Plug Animation"
-                      loading="lazy"
-                    />
+                    <ComparisonAnimation plugType="a" title="" />
                   </div>
                 </div>
               </div>
@@ -156,14 +150,7 @@ export default function TypeAvsTypeBPage() {
                   </div>
                   {/* Animation */}
                   <div className="mt-4">
-                    <iframe
-                      src="/animations/type-b-plug-animation.html"
-                      width="100%"
-                      height="200"
-                      className="border-0 rounded-lg"
-                      title="Type B Plug Animation"
-                      loading="lazy"
-                    />
+                    <ComparisonAnimation plugType="b" title="" />
                   </div>
                 </div>
               </div>

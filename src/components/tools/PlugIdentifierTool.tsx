@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { COUNTRIES, PlugType } from '@/data/countries';
 import { getPlugComponent } from '@/components/plugs';
 import AdapterFinder from './AdapterFinder';
+import { useIsMobile } from '@/hooks/useIsMobile';
 
 interface PlugOption {
   type: PlugType;
@@ -34,6 +35,7 @@ const PLUG_OPTIONS: PlugOption[] = [
 ];
 
 const PlugIdentifierTool: React.FC = () => {
+  const isMobile = useIsMobile();
   const [currentStep, setCurrentStep] = useState<1 | 2 | 3 | 4>(1);
   const [selectedPins, setSelectedPins] = useState<2 | 3 | null>(null);
   const [selectedShape, setSelectedShape] = useState<'flat' | 'round' | 'rectangular' | null>(null);
@@ -295,10 +297,10 @@ const PlugIdentifierTool: React.FC = () => {
                     <h4 className="text-sm font-semibold text-gray-700 mb-3">How It Works</h4>
                     <div className="bg-white rounded-lg p-4 shadow-sm h-48 flex items-center justify-center">
                       <iframe
-                        src={`/animations/type-${identifiedPlug.toLowerCase()}-plug-animation.html`}
                         className="w-full h-full border-0"
-                        title={`Type ${identifiedPlug} plug animation`}
-                        loading="lazy"
+                        src={`/animations/type-${identifiedPlug.toLowerCase()}-plug-animation${isMobile ? '-mobile' : ''}.html`}
+                        title={`Type ${identifiedPlug} plug animation${isMobile ? ' - Mobile' : ''}`}
+                        loading={isMobile ? 'eager' : 'lazy'}
                       />
                     </div>
                   </div>

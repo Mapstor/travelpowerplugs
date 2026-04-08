@@ -6,6 +6,7 @@ import { COUNTRIES, Country } from '@/data/countries';
 import { COMPATIBILITY_MATRIX } from '@/data/plugTypes';
 import PlugInSocket from '@/components/plugs/PlugInSocket';
 import { checkCompatibility, getCountryPlugData, CompatibilityResult } from '@/lib/compatibility';
+import { useIsMobile } from '@/hooks/useIsMobile';
 
 interface AdapterFinderToolProps {
   initialFrom?: string;
@@ -26,6 +27,7 @@ const AdapterFinderTool: React.FC<AdapterFinderToolProps> = ({
   const [showToSuggestions, setShowToSuggestions] = useState(false);
   
   const router = useRouter();
+  const isMobile = useIsMobile();
 
   // Initialize from URL params
   useEffect(() => {
@@ -404,12 +406,12 @@ const AdapterFinderTool: React.FC<AdapterFinderToolProps> = ({
                       {/* Animation Below */}
                       <div className="w-full">
                         <iframe
-                          src={`/animations/type-${plugType.toLowerCase()}-plug-animation.html`}
-                          width="100%"
-                          height="280"
-                          frameBorder="0"
-                          title={`Type ${plugType} Plug Animation`}
                           className="rounded-lg w-full"
+                          src={`/animations/type-${plugType.toLowerCase()}-plug-animation${isMobile ? '-mobile' : ''}.html`}
+                          width="100%"
+                          height={isMobile ? "200" : "280"}
+                          frameBorder="0"
+                          title={`Type ${plugType} Plug Animation${isMobile ? ' - Mobile' : ''}`}
                           style={{
                             border: 'none',
                             background: 'transparent',
@@ -464,12 +466,12 @@ const AdapterFinderTool: React.FC<AdapterFinderToolProps> = ({
                       {/* Animation Below */}
                       <div className="w-full">
                         <iframe
-                          src={`/animations/type-${plugType.toLowerCase()}-plug-animation.html`}
-                          width="100%"
-                          height="280"
-                          frameBorder="0"
-                          title={`Type ${plugType} Socket Animation`}
                           className="rounded-lg w-full"
+                          src={`/animations/type-${plugType.toLowerCase()}-plug-animation${isMobile ? '-mobile' : ''}.html`}
+                          width="100%"
+                          height={isMobile ? "200" : "280"}
+                          frameBorder="0"
+                          title={`Type ${plugType} Socket Animation${isMobile ? ' - Mobile' : ''}`}
                           style={{
                             border: 'none',
                             background: 'transparent',

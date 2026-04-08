@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import * as d3 from 'd3';
 import * as topojson from 'topojson-client';
 import { COUNTRIES, Country } from '@/data/countries';
@@ -334,15 +335,15 @@ const WorldMap: React.FC<WorldMapProps> = ({
             if (!countryData) return;
 
             if (isMobile) {
-              if (lastTappedCountry === countryData.slug) {
-                // Second tap - navigate
-                router.push(`/${countryData.slug}`);
-              } else {
-                // First tap - show tooltip
-                setLastTappedCountry(countryData.slug);
-                // Show tooltip logic here
-              }
+              // On mobile, show tooltip with clickable button
+              setTooltipData({
+                country: countryData,
+                x: event.clientX,
+                y: event.clientY
+              });
+              setLastTappedCountry(countryData.slug);
             } else {
+              // On desktop, navigate directly on click
               if (onCountryClick) {
                 onCountryClick(countryData);
               } else {
@@ -451,16 +452,27 @@ const WorldMap: React.FC<WorldMapProps> = ({
       {/* Enhanced Tooltip */}
       {tooltipData && (
         <div
-          className="fixed bg-white border-2 border-gray-300 rounded-lg pointer-events-none shadow-2xl p-3"
+          className="fixed bg-white border-2 border-gray-300 rounded-lg shadow-2xl p-3"
           style={{ 
             left: `${Math.min(tooltipData.x + 10, window.innerWidth - 330)}px`,
             top: `${Math.min(tooltipData.y - 10, window.innerHeight - 150)}px`,
             maxWidth: '320px',
             minWidth: '280px',
             zIndex: 9999,
-            transition: 'opacity 0.2s'
+            transition: 'opacity 0.2s',
+            pointerEvents: isMobile ? 'auto' : 'none' // Allow clicks on mobile
           }}
         >
+          {isMobile && (
+            <button 
+              onClick={() => setTooltipData(null)}
+              className="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          )}
           <div className="font-bold text-sm flex items-center mb-2">
             <img 
               src={`https://flagcdn.com/w20/${tooltipData.country.iso2.toLowerCase()}.png`}
@@ -478,27 +490,68 @@ const WorldMap: React.FC<WorldMapProps> = ({
                 : '✓ Compatible with US plugs'}
             </div>
           </div>
-          <div className="text-xs text-gray-500 mt-2">Click to view details →</div>
+          {isMobile ? (
+            <button 
+              onClick={() => router.push(`/${tooltipData.country.slug}`)}
+              className="w-full mt-3 bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded hover:bg-blue-700 transition-colors"
+            >
+              View Details →
+            </button>
+          ) : (
+            <div className="text-xs text-gray-500 mt-2">Click to view details →</div>
+          )}
         </div>
       )}
       
-      {/* Legend */}
+      {/* Legend with Links */}
       <div className="flex flex-wrap gap-2 mt-4 justify-center">
-        {Object.entries(PLUG_FAMILY_COLORS).filter(([key]) => key !== 'default').map(([family, color]) => (
-          <button
-            key={family}
-            onClick={() => setSelectedFamily(selectedFamily === family ? null : family)}
-            className={`flex items-center gap-2 px-3 py-1 rounded border transition ${
-              selectedFamily === family ? 'border-blue-500 bg-blue-50' : 'border-gray-300 hover:bg-gray-50'
-            }`}
-          >
-            <span
-              className="w-4 h-4 rounded"
-              style={{ backgroundColor: color }}
-            />
-            <span className="text-sm">{family}</span>
-          </button>
-        ))}
+        {Object.entries(PLUG_FAMILY_COLORS).filter(([key]) => key !== 'default').map(([family, color]) => {
+          // Determine the main plug type for linking
+          const getPlugTypeLink = (family: string) => {
+            switch(family) {
+              case 'A/B': return '/plug-type/type-a';
+              case 'C/E/F': return '/plug-type/type-c';
+              case 'G': return '/plug-type/type-g';
+              case 'D/M': return '/plug-type/type-d';
+              case 'I': return '/plug-type/type-i';
+              case 'J': return '/plug-type/type-j';
+              case 'K': return '/plug-type/type-k';
+              case 'L': return '/plug-type/type-l';
+              case 'N': return '/plug-type/type-n';
+              case 'O': return '/plug-type/type-o';
+              case 'H': return '/plug-type/type-h';
+              default: return null;
+            }
+          };
+          
+          const plugLink = getPlugTypeLink(family);
+          
+          return (
+            <div key={family} className="flex items-center gap-2">
+              <button
+                onClick={() => setSelectedFamily(selectedFamily === family ? null : family)}
+                className={`flex items-center gap-2 px-3 py-1 rounded border transition ${
+                  selectedFamily === family ? 'border-blue-500 bg-blue-50' : 'border-gray-300 hover:bg-gray-50'
+                }`}
+              >
+                <span
+                  className="w-4 h-4 rounded"
+                  style={{ backgroundColor: color }}
+                />
+                <span className="text-sm">{family}</span>
+              </button>
+              {plugLink && (
+                <Link 
+                  href={plugLink}
+                  className="text-xs text-blue-600 hover:underline"
+                  title={`Learn about Type ${family} plugs`}
+                >
+                  ↗
+                </Link>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

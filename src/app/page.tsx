@@ -269,52 +269,94 @@ export default function HomePage() {
             <div className="max-w-[860px] mx-auto mt-8">
               <h3 className="font-semibold mb-4 text-center">Global Electrical Standards by Region:</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
+                <div className="bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
                   <div className="flex items-center mb-2">
                     <span className="w-4 h-4 rounded-full bg-red-500 mr-3"></span>
-                    <strong className="text-sm">Type A/B - North America</strong>
+                    <strong className="text-sm">
+                      <Link href="/plug-type/type-a" className="hover:text-blue-600">Type A</Link>/
+                      <Link href="/plug-type/type-b" className="hover:text-blue-600">B</Link> - North America
+                    </strong>
                   </div>
-                  <p className="text-xs text-gray-600">USA, Canada, Mexico, Japan</p>
+                  <p className="text-xs text-gray-600">
+                    <Link href="/usa-electric-plug-types-will-you-need-an-adapter-traveling-to-the-us" className="hover:underline">USA</Link>, 
+                    <Link href="/canada-electric-plug-types-will-you-need-an-adapter" className="hover:underline ml-1">Canada</Link>, 
+                    <Link href="/mexico-electric-plug-types-will-you-need-an-adapter" className="hover:underline ml-1">Mexico</Link>, 
+                    <Link href="/japan-electric-plug-types-will-you-need-an-adapter-probably-yes" className="hover:underline ml-1">Japan</Link>
+                  </p>
                   <p className="text-xs mt-1">120V @ 60Hz (Japan: 100V @ 50/60Hz)</p>
                 </div>
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
+                <div className="bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
                   <div className="flex items-center mb-2">
                     <span className="w-4 h-4 rounded-full bg-blue-500 mr-3"></span>
-                    <strong className="text-sm">Type C/E/F - Continental Europe</strong>
+                    <strong className="text-sm">
+                      <Link href="/plug-type/type-c" className="hover:text-blue-600">Type C</Link>/
+                      <Link href="/plug-type/type-e" className="hover:text-blue-600">E</Link>/
+                      <Link href="/plug-type/type-f" className="hover:text-blue-600">F</Link> - Continental Europe
+                    </strong>
                   </div>
-                  <p className="text-xs text-gray-600">Germany, France, Spain, Italy</p>
+                  <p className="text-xs text-gray-600">
+                    <Link href="/germany-electric-plug-types-will-you-need-an-adapter-in-germany" className="hover:underline">Germany</Link>, 
+                    <Link href="/france-electric-plug-type-will-you-need-an-adapter-in-paris" className="hover:underline ml-1">France</Link>, 
+                    <Link href="/spain-electric-plug-types-will-you-need-an-adapter" className="hover:underline ml-1">Spain</Link>, 
+                    <Link href="/italy-electric-plug-types-will-you-need-an-adapter" className="hover:underline ml-1">Italy</Link>
+                  </p>
                   <p className="text-xs mt-1">230V @ 50Hz</p>
                 </div>
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
+                <div className="bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
                   <div className="flex items-center mb-2">
                     <span className="w-4 h-4 rounded-full bg-green-500 mr-3"></span>
-                    <strong className="text-sm">Type G - British Standard</strong>
+                    <strong className="text-sm">
+                      <Link href="/plug-type/type-g" className="hover:text-blue-600">Type G</Link> - British Standard
+                    </strong>
                   </div>
-                  <p className="text-xs text-gray-600">UK, Ireland, Singapore, Malaysia</p>
+                  <p className="text-xs text-gray-600">
+                    <Link href="/united-kingdom-electric-plug-types-which-adapter-do-you-need-in-uk" className="hover:underline">UK</Link>, 
+                    <Link href="/ireland-electric-plug-types-will-you-need-an-adapter" className="hover:underline ml-1">Ireland</Link>, 
+                    <Link href="/singapore-electric-plug-types-will-you-need-an-adapter" className="hover:underline ml-1">Singapore</Link>, 
+                    <Link href="/malaysia-electric-plug-types-will-you-need-an-adapter" className="hover:underline ml-1">Malaysia</Link>
+                  </p>
                   <p className="text-xs mt-1">230V @ 50Hz (with fused plugs)</p>
                 </div>
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
+                <div className="bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
                   <div className="flex items-center mb-2">
                     <span className="w-4 h-4 rounded-full bg-purple-500 mr-3"></span>
-                    <strong className="text-sm">Type I - Oceania & China</strong>
+                    <strong className="text-sm">
+                      <Link href="/plug-type/type-i" className="hover:text-blue-600">Type I</Link> - Oceania & China
+                    </strong>
                   </div>
-                  <p className="text-xs text-gray-600">Australia, New Zealand, China, Argentina</p>
+                  <p className="text-xs text-gray-600">
+                    <Link href="/australia-electric-plug-types-will-you-need-an-adapter-traveling-to-australia" className="hover:underline">Australia</Link>, 
+                    <Link href="/new-zealand-electric-plug-types-will-you-need-an-adapter" className="hover:underline ml-1">New Zealand</Link>, 
+                    <Link href="/china-electric-plug-types-will-you-need-an-adapter" className="hover:underline ml-1">China</Link>, 
+                    <Link href="/argentina-electric-plug-types-will-you-need-an-adapter" className="hover:underline ml-1">Argentina</Link>
+                  </p>
                   <p className="text-xs mt-1">220-240V @ 50Hz</p>
                 </div>
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
+                <div className="bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
                   <div className="flex items-center mb-2">
                     <span className="w-4 h-4 rounded-full bg-yellow-500 mr-3"></span>
-                    <strong className="text-sm">Type D/M - India & Africa</strong>
+                    <strong className="text-sm">
+                      <Link href="/plug-type/type-d" className="hover:text-blue-600">Type D</Link>/
+                      <Link href="/plug-type/type-m" className="hover:text-blue-600">M</Link> - India & Africa
+                    </strong>
                   </div>
-                  <p className="text-xs text-gray-600">India, South Africa, Nepal</p>
+                  <p className="text-xs text-gray-600">
+                    <Link href="/india-electric-plug-types-will-you-need-an-adapter-traveling-to-india" className="hover:underline">India</Link>, 
+                    <Link href="/south-africa-electric-plug-types-will-you-need-an-adapter" className="hover:underline ml-1">South Africa</Link>, 
+                    <Link href="/nepal-electric-plug-types-will-you-need-an-adapter" className="hover:underline ml-1">Nepal</Link>
+                  </p>
                   <p className="text-xs mt-1">220-240V @ 50Hz</p>
                 </div>
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
+                <div className="bg-white p-4 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
                   <div className="flex items-center mb-2">
                     <span className="w-4 h-4 rounded-full bg-gray-500 mr-3"></span>
                     <strong className="text-sm">Mixed/Unique Standards</strong>
                   </div>
-                  <p className="text-xs text-gray-600">Brazil (Type N), Israel (Type H), Switzerland (Type J)</p>
+                  <p className="text-xs text-gray-600">
+                    <Link href="/brazil-electric-plug-types-will-you-need-an-adapter" className="hover:underline">Brazil</Link> (<Link href="/plug-type/type-n" className="hover:underline">Type N</Link>), 
+                    <Link href="/israel-electric-plug-types-will-you-need-an-adapter" className="hover:underline ml-1">Israel</Link> (<Link href="/plug-type/type-h" className="hover:underline">Type H</Link>), 
+                    <Link href="/switzerland-electric-plug-types-will-you-need-an-adapter" className="hover:underline ml-1">Switzerland</Link> (<Link href="/plug-type/type-j" className="hover:underline">Type J</Link>)
+                  </p>
                   <p className="text-xs mt-1">Varies by country</p>
                 </div>
               </div>

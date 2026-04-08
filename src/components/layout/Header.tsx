@@ -55,6 +55,7 @@ export default function Header({ showFullNav = true }: HeaderProps) {
   const [isToolsOpen, setIsToolsOpen] = useState(false);
   const [isPlugTypesOpen, setIsPlugTypesOpen] = useState(false);
   const [isComparisonsOpen, setIsComparisonsOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -212,17 +213,137 @@ export default function Header({ showFullNav = true }: HeaderProps) {
           </nav>
         )}
         
-          {/* Mobile menu placeholder */}
+          {/* Mobile menu button */}
           <div className="lg:hidden">
-            <button className="text-gray-700 p-2 rounded-md hover:bg-gray-100">
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-gray-700 p-2 rounded-md hover:bg-gray-100"
+            >
               <span className="sr-only">Open menu</span>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+              {isMobileMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
             </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile menu */}
+      {isMobileMenuOpen && showFullNav && (
+        <div className="lg:hidden bg-white border-t border-gray-200">
+          <div className="px-4 py-2 space-y-2">
+            {/* Continents section */}
+            <div className="border-b border-gray-100 pb-2">
+              <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Continents</h3>
+              <div className="grid grid-cols-2 gap-2">
+                {continents.map((continent) => (
+                  <Link
+                    key={continent.slug}
+                    href={`/continent/${continent.slug}`}
+                    className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {continent.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Plug Types section */}
+            <div className="border-b border-gray-100 pb-2">
+              <details className="group">
+                <summary className="flex justify-between items-center cursor-pointer list-none px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-50 rounded-md">
+                  Plug Types
+                  <svg className="w-4 h-4 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="mt-2 ml-3 space-y-1">
+                  {plugTypes.map((plugType) => (
+                    <Link
+                      key={plugType.slug}
+                      href={`/plug-type/${plugType.slug}`}
+                      className="flex items-center px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-md"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <span className="mr-2">{plugType.icon}</span>
+                      {plugType.name}
+                    </Link>
+                  ))}
+                </div>
+              </details>
+            </div>
+
+            {/* Comparisons section */}
+            <div className="border-b border-gray-100 pb-2">
+              <details className="group">
+                <summary className="flex justify-between items-center cursor-pointer list-none px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-50 rounded-md">
+                  Comparisons
+                  <svg className="w-4 h-4 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="mt-2 ml-3 space-y-1">
+                  {comparisons.map((comparison) => (
+                    <Link
+                      key={comparison.slug}
+                      href={`/${comparison.slug}`}
+                      className="flex items-center px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-md"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <span className="mr-2">{comparison.icon}</span>
+                      {comparison.name}
+                    </Link>
+                  ))}
+                </div>
+              </details>
+            </div>
+
+            {/* Tools section */}
+            <div className="pb-2">
+              <details className="group">
+                <summary className="flex justify-between items-center cursor-pointer list-none px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-50 rounded-md">
+                  Tools
+                  <svg className="w-4 h-4 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="mt-2 ml-3 space-y-1">
+                  {tools.map((tool) => (
+                    <Link
+                      key={tool.slug}
+                      href={`/tools/${tool.slug}`}
+                      className="flex items-center px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-md"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <span className="mr-2">{tool.icon}</span>
+                      {tool.name}
+                    </Link>
+                  ))}
+                </div>
+              </details>
+            </div>
+
+            {/* About link */}
+            <div className="pt-2 border-t border-gray-100">
+              <Link
+                href="/about"
+                className="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <span className="mr-2">ℹ️</span>
+                About
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

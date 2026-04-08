@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Type G Mobile Animation</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#f7f5f2;height:100%;overflow:hidden}
+  #scene{width:100%;height:100vh;position:relative;cursor:pointer}
+  canvas{display:block;width:100%;height:100%}
+  .replay-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(244,242,239,0.45);opacity:0;transition:opacity 0.4s;pointer-events:none;z-index:2}
+  .replay-overlay.visible{opacity:1;pointer-events:auto}
+  .replay-btn{width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.95);border:2px solid #ddd;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
+  .replay-btn:hover{border-color:#c85a3a;background:#fff;transform:scale(1.1)}
+  .replay-btn svg{width:20px;height:20px;fill:none;stroke:#999;stroke-width:2.5;stroke-linecap:round}
+  .replay-btn:hover svg{stroke:#c85a3a}
+</style>
+</head>
+<body>
+<div id="scene">
+  <canvas id="cv"></canvas>
+  <div class="replay-overlay" id="ro">
+    <div class="replay-btn" id="rb">
+      <svg viewBox="0 0 24 24"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const canvas = document.getElementById('cv');
+const sceneEl = document.getElementById('scene');
+const replayOverlay = document.getElementById('ro');
+const replayBtn = document.getElementById('rb');
+
+const w = window.innerWidth;
+const h = window.innerHeight;
+canvas.width = w; 
+canvas.height = h;
+
+const scene3 = new THREE.Scene();
+scene3.background = new THREE.Color(0xf4f2ef);
+
+// Camera - adjusted for mobile view
+const camera = new THREE.PerspectiveCamera(32, w/h, 0.1, 100);
+camera.position.set(-0.2, 1.2, 7.5);
+camera.lookAt(0.3, -0.1, 0);
+
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+renderer.setSize(w, h);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.15;
+
+// Lighting
+scene3.add(new THREE.AmbientLight(0xffffff, 0.45));
+const keyL = new THREE.DirectionalLight(0xfff8ee, 0.95);
+keyL.position.set(3, 6, 5); 
+keyL.castShadow = true; 
+keyL.shadow.mapSize.set(512, 512);
+scene3.add(keyL);
+scene3.add(new THREE.DirectionalLight(0xe0ecff, 0.3).translateX(-5).translateY(2).translateZ(3));
+
+// Materials
+const mW = new THREE.MeshStandardMaterial({ color: 0xf2f2f2, roughness: 0.38 });
+const mP = new THREE.MeshStandardMaterial({ color: 0xf0eeea, roughness: 0.3 });
+const mBlade = new THREE.MeshStandardMaterial({ color: 0xc4a955, roughness: 0.22, metalness: 0.85 }); // Brass for Type G
+const mD = new THREE.MeshStandardMaterial({ color: 0x060606, roughness: 0.95 });
+const mCbl = new THREE.MeshStandardMaterial({ color: 0x1c1c1c, roughness: 0.6 });
+const mWall = new THREE.MeshStandardMaterial({ color: 0xe2dfd9, roughness: 0.55 });
+
+// Type G specific - UK rectangular blades in triangle pattern
+const BLADE_L = 0.65;  // blade length
+const BLADE_W = 0.08;  // blade width
+const BLADE_T = 0.035; // blade thickness
+
+// SOCKET (simplified for mobile)
+const sG = new THREE.Group();
+
+// Wall
+const wallM = new THREE.Mesh(new THREE.BoxGeometry(0.4, 3.2, 3.2), mWall);
+wallM.position.x = 0.2; 
+wallM.receiveShadow = true; 
+sG.add(wallM);
+
+// Faceplate 
+const fpGeo = new THREE.BoxGeometry(0.14, 2.0, 2.4);
+const fpMesh = new THREE.Mesh(fpGeo, mP);
+fpMesh.castShadow = true; 
+fpMesh.receiveShadow = true;
+sG.add(fpMesh);
+
+// Three rectangular slots in triangle pattern (Type G)
+// Top earth (vertical) - longer
+const earthSlotGeo = new THREE.BoxGeometry(0.03, BLADE_L, BLADE_W);
+const earthSlotMesh = new THREE.Mesh(earthSlotGeo, mD);
+earthSlotMesh.position.set(-0.08, 0.55, 0);
+sG.add(earthSlotMesh);
+
+const earthTunnelGeo = new THREE.BoxGeometry(0.6, BLADE_L - 0.03, BLADE_W - 0.01);
+const earthTunnelMesh = new THREE.Mesh(earthTunnelGeo, mD);
+earthTunnelMesh.position.set(0.25, 0.55, 0);
+sG.add(earthTunnelMesh);
+
+// Live (horizontal) - bottom left
+const liveSlotGeo = new THREE.BoxGeometry(0.03, BLADE_W, BLADE_L);
+const liveSlotMesh = new THREE.Mesh(liveSlotGeo, mD);
+liveSlotMesh.position.set(-0.08, -0.3, -0.45);
+sG.add(liveSlotMesh);
+
+const liveTunnelGeo = new THREE.BoxGeometry(0.6, BLADE_W - 0.01, BLADE_L - 0.03);
+const liveTunnelMesh = new THREE.Mesh(liveTunnelGeo, mD);
+liveTunnelMesh.position.set(0.25, -0.3, -0.45);
+sG.add(liveTunnelMesh);
+
+// Neutral (horizontal) - bottom right
+const neutralSlotGeo = new THREE.BoxGeometry(0.03, BLADE_W, BLADE_L);
+const neutralSlotMesh = new THREE.Mesh(neutralSlotGeo, mD);
+neutralSlotMesh.position.set(-0.08, -0.3, 0.45);
+sG.add(neutralSlotMesh);
+
+const neutralTunnelGeo = new THREE.BoxGeometry(0.6, BLADE_W - 0.01, BLADE_L - 0.03);
+const neutralTunnelMesh = new THREE.Mesh(neutralTunnelGeo, mD);
+neutralTunnelMesh.position.set(0.25, -0.3, 0.45);
+sG.add(neutralTunnelMesh);
+
+sG.position.set(2.8, 0, 0);
+scene3.add(sG);
+
+// PLUG (simplified for mobile)
+const pG = new THREE.Group();
+
+// Body - larger for Type G
+const bGeo = new THREE.BoxGeometry(0.45, 1.4, 1.2);
+const bMesh = new THREE.Mesh(bGeo, mW);
+bMesh.castShadow = true;
+pG.add(bMesh);
+
+// Three rectangular blades in triangle pattern
+// Earth blade (vertical at top) - longer
+const earthBladeGeo = new THREE.BoxGeometry(0.8, BLADE_L, BLADE_W);
+const earthBladeMesh = new THREE.Mesh(earthBladeGeo, mBlade);
+earthBladeMesh.position.set(0.5, 0.55, 0);
+earthBladeMesh.castShadow = true;
+pG.add(earthBladeMesh);
+
+// Live blade (horizontal at bottom left)
+const liveBladeGeo = new THREE.BoxGeometry(0.8, BLADE_W, BLADE_L);
+const liveBladeMesh = new THREE.Mesh(liveBladeGeo, mBlade);
+liveBladeMesh.position.set(0.5, -0.3, -0.45);
+liveBladeMesh.castShadow = true;
+pG.add(liveBladeMesh);
+
+// Neutral blade (horizontal at bottom right)
+const neutralBladeGeo = new THREE.BoxGeometry(0.8, BLADE_W, BLADE_L);
+const neutralBladeMesh = new THREE.Mesh(neutralBladeGeo, mBlade);
+neutralBladeMesh.position.set(0.5, -0.3, 0.45);
+neutralBladeMesh.castShadow = true;
+pG.add(neutralBladeMesh);
+
+// Cable (simplified) - on back
+const cGeo = new THREE.CylinderGeometry(0.12, 0.12, 1.8, 16);
+const cMesh = new THREE.Mesh(cGeo, mCbl);
+cMesh.rotation.z = Math.PI / 2;
+cMesh.position.x = -0.75;
+cMesh.castShadow = true;
+pG.add(cMesh);
+
+pG.position.set(-1.2, 0, 0);
+scene3.add(pG);
+
+// Animation
+let playing = false;
+let aId;
+let st;
+const DUR = 2500;
+
+function eInOut(t) {
+  return t < 0.5 ? 2*t*t : -1+(4-2*t)*t;
+}
+
+function rf(t) {
+  const e = eInOut(t);
+  const s = {
+    px: -1.2 + e * 2.9,
+    py: 0,
+    rz: 0
+  };
+  
+  // Add slight wobble at the end
+  if (t > 0.8) {
+    const wobble = (t - 0.8) / 0.2;
+    s.py = Math.sin(wobble * Math.PI * 4) * 0.02 * (1 - wobble);
+  }
+  
+  pG.position.set(s.px, s.py, 0);
+  pG.rotation.z = s.rz;
+  
+  renderer.render(scene3, camera);
+}
+
+function animate(ts) {
+  if (!st) st = ts;
+  const t = Math.min((ts - st) / DUR, 1);
+  rf(t);
+  if (t < 1) aId = requestAnimationFrame(animate);
+  else { playing = false; setTimeout(() => replayOverlay.classList.add('visible'), 500); }
+}
+
+function play() {
+  if (playing) return;
+  playing = true;
+  replayOverlay.classList.remove('visible');
+  st = null;
+  rf(0);
+  aId = requestAnimationFrame(animate);
+}
+
+// Event listeners
+sceneEl.addEventListener('click', play);
+replayBtn.addEventListener('click', e => { e.stopPropagation(); play(); });
+
+// Initial render
+renderer.render(scene3, camera);
+
+// Auto-play on load
+setTimeout(play, 400);
+</script>
+</body>
+</html>

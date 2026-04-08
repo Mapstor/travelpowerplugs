@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Type L Mobile Animation</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#f7f5f2;height:100%;overflow:hidden}
+  #scene{width:100%;height:100vh;position:relative;cursor:pointer}
+  canvas{display:block;width:100%;height:100%}
+  .replay-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(244,242,239,0.45);opacity:0;transition:opacity 0.4s;pointer-events:none;z-index:2}
+  .replay-overlay.visible{opacity:1;pointer-events:auto}
+  .replay-btn{width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.95);border:2px solid #ddd;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;box-shadow:0 2px 10px rgba(0,0,0,0.1)}
+  .replay-btn:hover{border-color:#c85a3a;background:#fff;transform:scale(1.1)}
+  .replay-btn svg{width:20px;height:20px;fill:none;stroke:#999;stroke-width:2.5;stroke-linecap:round}
+  .replay-btn:hover svg{stroke:#c85a3a}
+</style>
+</head>
+<body>
+<div id="scene">
+  <canvas id="cv"></canvas>
+  <div class="replay-overlay" id="ro">
+    <div class="replay-btn" id="rb">
+      <svg viewBox="0 0 24 24"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const canvas = document.getElementById('cv');
+const sceneEl = document.getElementById('scene');
+const replayOverlay = document.getElementById('ro');
+const replayBtn = document.getElementById('rb');
+
+const w = window.innerWidth;
+const h = window.innerHeight;
+canvas.width = w; 
+canvas.height = h;
+
+const scene3 = new THREE.Scene();
+scene3.background = new THREE.Color(0xf4f2ef);
+
+// Camera - adjusted for mobile view
+const camera = new THREE.PerspectiveCamera(32, w/h, 0.1, 100);
+camera.position.set(-0.2, 1.2, 7.5);
+camera.lookAt(0.3, -0.1, 0);
+
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+renderer.setSize(w, h);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.15;
+
+// Lighting
+scene3.add(new THREE.AmbientLight(0xffffff, 0.45));
+const keyL = new THREE.DirectionalLight(0xfff8ee, 0.95);
+keyL.position.set(3, 6, 5); 
+keyL.castShadow = true; 
+keyL.shadow.mapSize.set(512, 512);
+scene3.add(keyL);
+scene3.add(new THREE.DirectionalLight(0xe0ecff, 0.3).translateX(-5).translateY(2).translateZ(3));
+
+// Materials
+const mW = new THREE.MeshStandardMaterial({ color: 0xf2f2f2, roughness: 0.38 });
+const mP = new THREE.MeshStandardMaterial({ color: 0xf0eeea, roughness: 0.3 });
+const mPin = new THREE.MeshStandardMaterial({ color: 0xccaa55, roughness: 0.18, metalness: 0.92 }); // Brass
+const mD = new THREE.MeshStandardMaterial({ color: 0x060606, roughness: 0.95 });
+const mCbl = new THREE.MeshStandardMaterial({ color: 0x1c1c1c, roughness: 0.6 });
+const mWall = new THREE.MeshStandardMaterial({ color: 0xe2dfd9, roughness: 0.55 });
+
+// Type L specific - Italian three pins in a straight line
+const PIN_R = 0.055; // pin radius
+const PIN_SPACING = 0.42; // horizontal spacing between pins
+
+// SOCKET (simplified for mobile)
+const sG = new THREE.Group();
+
+// Wall
+const wallM = new THREE.Mesh(new THREE.BoxGeometry(0.4, 3.2, 3.2), mWall);
+wallM.position.x = 0.2; 
+wallM.receiveShadow = true; 
+sG.add(wallM);
+
+// Faceplate - wider rectangular shape for Type L
+const fpGeo = new THREE.BoxGeometry(0.14, 1.2, 2.4);
+const fpMesh = new THREE.Mesh(fpGeo, mP);
+fpMesh.castShadow = true; 
+fpMesh.receiveShadow = true;
+sG.add(fpMesh);
+
+// Three holes in a straight horizontal line (Type L pattern)
+for (let i = -1; i <= 1; i++) {
+  // Hole opening
+  const holeGeo = new THREE.CylinderGeometry(PIN_R + 0.02, PIN_R + 0.02, 0.03, 24);
+  const holeMesh = new THREE.Mesh(holeGeo, mD);
+  holeMesh.rotation.z = Math.PI / 2;
+  holeMesh.position.set(-0.08, 0, i * PIN_SPACING);
+  sG.add(holeMesh);
+  
+  // Hole tunnel
+  const tunnelGeo = new THREE.CylinderGeometry(PIN_R + 0.015, PIN_R + 0.015, 0.6, 24);
+  const tunnelMesh = new THREE.Mesh(tunnelGeo, mD);
+  tunnelMesh.rotation.z = Math.PI / 2;
+  tunnelMesh.position.set(0.25, 0, i * PIN_SPACING);
+  sG.add(tunnelMesh);
+}
+
+sG.position.set(2.8, 0, 0);
+scene3.add(sG);
+
+// PLUG (simplified for mobile)
+const pG = new THREE.Group();
+
+// Body - wider for Type L to accommodate three inline pins
+const bGeo = new THREE.BoxGeometry(0.4, 0.8, 1.5);
+const bMesh = new THREE.Mesh(bGeo, mW);
+bMesh.castShadow = true;
+pG.add(bMesh);
+
+// Three pins in a straight horizontal line
+for (let i = -1; i <= 1; i++) {
+  const pinGeo = new THREE.CylinderGeometry(PIN_R, PIN_R, 0.75, 24);
+  const pinMesh = new THREE.Mesh(pinGeo, mPin);
+  pinMesh.rotation.z = Math.PI / 2;
+  pinMesh.position.set(0.5, 0, i * PIN_SPACING); // Pins in a horizontal line
+  pinMesh.castShadow = true;
+  pG.add(pinMesh);
+}
+
+// Cable (simplified) - on back
+const cGeo = new THREE.CylinderGeometry(0.12, 0.12, 1.8, 16);
+const cMesh = new THREE.Mesh(cGeo, mCbl);
+cMesh.rotation.z = Math.PI / 2;
+cMesh.position.x = -0.7; // Cable on back
+cMesh.castShadow = true;
+pG.add(cMesh);
+
+pG.position.set(-1.2, 0, 0);
+scene3.add(pG);
+
+// Animation
+let playing = false;
+let aId;
+let st;
+const DUR = 2500;
+
+function eInOut(t) {
+  return t < 0.5 ? 2*t*t : -1+(4-2*t)*t;
+}
+
+function rf(t) {
+  const e = eInOut(t);
+  const s = {
+    px: -1.2 + e * 2.9,
+    py: 0,
+    rz: 0
+  };
+  
+  // Add slight wobble at the end
+  if (t > 0.8) {
+    const wobble = (t - 0.8) / 0.2;
+    s.py = Math.sin(wobble * Math.PI * 4) * 0.02 * (1 - wobble);
+  }
+  
+  pG.position.set(s.px, s.py, 0);
+  pG.rotation.z = s.rz;
+  
+  renderer.render(scene3, camera);
+}
+
+function animate(ts) {
+  if (!st) st = ts;
+  const t = Math.min((ts - st) / DUR, 1);
+  rf(t);
+  if (t < 1) aId = requestAnimationFrame(animate);
+  else { playing = false; setTimeout(() => replayOverlay.classList.add('visible'), 500); }
+}
+
+function play() {
+  if (playing) return;
+  playing = true;
+  replayOverlay.classList.remove('visible');
+  st = null;
+  rf(0);
+  aId = requestAnimationFrame(animate);
+}
+
+// Event listeners
+sceneEl.addEventListener('click', play);
+replayBtn.addEventListener('click', e => { e.stopPropagation(); play(); });
+
+// Initial render
+renderer.render(scene3, camera);
+
+// Auto-play on load
+setTimeout(play, 400);
+</script>
+</body>
+</html>

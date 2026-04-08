@@ -64,7 +64,7 @@ const replayBtn = document.getElementById('rb');
 const pfEl = document.getElementById('pf');
 
 const rect = sceneEl.getBoundingClientRect();
-const w = Math.round(rect.width) || 560, h = Math.round(rect.height) || 180;
+const w = Math.max(Math.round(rect.width), 560), h = Math.max(Math.round(rect.height), 180);
 canvas.width = w * 2; canvas.height = h * 2;
 
 const scene3 = new THREE.Scene();
@@ -319,6 +319,9 @@ function play() {
   pG.position.set(-4.5, 0, 0);
   aId = requestAnimationFrame(animate);
 }
+
+// Initial render to show scene immediately
+renderer.render(scene3, camera);
 
 replayBtn.addEventListener('click', e => { e.stopPropagation(); play(); });
 sceneEl.addEventListener('click', play);

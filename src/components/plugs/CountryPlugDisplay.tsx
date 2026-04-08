@@ -6,6 +6,7 @@ import { COUNTRIES } from '@/data/countries';
 import { COMPATIBILITY_MATRIX } from '@/data/plugTypes';
 import PlugInSocket from './PlugInSocket';
 import { getPlugComponent } from './index';
+import { useIsMobile } from '@/hooks/useIsMobile';
 
 interface CountryPlugDisplayProps {
   country: Country;
@@ -20,6 +21,7 @@ const CountryPlugDisplay: React.FC<CountryPlugDisplayProps> = ({
   size = 120,
   animated = true
 }) => {
+  const isMobile = useIsMobile();
   const origin = originCountry ? COUNTRIES.find(c => c.slug === originCountry) : null;
   const originPlugTypes = origin?.plugTypes || ['A', 'B'] as PlugType[]; // Default to US plugs
   
@@ -41,21 +43,22 @@ const CountryPlugDisplay: React.FC<CountryPlugDisplayProps> = ({
         <div className="flex flex-wrap gap-4 justify-center mb-8">
           {country.plugTypes.map((plugType) => {
             const plugTypeLower = plugType.toLowerCase();
-            const animationSrc = `/animations/type-${plugTypeLower}-plug-animation.html`;
+            const animationSrc = `/animations/type-${plugTypeLower}-plug-animation${isMobile ? '-mobile' : ''}.html`;
             
             return (
               <div key={plugType} className="text-center">
-                <div className="w-[300px] h-[180px] bg-gray-50 rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                <div className={`${isMobile ? 'w-[280px]' : 'w-[300px]'} h-[180px] bg-gray-50 rounded-lg overflow-hidden border border-gray-200 shadow-sm`}>
                   <iframe
                     src={animationSrc}
                     width="100%"
                     height="100%"
                     style={{ border: 'none' }}
-                    loading="lazy"
-                    title={`Type ${plugType.toUpperCase()} Socket`}
+                    loading={isMobile ? 'eager' : 'lazy'}
+                    title={`Type ${plugType.toUpperCase()} Socket${isMobile ? ' - Mobile' : ''}`}
                     className="w-full h-full"
                   />
                 </div>
+                
                 <div className="mt-2 text-sm font-semibold text-gray-700">
                   Type {plugType.toUpperCase()}
                 </div>
