@@ -286,7 +286,6 @@ export default async function CountryPage({ params }: PageProps) {
               <div className="space-y-4">
                 <p className="text-lg text-gray-800 leading-relaxed">
                   <span className="font-semibold text-gray-900">{country.name} uses {practicalPlugData ? `Type ${primaryPlugs.join(' and Type ')}` : `Type ${country.plugTypes.join(' and Type ')}`} electrical plugs</span> operating at {practicalPlugData ? practicalPlugData.voltage.standard : country.voltage}V and {practicalPlugData ? practicalPlugData.frequency.standard : country.frequency}Hz.
-                  {' '}The {country.name} plug type is {country.plugTypes.length > 1 ? 'part of the European standard' : 'the European standard'}, widely used across {country.continent === 'europe' ? 'the continent' : country.continent}.
                 </p>
                 
                 {country.hasAdapter && (
