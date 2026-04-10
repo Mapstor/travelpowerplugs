@@ -294,6 +294,93 @@
       "destination": "/continent/oceania"
     }
   ],
+  "redirects": [
+    {
+      "source": "/france-electric-plug-types",
+      "destination": "/france-electric-plug-type-will-you-need-an-adapter-in-paris",
+      "permanent": true
+    },
+    {
+      "source": "/germany-electric-plug-types",
+      "destination": "/germany-electric-plug-types-will-you-need-an-adapter-in-germany", 
+      "permanent": true
+    },
+    {
+      "source": "/italy-electric-plug-types",
+      "destination": "/italy-electric-plug-types-which-outlets-they-use-in-italy-adapters",
+      "permanent": true
+    },
+    {
+      "source": "/spain-electric-plug-types", 
+      "destination": "/spain-electric-plug-types-will-you-need-an-adapter-for-spain",
+      "permanent": true
+    },
+    {
+      "source": "/uk-electric-plug-types",
+      "destination": "/united-kingdom-electric-plug-types-which-adapter-do-you-need-in-uk",
+      "permanent": true
+    },
+    {
+      "source": "/usa-electric-plug-types",
+      "destination": "/usa-electric-plug-types-will-you-need-an-adapter-traveling-to-the-us", 
+      "permanent": true
+    },
+    {
+      "source": "/japan-electric-plug-types",
+      "destination": "/japan-electric-plug-types-will-you-need-an-adapter-probably-yes",
+      "permanent": true
+    },
+    {
+      "source": "/australia-electric-plug-types",
+      "destination": "/australia-electric-plug-types-do-you-need-adapter",
+      "permanent": true
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:path*", 
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/feed/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-admin/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-includes/:path*", 
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-json/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*/$",
+      "destination": "/:path*",
+      "permanent": true
+    }
+  ],
   "functions": {
     "src/app/og/[country]/route.tsx": {
       "maxDuration": 10
