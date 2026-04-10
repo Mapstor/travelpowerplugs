@@ -711,7 +711,7 @@
       {
         "type": "F",
         "status": "primary",
-        "note": "European standard"
+        "note": "Standard Schuko plug"
       },
       {
         "type": "C",
@@ -1709,7 +1709,7 @@
       {
         "type": "F",
         "status": "primary",
-        "note": "European standard"
+        "note": "Standard Schuko plug"
       },
       {
         "type": "C",
@@ -2450,7 +2450,7 @@
       {
         "type": "F",
         "status": "primary",
-        "note": "European standard"
+        "note": "Standard Schuko plug"
       },
       {
         "type": "C",
@@ -2799,7 +2799,7 @@
     "frequency": {
       "standard": 50
     },
-    "notes": "Type D primary. Complex voltage system varies by region.",
+    "notes": "Complex voltage system varies by region (127V/230V). Type C is primary in modern areas.",
     "continent": "africa"
   },
   "li": {
@@ -5361,7 +5361,7 @@
       {
         "type": "F",
         "status": "primary",
-        "note": "European standard dominates"
+        "note": "Standard Schuko plug dominates"
       },
       {
         "type": "C",
