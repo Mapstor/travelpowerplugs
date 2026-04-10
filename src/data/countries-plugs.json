@@ -2774,14 +2774,19 @@
     "slug": "libya-electric-plug-types-will-you-need-an-adapter-in-libya",
     "plugTypes": [
       {
-        "type": "D",
-        "status": "primary",
-        "note": "British colonial legacy"
+        "type": "C",
+        "status": "primary", 
+        "note": "Most common in modern areas"
       },
       {
-        "type": "C",
+        "type": "D",
         "status": "secondary",
-        "note": "Some areas"
+        "note": "British colonial legacy, older buildings"
+      },
+      {
+        "type": "L",
+        "status": "secondary",
+        "note": "Italian influence, some outlets"
       }
     ],
     "voltage": {

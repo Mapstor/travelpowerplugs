@@ -175,7 +175,7 @@ export default async function CountryPage({ params }: PageProps) {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": country.continent.charAt(0).toUpperCase() + country.continent.slice(1).replace('-', ' '),
+        "name": country.continent.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase()),
         "item": `https://travelpowerplugs.com/continent/${country.continent}`
       },
       {
@@ -187,32 +187,48 @@ export default async function CountryPage({ params }: PageProps) {
     ]
   };
 
-  const jsonLdWebPage = {
+  // Combine all schemas into @graph pattern
+  const jsonLdGraph = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": `${country.name} Electric Plug Types`,
-    "description": `Complete guide to electrical plugs, sockets, voltage and frequency in ${country.name}`,
-    "author": {
-      "@type": "Person",
-      "name": "Marko Visic"
-    },
-    "datePublished": "2024-01-01",
-    "dateModified": new Date().toISOString()
+    "@graph": [
+      // TravelGuide schema
+      {
+        "@type": "TravelGuide",
+        "name": `${country.name} Electric Plug Types`,
+        "description": `Complete guide to electrical plugs, sockets, voltage and frequency in ${country.name}`,
+        "about": {
+          "@type": "Country",
+          "name": country.name,
+          "identifier": country.iso2
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Marko Visic"
+        },
+        "datePublished": "2024-01-01",
+        "dateModified": new Date().toISOString(),
+        "inLanguage": "en",
+        "mainEntity": {
+          "@type": "Place",
+          "name": country.name,
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": country.iso2
+          }
+        }
+      },
+      // FAQPage schema
+      jsonLdFAQ,
+      // BreadcrumbList schema
+      jsonLdBreadcrumb
+    ]
   };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFAQ) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
       />
       
       {/* Header */}
@@ -225,7 +241,7 @@ export default async function CountryPage({ params }: PageProps) {
             items={[
               { label: 'Home', href: '/' },
               { 
-                label: country.continent.charAt(0).toUpperCase() + country.continent.slice(1).replace('-', ' '),
+                label: country.continent.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase()),
                 href: `/continent/${country.continent}`
               },
               { label: country.name }
