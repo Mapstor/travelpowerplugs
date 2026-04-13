@@ -125,7 +125,7 @@ export default function Converter110to220Guide() {
             <div className="grid md:grid-cols-2 gap-8 my-8">
               <div className="bg-red-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-4">110-127V Countries (You Live Here)</h3>
-                <HTMLAnimatedPlug plugType="A" width={600} height={400} />
+                <HTMLAnimatedPlug plugType="A" width={700} height={240} />
                 <ul className="mt-4 space-y-2">
                   <li>🇺🇸 <Link href="/usa-electric-plug-types-will-you-need-an-adapter-traveling-to-the-us" className="text-blue-600 hover:underline">United States</Link> - 120V 60Hz</li>
                   <li>🇨🇦 <Link href="/canada-electric-plug-types-will-you-need-an-adapter" className="text-blue-600 hover:underline">Canada</Link> - 120V 60Hz</li>
@@ -138,7 +138,7 @@ export default function Converter110to220Guide() {
               
               <div className="bg-green-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-4">220-240V Countries (Your Destination)</h3>
-                <HTMLAnimatedPlug plugType="C" width={600} height={400} />
+                <HTMLAnimatedPlug plugType="C" width={700} height={240} />
                 <ul className="mt-4 space-y-2">
                   <li>🇬🇧 <Link href="/united-kingdom-electric-plug-types-which-adapter-do-you-need-in-uk" className="text-blue-600 hover:underline">United Kingdom</Link> - 230V 50Hz</li>
                   <li>🇫🇷 <Link href="/france-electric-plug-type-will-you-need-an-adapter-in-paris" className="text-blue-600 hover:underline">France</Link> - 230V 50Hz</li>

@@ -63,7 +63,7 @@ export default function EuropeToUKAdapterGuidePage() {
         <div className="flex flex-col gap-8">
           <div>
             <h3 className="text-xl font-semibold mb-4 text-center">European Type C</h3>
-            <HTMLAnimatedPlug plugType="C" width={600} height={400} />
+            <HTMLAnimatedPlug plugType="C" width={700} height={240} />
             <p className="text-sm text-gray-600 mt-2 text-center">
               Two round pins, no ground
             </p>
@@ -71,7 +71,7 @@ export default function EuropeToUKAdapterGuidePage() {
           
           <div>
             <h3 className="text-xl font-semibold mb-4 text-center">European Type F (Schuko)</h3>
-            <HTMLAnimatedPlug plugType="F" width={600} height={400} />
+            <HTMLAnimatedPlug plugType="F" width={700} height={240} />
             <p className="text-sm text-gray-600 mt-2 text-center">
               Two round pins with ground clips
             </p>
@@ -79,7 +79,7 @@ export default function EuropeToUKAdapterGuidePage() {
           
           <div>
             <h3 className="text-xl font-semibold mb-4 text-center">UK Type G</h3>
-            <HTMLAnimatedPlug plugType="G" width={600} height={400} />
+            <HTMLAnimatedPlug plugType="G" width={700} height={240} />
             <p className="text-sm text-gray-600 mt-2 text-center">
               Three rectangular pins with fuse
             </p>

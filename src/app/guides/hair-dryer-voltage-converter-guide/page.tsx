@@ -423,7 +423,7 @@ export default function HairDryerVoltageConverterGuidePage() {
             <div className="space-y-4">
               <div className="border rounded-lg p-4">
                 <h4 className="font-bold mb-2">USA, Canada, Mexico</h4>
-                <HTMLAnimatedPlug plugType="A" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="A" width={700} height={240} />
                 <ul className="text-sm text-gray-700 mt-2 space-y-1">
                   <li>• Voltage: 120V standard</li>
                   <li>• Outlets: Type A/B</li>
@@ -441,7 +441,7 @@ export default function HairDryerVoltageConverterGuidePage() {
             <div className="space-y-4">
               <div className="border rounded-lg p-4">
                 <h4 className="font-bold mb-2">Most European Countries</h4>
-                <HTMLAnimatedPlug plugType="C" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="C" width={700} height={240} />
                 <ul className="text-sm text-gray-700 mt-2 space-y-1">
                   <li>• Voltage: 230V standard</li>
                   <li>• Outlets: Type C/F (Schuko)</li>
@@ -459,7 +459,7 @@ export default function HairDryerVoltageConverterGuidePage() {
             <div className="space-y-4">
               <div className="border rounded-lg p-4">
                 <h4 className="font-bold mb-2">United Kingdom, Ireland</h4>
-                <HTMLAnimatedPlug plugType="G" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="G" width={700} height={240} />
                 <ul className="text-sm text-gray-700 mt-2 space-y-1">
                   <li>• Voltage: 230V</li>
                   <li>• Outlets: Type G (3-pin)</li>
@@ -495,7 +495,7 @@ export default function HairDryerVoltageConverterGuidePage() {
             <div className="space-y-4">
               <div className="border rounded-lg p-4">
                 <h4 className="font-bold mb-2">Australia, New Zealand</h4>
-                <HTMLAnimatedPlug plugType="I" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="I" width={700} height={240} />
                 <ul className="text-sm text-gray-700 mt-2 space-y-1">
                   <li>• Voltage: 230V/240V</li>
                   <li>• Outlets: Type I (angled pins)</li>

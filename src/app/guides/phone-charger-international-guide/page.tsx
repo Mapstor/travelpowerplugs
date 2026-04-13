@@ -244,7 +244,7 @@ export default function PhoneChargerInternationalGuidePage() {
             <div className="space-y-4">
               <div className="border rounded-lg p-4">
                 <h4 className="font-bold mb-2">USA/Canada (Type A/B)</h4>
-                <HTMLAnimatedPlug plugType="A" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="A" width={700} height={240} />
                 <ul className="text-sm text-gray-700 mt-2 space-y-1">
                   <li>• Voltage: 120V (charges slightly slower)</li>
                   <li>• Many public USB outlets available</li>
@@ -279,7 +279,7 @@ export default function PhoneChargerInternationalGuidePage() {
             <div className="space-y-4">
               <div className="border rounded-lg p-4">
                 <h4 className="font-bold mb-2">Continental Europe (Type C/F)</h4>
-                <HTMLAnimatedPlug plugType="C" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="C" width={700} height={240} />
                 <ul className="text-sm text-gray-700 mt-2 space-y-1">
                   <li>• Voltage: 230V (optimal charging speed)</li>
                   <li>• Type C works in most European countries</li>
@@ -290,7 +290,7 @@ export default function PhoneChargerInternationalGuidePage() {
 
               <div className="border rounded-lg p-4">
                 <h4 className="font-bold mb-2">UK/Ireland (Type G)</h4>
-                <HTMLAnimatedPlug plugType="G" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="G" width={700} height={240} />
                 <ul className="text-sm text-gray-700 mt-2 space-y-1">
                   <li>• Bulky adapter required</li>
                   <li>• 230V provides fast charging</li>
@@ -327,7 +327,7 @@ export default function PhoneChargerInternationalGuidePage() {
 
               <div className="border rounded-lg p-4">
                 <h4 className="font-bold mb-2">Australia/NZ (Type I)</h4>
-                <HTMLAnimatedPlug plugType="I" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="I" width={700} height={240} />
                 <ul className="text-sm text-gray-700 mt-2 space-y-1">
                   <li>• Unique angled pins</li>
                   <li>• 230V for fast charging</li>

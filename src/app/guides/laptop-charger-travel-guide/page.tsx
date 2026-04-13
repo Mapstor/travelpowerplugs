@@ -447,7 +447,7 @@ export default function LaptopChargerTravelGuidePage() {
             <div className="space-y-3">
               <div className="border-l-3 border-blue-500 pl-4">
                 <h4 className="font-semibold">🇺🇸 USA/Canada</h4>
-                <HTMLAnimatedPlug plugType="A" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="A" width={700} height={240} />
                 <ul className="text-sm text-gray-700 mt-2">
                   <li>• Type A/B plugs, 120V</li>
                   <li>• All modern chargers work</li>
@@ -474,7 +474,7 @@ export default function LaptopChargerTravelGuidePage() {
             <div className="space-y-3">
               <div className="border-l-3 border-green-500 pl-4">
                 <h4 className="font-semibold">🇪🇺 Continental Europe</h4>
-                <HTMLAnimatedPlug plugType="C" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="C" width={700} height={240} />
                 <ul className="text-sm text-gray-700 mt-2">
                   <li>• Type C/F plugs, 230V</li>
                   <li>• Universal compatibility</li>
@@ -485,7 +485,7 @@ export default function LaptopChargerTravelGuidePage() {
               
               <div className="border-l-3 border-green-500 pl-4">
                 <h4 className="font-semibold">🇬🇧 UK/Ireland</h4>
-                <HTMLAnimatedPlug plugType="G" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="G" width={700} height={240} />
                 <ul className="text-sm text-gray-700 mt-2">
                   <li>• Type G plugs, 230V</li>
                   <li>• Bulky adapters required</li>
@@ -512,7 +512,7 @@ export default function LaptopChargerTravelGuidePage() {
               
               <div className="border-l-3 border-red-500 pl-4">
                 <h4 className="font-semibold">🇦🇺 Australia/NZ</h4>
-                <HTMLAnimatedPlug plugType="I" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="I" width={700} height={240} />
                 <ul className="text-sm text-gray-700 mt-2">
                   <li>• Type I plugs, 230V</li>
                   <li>• Angled pins (unique)</li>

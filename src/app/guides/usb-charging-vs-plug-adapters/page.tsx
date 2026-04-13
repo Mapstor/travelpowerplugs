@@ -333,7 +333,7 @@ export default function USBChargingVsPlugAdaptersPage() {
           <div className="flex flex-col gap-4">
             <div className="border rounded-lg p-4">
               <h4 className="font-semibold mb-2 text-center">Type A/B (North America)</h4>
-              <HTMLAnimatedPlug plugType="A" width={400} height={300} />
+              <HTMLAnimatedPlug plugType="A" width={700} height={240} />
               <p className="text-sm text-gray-600 mt-2 text-center">
                 USA, Canada, Mexico, Japan
               </p>
@@ -341,7 +341,7 @@ export default function USBChargingVsPlugAdaptersPage() {
             
             <div className="border rounded-lg p-4">
               <h4 className="font-semibold mb-2 text-center">Type C/F (Europe)</h4>
-              <HTMLAnimatedPlug plugType="C" width={400} height={300} />
+              <HTMLAnimatedPlug plugType="C" width={700} height={240} />
               <p className="text-sm text-gray-600 mt-2 text-center">
                 Most of Europe, Russia, South America
               </p>
@@ -349,7 +349,7 @@ export default function USBChargingVsPlugAdaptersPage() {
             
             <div className="border rounded-lg p-4">
               <h4 className="font-semibold mb-2 text-center">Type G (UK)</h4>
-              <HTMLAnimatedPlug plugType="G" width={400} height={300} />
+              <HTMLAnimatedPlug plugType="G" width={700} height={240} />
               <p className="text-sm text-gray-600 mt-2 text-center">
                 UK, Ireland, Singapore, Hong Kong
               </p>

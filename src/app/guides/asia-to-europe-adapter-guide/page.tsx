@@ -180,7 +180,7 @@ export default function AsiaToEuropeAdapterGuidePage() {
             <div className="space-y-6">
               <div>
                 <h4 className="font-semibold mb-2 text-center">Type A (Japan, Taiwan)</h4>
-                <HTMLAnimatedPlug plugType="A" width={600} height={400} />
+                <HTMLAnimatedPlug plugType="A" width={700} height={240} />
                 <p className="text-sm text-gray-600 mt-2 text-center">
                   Two flat parallel pins, no ground
                 </p>
@@ -188,7 +188,7 @@ export default function AsiaToEuropeAdapterGuidePage() {
               
               <div>
                 <h4 className="font-semibold mb-2 text-center">Type G (Singapore, HK, Malaysia)</h4>
-                <HTMLAnimatedPlug plugType="G" width={600} height={400} />
+                <HTMLAnimatedPlug plugType="G" width={700} height={240} />
                 <p className="text-sm text-gray-600 mt-2 text-center">
                   Three rectangular pins with fuse
                 </p>
@@ -196,7 +196,7 @@ export default function AsiaToEuropeAdapterGuidePage() {
               
               <div>
                 <h4 className="font-semibold mb-2 text-center">Type I (China, Australia)</h4>
-                <HTMLAnimatedPlug plugType="I" width={600} height={400} />
+                <HTMLAnimatedPlug plugType="I" width={700} height={240} />
                 <p className="text-sm text-gray-600 mt-2 text-center">
                   Two flat angled pins, optional ground
                 </p>
@@ -210,7 +210,7 @@ export default function AsiaToEuropeAdapterGuidePage() {
             <div className="space-y-6">
               <div>
                 <h4 className="font-semibold mb-2 text-center">Type C (Europlug)</h4>
-                <HTMLAnimatedPlug plugType="C" width={600} height={400} />
+                <HTMLAnimatedPlug plugType="C" width={700} height={240} />
                 <p className="text-sm text-gray-600 mt-2 text-center">
                   Two round pins, no ground
                 </p>
@@ -218,7 +218,7 @@ export default function AsiaToEuropeAdapterGuidePage() {
               
               <div>
                 <h4 className="font-semibold mb-2 text-center">Type F (Schuko)</h4>
-                <HTMLAnimatedPlug plugType="F" width={600} height={400} />
+                <HTMLAnimatedPlug plugType="F" width={700} height={240} />
                 <p className="text-sm text-gray-600 mt-2 text-center">
                   Two round pins with ground clips
                 </p>
@@ -226,7 +226,7 @@ export default function AsiaToEuropeAdapterGuidePage() {
               
               <div>
                 <h4 className="font-semibold mb-2 text-center">Type E (France)</h4>
-                <HTMLAnimatedPlug plugType="E" width={600} height={400} />
+                <HTMLAnimatedPlug plugType="E" width={700} height={240} />
                 <p className="text-sm text-gray-600 mt-2 text-center">
                   Two round pins with ground pin hole
                 </p>

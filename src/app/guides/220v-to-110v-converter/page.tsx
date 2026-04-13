@@ -126,7 +126,7 @@ export default function Converter220to110Guide() {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-green-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-4">Your Home (220-240V)</h3>
-                <HTMLAnimatedPlug plugType="C" width={600} height={400} />
+                <HTMLAnimatedPlug plugType="C" width={700} height={240} />
                 <p className="font-semibold mt-4 mb-2">Where You're From:</p>
                 <ul className="space-y-1 text-sm">
                   <li>🇪🇺 <Link href="/continent/europe" className="text-blue-600 hover:underline">All of Europe</Link> - 230V</li>
@@ -140,7 +140,7 @@ export default function Converter220to110Guide() {
               
               <div className="bg-blue-50 p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-4">North America (110-120V)</h3>
-                <HTMLAnimatedPlug plugType="A" width={600} height={400} />
+                <HTMLAnimatedPlug plugType="A" width={700} height={240} />
                 <p className="font-semibold mt-4 mb-2">Your Destination:</p>
                 <ul className="space-y-1 text-sm">
                   <li>🇺🇸 <Link href="/usa-electric-plug-types-will-you-need-an-adapter-traveling-to-the-us" className="text-blue-600 hover:underline">USA</Link> - 120V @ 60Hz</li>
@@ -501,19 +501,19 @@ export default function Converter220to110Guide() {
             <div className="flex flex-col space-y-8">
               <div className="text-center">
                 <h3 className="font-bold mb-3">From Europe (Type C/F)</h3>
-                <HTMLAnimatedPlug plugType="C" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="C" width={700} height={240} />
                 <p className="mt-2 text-sm">Need: <Link href="/plug-type/type-c" className="text-blue-600 hover:underline">Type C</Link> to <Link href="/plug-type/type-a" className="text-blue-600 hover:underline">Type A</Link> adapter</p>
               </div>
               
               <div className="text-center">
                 <h3 className="font-bold mb-3">From UK (Type G)</h3>
-                <HTMLAnimatedPlug plugType="G" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="G" width={700} height={240} />
                 <p className="mt-2 text-sm">Need: <Link href="/plug-type/type-g" className="text-blue-600 hover:underline">Type G</Link> to <Link href="/plug-type/type-a" className="text-blue-600 hover:underline">Type A</Link> adapter</p>
               </div>
               
               <div className="text-center">
                 <h3 className="font-bold mb-3">From Australia (Type I)</h3>
-                <HTMLAnimatedPlug plugType="I" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="I" width={700} height={240} />
                 <p className="mt-2 text-sm">Need: <Link href="/plug-type/type-i" className="text-blue-600 hover:underline">Type I</Link> to <Link href="/plug-type/type-a" className="text-blue-600 hover:underline">Type A</Link> adapter</p>
               </div>
             </div>

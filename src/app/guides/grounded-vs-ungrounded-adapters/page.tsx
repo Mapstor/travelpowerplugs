@@ -128,7 +128,7 @@ export default function GroundedVsUngroundedGuide() {
             <div className="flex flex-col space-y-8">
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-3">Ungrounded (2-Prong)</h3>
-                <HTMLAnimatedPlug plugType="C" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="C" width={700} height={240} />
                 <div className="mt-4 p-4 bg-gray-50 rounded">
                   <p className="font-semibold">Type C (Europlug)</p>
                   <ul className="text-sm mt-2 space-y-1 text-left">
@@ -142,7 +142,7 @@ export default function GroundedVsUngroundedGuide() {
               
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-3">Grounded (Side Clips)</h3>
-                <HTMLAnimatedPlug plugType="F" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="F" width={700} height={240} />
                 <div className="mt-4 p-4 bg-green-50 rounded">
                   <p className="font-semibold">Type F (Schuko)</p>
                   <ul className="text-sm mt-2 space-y-1 text-left">
@@ -156,7 +156,7 @@ export default function GroundedVsUngroundedGuide() {
               
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-3">Grounded (3-Pin)</h3>
-                <HTMLAnimatedPlug plugType="G" width={400} height={300} />
+                <HTMLAnimatedPlug plugType="G" width={700} height={240} />
                 <div className="mt-4 p-4 bg-blue-50 rounded">
                   <p className="font-semibold">Type G (British)</p>
                   <ul className="text-sm mt-2 space-y-1 text-left">

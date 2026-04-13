@@ -127,7 +127,7 @@ export default function UStoEuropeAdapterGuide() {
             <div className="flex flex-col space-y-8">
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-3">What You Have (USA)</h3>
-                <HTMLAnimatedPlug plugType="A" width={500} height={350} />
+                <HTMLAnimatedPlug plugType="A" width={700} height={240} />
                 <p className="mt-2 font-semibold">Type A & B Plugs</p>
                 <p className="text-sm">Flat parallel blades</p>
                 <p className="text-sm">120V @ 60Hz</p>
@@ -139,7 +139,7 @@ export default function UStoEuropeAdapterGuide() {
               
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-3">What Europe Uses</h3>
-                <HTMLAnimatedPlug plugType="C" width={500} height={350} />
+                <HTMLAnimatedPlug plugType="C" width={700} height={240} />
                 <p className="mt-2 font-semibold">Type C (Europlug)</p>
                 <p className="text-sm">Two round pins</p>
                 <p className="text-sm">230V @ 50Hz</p>
