@@ -4,13 +4,13 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 const continents = [
-  { name: 'Europe', slug: 'europe' },
-  { name: 'Asia', slug: 'asia' },
-  { name: 'Africa', slug: 'africa' },
-  { name: 'North America', slug: 'north-america' },
-  { name: 'South America', slug: 'south-america' },
-  { name: 'Oceania', slug: 'oceania' },
-  { name: 'Middle East', slug: 'middle-east' },
+  { name: 'Europe', slug: 'europe', icon: '🇪🇺' },
+  { name: 'Asia', slug: 'asia', icon: '🌏' },
+  { name: 'Africa', slug: 'africa', icon: '🌍' },
+  { name: 'North America', slug: 'north-america', icon: '🌎' },
+  { name: 'South America', slug: 'south-america', icon: '🌎' },
+  { name: 'Oceania', slug: 'oceania', icon: '🏝️' },
+  { name: 'Middle East', slug: 'middle-east', icon: '🏜️' },
 ];
 
 const tools = [
@@ -47,6 +47,20 @@ const comparisons = [
   { name: 'Type D vs Type M', slug: 'type-d-vs-type-m-plug', icon: '🇿🇦' },
 ];
 
+const blogGuides = [
+  { name: 'US to Europe Adapter Guide', slug: 'us-to-europe-adapter-guide', icon: '🇺🇸' },
+  { name: 'Europe to UK Adapter Guide', slug: 'europe-to-uk-adapter-guide', icon: '🇬🇧' },
+  { name: 'Asia to Europe Adapter Guide', slug: 'asia-to-europe-adapter-guide', icon: '🌏' },
+  { name: '110V to 220V Converter Guide', slug: '110v-to-220v-converter', icon: '⚡' },
+  { name: '220V to 110V Converter Guide', slug: '220v-to-110v-converter', icon: '⚡' },
+  { name: 'Why My Adapter Doesn\'t Work', slug: 'why-my-adapter-doesnt-work', icon: '❓' },
+  { name: 'Grounded vs Ungrounded Adapters', slug: 'grounded-vs-ungrounded-adapters', icon: '🔌' },
+  { name: 'Laptop Charger Travel Guide', slug: 'laptop-charger-travel-guide', icon: '💻' },
+  { name: 'Phone Charger International Guide', slug: 'phone-charger-international-guide', icon: '📱' },
+  { name: 'Hair Dryer Voltage Converter Guide', slug: 'hair-dryer-voltage-converter-guide', icon: '💇' },
+  { name: 'USB vs Traditional Adapters', slug: 'usb-charging-vs-plug-adapters', icon: '🔌' },
+];
+
 interface HeaderProps {
   showFullNav?: boolean;
 }
@@ -55,6 +69,8 @@ export default function Header({ showFullNav = true }: HeaderProps) {
   const [isToolsOpen, setIsToolsOpen] = useState(false);
   const [isPlugTypesOpen, setIsPlugTypesOpen] = useState(false);
   const [isComparisonsOpen, setIsComparisonsOpen] = useState(false);
+  const [isContinentsOpen, setIsContinentsOpen] = useState(false);
+  const [isBlogOpen, setIsBlogOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Close dropdowns when clicking outside
@@ -65,6 +81,8 @@ export default function Header({ showFullNav = true }: HeaderProps) {
         setIsToolsOpen(false);
         setIsPlugTypesOpen(false);
         setIsComparisonsOpen(false);
+        setIsContinentsOpen(false);
+        setIsBlogOpen(false);
       }
     };
 
@@ -76,18 +94,40 @@ export default function Header({ showFullNav = true }: HeaderProps) {
     setIsToolsOpen(!isToolsOpen);
     setIsPlugTypesOpen(false);
     setIsComparisonsOpen(false);
+    setIsContinentsOpen(false);
+    setIsBlogOpen(false);
   };
 
   const togglePlugTypesDropdown = () => {
     setIsPlugTypesOpen(!isPlugTypesOpen);
     setIsToolsOpen(false);
     setIsComparisonsOpen(false);
+    setIsContinentsOpen(false);
+    setIsBlogOpen(false);
   };
 
   const toggleComparisonsDropdown = () => {
     setIsComparisonsOpen(!isComparisonsOpen);
     setIsToolsOpen(false);
     setIsPlugTypesOpen(false);
+    setIsContinentsOpen(false);
+    setIsBlogOpen(false);
+  };
+
+  const toggleContinentsDropdown = () => {
+    setIsContinentsOpen(!isContinentsOpen);
+    setIsToolsOpen(false);
+    setIsPlugTypesOpen(false);
+    setIsComparisonsOpen(false);
+    setIsBlogOpen(false);
+  };
+
+  const toggleBlogDropdown = () => {
+    setIsBlogOpen(!isBlogOpen);
+    setIsToolsOpen(false);
+    setIsPlugTypesOpen(false);
+    setIsComparisonsOpen(false);
+    setIsContinentsOpen(false);
   };
 
   return (
@@ -110,17 +150,30 @@ export default function Header({ showFullNav = true }: HeaderProps) {
         
         {showFullNav && (
           <nav className="hidden lg:flex items-center space-x-6">
-            {/* Continents */}
-            <div className="flex space-x-4">
-              {continents.slice(0, 4).map((continent) => (
-                <Link
-                  key={continent.slug}
-                  href={`/continent/${continent.slug}`}
-                  className="text-sm text-gray-700 hover:text-blue-600 transition-colors"
-                >
-                  {continent.name}
-                </Link>
-              ))}
+            {/* Continents Dropdown */}
+            <div className="relative dropdown-container">
+              <button 
+                onClick={toggleContinentsDropdown}
+                className="text-sm text-gray-700 hover:text-blue-600 transition-colors flex items-center"
+              >
+                Continents <span className="ml-1">▼</span>
+              </button>
+              
+              {isContinentsOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                  {continents.map((continent) => (
+                    <Link
+                      key={continent.slug}
+                      href={`/continent/${continent.slug}`}
+                      className="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors first:rounded-t-lg last:rounded-b-lg"
+                      onClick={() => setIsContinentsOpen(false)}
+                    >
+                      <span className="mr-3">{continent.icon}</span>
+                      {continent.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
             
             {/* Plug Types Dropdown */}
@@ -210,6 +263,32 @@ export default function Header({ showFullNav = true }: HeaderProps) {
                 </div>
               )}
             </div>
+            
+            {/* Blog Dropdown */}
+            <div className="relative dropdown-container">
+              <button 
+                onClick={toggleBlogDropdown}
+                className="text-sm text-gray-700 hover:text-blue-600 transition-colors flex items-center"
+              >
+                Blog <span className="ml-1">▼</span>
+              </button>
+              
+              {isBlogOpen && (
+                <div className="absolute top-full right-0 mt-2 w-72 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-[500px] overflow-y-auto">
+                  {blogGuides.map((guide) => (
+                    <Link
+                      key={guide.slug}
+                      href={`/guides/${guide.slug}`}
+                      className="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors first:rounded-t-lg last:rounded-b-lg"
+                      onClick={() => setIsBlogOpen(false)}
+                    >
+                      <span className="mr-3">{guide.icon}</span>
+                      <span className="line-clamp-1">{guide.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           </nav>
         )}
         
@@ -246,9 +325,10 @@ export default function Header({ showFullNav = true }: HeaderProps) {
                   <Link
                     key={continent.slug}
                     href={`/continent/${continent.slug}`}
-                    className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md"
+                    className="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
+                    <span className="mr-2">{continent.icon}</span>
                     {continent.name}
                   </Link>
                 ))}
@@ -306,7 +386,7 @@ export default function Header({ showFullNav = true }: HeaderProps) {
             </div>
 
             {/* Tools section */}
-            <div className="pb-2">
+            <div className="border-b border-gray-100 pb-2">
               <details className="group">
                 <summary className="flex justify-between items-center cursor-pointer list-none px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-50 rounded-md">
                   Tools
@@ -324,6 +404,31 @@ export default function Header({ showFullNav = true }: HeaderProps) {
                     >
                       <span className="mr-2">{tool.icon}</span>
                       {tool.name}
+                    </Link>
+                  ))}
+                </div>
+              </details>
+            </div>
+
+            {/* Blog section */}
+            <div className="pb-2">
+              <details className="group">
+                <summary className="flex justify-between items-center cursor-pointer list-none px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-50 rounded-md">
+                  Blog
+                  <svg className="w-4 h-4 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="mt-2 ml-3 space-y-1">
+                  {blogGuides.map((guide) => (
+                    <Link
+                      key={guide.slug}
+                      href={`/guides/${guide.slug}`}
+                      className="flex items-center px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-md"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <span className="mr-2">{guide.icon}</span>
+                      <span className="line-clamp-2">{guide.name}</span>
                     </Link>
                   ))}
                 </div>
