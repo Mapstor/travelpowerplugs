@@ -15,9 +15,12 @@ interface HTMLAnimatedPlugProps {
 const HTMLAnimatedPlug: React.FC<HTMLAnimatedPlugProps> = ({ 
   plugType, 
   width = 700, 
-  height = 240 
+  height = 400 
 }) => {
-  const isMobile = useIsMobile();
+  const isMobileDetected = useIsMobile();
+  
+  // Default to desktop during SSR/initial render to avoid hydration mismatch
+  const isMobile = isMobileDetected === null ? false : isMobileDetected;
   
   // Ensure plugType is lowercase for file paths
   const normalizedPlugType = plugType.toLowerCase();
@@ -113,26 +116,26 @@ const HTMLAnimatedPlug: React.FC<HTMLAnimatedPlugProps> = ({
           )}
         </div>
         ) : (
-          // Desktop Layout: Image on left, animation on right (horizontal)
-          <div className="flex items-center justify-center gap-4">
-          {/* Plug Image on the left - clickable */}
+          // Desktop Layout: Image above animation (vertical stack)
+          <div className="flex flex-col items-center gap-4">
+          {/* Plug Image on top - clickable */}
           <Link 
             href={`/plug-type/type-${normalizedPlugType}`}
-            className="flex-shrink-0 hover:opacity-80 transition-opacity cursor-pointer"
+            className="hover:opacity-80 transition-opacity cursor-pointer"
             title={`Learn more about Type ${plugType} plugs`}
           >
             <Image
               src={imagePath}
               alt={plugInfo?.photoAlt || `Type ${plugType} Plug and Socket`}
-              width={150}
-              height={150}
+              width={200}
+              height={200}
               className="rounded-lg"
               style={{ objectFit: 'contain' }}
             />
           </Link>
           
-          {/* Animation on the right - using desktop animation */}
-          <div className="flex-grow flex justify-center">
+          {/* Animation below - using desktop animation with full width */}
+          <div className="w-full flex justify-center">
             <iframe
               src={animationPath}
               width={width}

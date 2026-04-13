@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 
 export const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
   useEffect(() => {
     const checkIsMobile = () => {
@@ -20,5 +20,6 @@ export const useIsMobile = () => {
     return () => window.removeEventListener('resize', checkIsMobile);
   }, []);
 
+  // Return false for SSR to avoid hydration mismatch, null means not yet determined
   return isMobile;
 };
