@@ -4,7 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Best Universal Travel Adapter Guide 2026 - Complete Buying Guide',
-  description: 'Complete guide to choosing the best universal travel adapter. Compare features, understand safety standards, and find the perfect adapter for your travels.',
+  description: 'Complete guide to choosing the best universal travel adapter. Compare features, understand safety standards, and find the perfect adapter for your travels.'
 };
 
 export default function UniversalAdapterGuidePage() {

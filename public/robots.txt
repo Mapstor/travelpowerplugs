@@ -10,3 +10,6 @@ Host: https://travelpowerplugs.com
 
 # Sitemaps
 Sitemap: https://travelpowerplugs.com/sitemap.xml
+Sitemap: https://travelpowerplugs.com/sitemap-countries.xml
+Sitemap: https://travelpowerplugs.com/sitemap-tools.xml
+Sitemap: https://travelpowerplugs.com/sitemap-plugs.xml
