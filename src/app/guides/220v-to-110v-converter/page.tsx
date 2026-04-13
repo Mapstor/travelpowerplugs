@@ -498,7 +498,7 @@ export default function Converter220to110Guide() {
           <section className="my-12">
             <h2 className="text-3xl font-bold mb-6">Plug Adapters You'll Need (Plus Converter)</h2>
             
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="flex flex-col space-y-8">
               <div className="text-center">
                 <h3 className="font-bold mb-3">From Europe (Type C/F)</h3>
                 <HTMLAnimatedPlug plugType="C" width={400} height={300} />

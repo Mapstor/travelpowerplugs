@@ -60,7 +60,7 @@ export default function EuropeToUKAdapterGuidePage() {
       <div className="mb-12">
         <h2 className="text-3xl font-bold mb-6">Visual Comparison: European vs UK Plugs</h2>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="flex flex-col gap-8">
           <div>
             <h3 className="text-xl font-semibold mb-4 text-center">European Type C</h3>
             <HTMLAnimatedPlug plugType="C" width={600} height={400} />

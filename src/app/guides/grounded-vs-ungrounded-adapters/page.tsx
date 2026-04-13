@@ -125,7 +125,7 @@ export default function GroundedVsUngroundedGuide() {
           <section className="my-12">
             <h2 className="text-3xl font-bold mb-6">The Visual Difference: What Grounding Actually Looks Like</h2>
             
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="flex flex-col space-y-8">
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-3">Ungrounded (2-Prong)</h3>
                 <HTMLAnimatedPlug plugType="C" width={400} height={300} />

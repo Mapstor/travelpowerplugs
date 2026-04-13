@@ -330,7 +330,7 @@ export default function USBChargingVsPlugAdaptersPage() {
         <div className="mt-6">
           <h3 className="text-xl font-semibold mb-4">Common Plug Types Worldwide</h3>
           
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="flex flex-col gap-4">
             <div className="border rounded-lg p-4">
               <h4 className="font-semibold mb-2 text-center">Type A/B (North America)</h4>
               <HTMLAnimatedPlug plugType="A" width={400} height={300} />

@@ -124,7 +124,7 @@ export default function UStoEuropeAdapterGuide() {
           <section className="my-12">
             <h2 className="text-3xl font-bold mb-6">The Great Plug Transformation: US → Europe</h2>
             
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="flex flex-col space-y-8">
               <div className="text-center">
                 <h3 className="text-xl font-bold mb-3">What You Have (USA)</h3>
                 <HTMLAnimatedPlug plugType="A" width={500} height={350} />
