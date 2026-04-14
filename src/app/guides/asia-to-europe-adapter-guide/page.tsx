@@ -173,11 +173,11 @@ export default function AsiaToEuropeAdapterGuidePage() {
       <div className="mb-12">
         <h2 className="text-3xl font-bold mb-6">Common Asian vs European Plug Types</h2>
         
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
+        <div className="space-y-12 mb-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-center">Asian Plug Types</h3>
+            <h3 className="text-xl font-semibold mb-6 text-center">Asian Plug Types</h3>
             
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div>
                 <h4 className="font-semibold mb-2 text-center">Type A (Japan, Taiwan)</h4>
                 <HTMLAnimatedPlug plugType="A" width={700} height={240} />
@@ -205,9 +205,9 @@ export default function AsiaToEuropeAdapterGuidePage() {
           </div>
           
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-center">European Plug Types</h3>
+            <h3 className="text-xl font-semibold mb-6 text-center">European Plug Types</h3>
             
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div>
                 <h4 className="font-semibold mb-2 text-center">Type C (Europlug)</h4>
                 <HTMLAnimatedPlug plugType="C" width={700} height={240} />
