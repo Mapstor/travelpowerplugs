@@ -389,8 +389,69 @@ export default async function EnhancedPlugTypePage({ params }: PageProps) {
 
   const realWorldUsage = usageAnalysis();
 
+  // JSON-LD Schema with @graph pattern
+  const jsonLdGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      // TechArticle schema
+      {
+        "@type": "TechArticle",
+        "headline": plugType.title,
+        "description": plugType.description,
+        "about": {
+          "@type": "Product",
+          "name": `Type ${plugType.type} Electric Plug`,
+          "category": "Electrical Connector",
+          "manufacturer": "Various",
+          "description": plugType.description
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Marko Visic"
+        },
+        "datePublished": "2024-01-01",
+        "dateModified": new Date().toISOString(),
+        "inLanguage": "en",
+        "mainEntity": {
+          "@type": "Product",
+          "name": `Type ${plugType.type} Electric Plug`,
+          "image": plugType.image,
+          "description": plugType.description
+        }
+      },
+      // BreadcrumbList schema
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://travelpowerplugs.com"
+          },
+          {
+            "@type": "ListItem", 
+            "position": 2,
+            "name": "Plug Types",
+            "item": "https://travelpowerplugs.com/#plug-types"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": `Type ${plugType.type}`,
+            "item": `https://travelpowerplugs.com/plug-type/type-${type}`
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
+      />
       <Header showFullNav={true} />
       
       <main className="max-w-7xl mx-auto px-4 py-8">

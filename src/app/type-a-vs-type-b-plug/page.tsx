@@ -734,19 +734,66 @@ export default function TypeAvsTypeBPage() {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@type": "Article",
-                "headline": "Type A vs Type B Plug: Complete Comparison Guide",
-                "description": "Comprehensive comparison of Type A and Type B electrical plugs, including safety differences, compatibility, and country usage.",
-                "author": {
-                  "@type": "Person",
-                  "name": "Marko Visic"
-                },
-                "datePublished": "2024-01-01",
-                "dateModified": new Date().toISOString(),
-                "mainEntityOfPage": {
-                  "@type": "WebPage",
-                  "@id": "https://travelpowerplugs.com/type-a-vs-type-b-plug"
-                }
+                "@graph": [
+                  // Article schema
+                  {
+                    "@type": "Article",
+                    "headline": "Type A vs Type B Plug: Complete Comparison Guide",
+                    "description": "Comprehensive comparison of Type A and Type B electrical plugs, including safety differences, compatibility, and country usage.",
+                    "author": {
+                      "@type": "Person",
+                      "name": "Marko Visic"
+                    },
+                    "datePublished": "2024-01-01",
+                    "dateModified": new Date().toISOString(),
+                    "mainEntityOfPage": {
+                      "@type": "WebPage",
+                      "@id": "https://travelpowerplugs.com/type-a-vs-type-b-plug"
+                    },
+                    "about": [
+                      {
+                        "@type": "Product",
+                        "name": "Type A Electric Plug",
+                        "description": "NEMA 1-15 two-prong ungrounded electrical plug standard"
+                      },
+                      {
+                        "@type": "Product", 
+                        "name": "Type B Electric Plug",
+                        "description": "NEMA 5-15 three-prong grounded electrical plug standard"
+                      }
+                    ],
+                    "inLanguage": "en",
+                    "publisher": {
+                      "@type": "Organization",
+                      "name": "Travel Power Plugs",
+                      "url": "https://travelpowerplugs.com"
+                    }
+                  },
+                  // BreadcrumbList schema
+                  {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                      {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://travelpowerplugs.com/"
+                      },
+                      {
+                        "@type": "ListItem", 
+                        "position": 2,
+                        "name": "Plug Comparisons",
+                        "item": "https://travelpowerplugs.com/comparisons"
+                      },
+                      {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Type A vs Type B",
+                        "item": "https://travelpowerplugs.com/type-a-vs-type-b-plug"
+                      }
+                    ]
+                  }
+                ]
               })
             }}
           />

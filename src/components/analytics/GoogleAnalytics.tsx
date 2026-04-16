@@ -1,6 +1,6 @@
 import Script from 'next/script';
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-Y9W0F4YS0V';
 
 const GoogleAnalytics = () => {
   if (process.env.NODE_ENV !== 'production') {

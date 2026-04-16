@@ -26,50 +26,96 @@ export const metadata: Metadata = {
 };
 
 export default function TypeCvsTypeEComparison() {
-  const structuredData = {
+  const structuredDataGraph = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: 'Type C vs Type E Plug: French vs European Standard Comparison',
-    description: 'In-depth comparison of Type C (Europlug) vs Type E (French) electrical plugs used across France and Eastern Europe.',
-    author: {
-      '@type': 'Person',
-      name: 'Marko Visic'
-    },
-    datePublished: '2024-01-01',
-    dateModified: new Date().toISOString(),
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': 'https://travelpowerplugs.com/type-c-vs-type-e-plug/'
-    }
-  };
-
-  const faqStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
+    '@graph': [
+      // Article schema
       {
-        '@type': 'Question',
-        name: 'Can Type C plugs work in Type E sockets?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, Type C plugs fit perfectly in Type E sockets. Type E sockets are designed to accept both Type C (Europlug) and Type E plugs. The Type C plug will work but without grounding protection.'
+        '@type': 'Article',
+        headline: 'Type C vs Type E Plug: French vs European Standard Comparison',
+        description: 'In-depth comparison of Type C (Europlug) vs Type E (French) electrical plugs used across France and Eastern Europe.',
+        author: {
+          '@type': 'Person',
+          name: 'Marko Visic'
+        },
+        datePublished: '2024-01-01',
+        dateModified: new Date().toISOString(),
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://travelpowerplugs.com/type-c-vs-type-e-plug/'
+        },
+        about: [
+          {
+            '@type': 'Product',
+            name: 'Type C Electric Plug',
+            description: 'Europlug CEE 7/16 two-pin electrical connector'
+          },
+          {
+            '@type': 'Product', 
+            name: 'Type E Electric Plug',
+            description: 'French CEE 7/5 electrical plug with earth pin'
+          }
+        ],
+        inLanguage: 'en',
+        publisher: {
+          '@type': 'Organization',
+          name: 'Travel Power Plugs',
+          url: 'https://travelpowerplugs.com'
         }
       },
+      // FAQPage schema
       {
-        '@type': 'Question',
-        name: 'What is the difference between Type E and Type F plugs?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Type E uses a grounding pin that protrudes from the socket (French system), while Type F uses grounding clips on the sides (German Schuko system). Modern appliances often use CEE 7/7 hybrid plugs that work with both.'
-        }
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Can Type C plugs work in Type E sockets?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, Type C plugs fit perfectly in Type E sockets. Type E sockets are designed to accept both Type C (Europlug) and Type E plugs. The Type C plug will work but without grounding protection.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'What is the difference between Type E and Type F plugs?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Type E uses a grounding pin that protrudes from the socket (French system), while Type F uses grounding clips on the sides (German Schuko system). Modern appliances often use CEE 7/7 hybrid plugs that work with both.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Which countries use Type E plugs?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'France, Belgium, Poland, Czech Republic, Slovakia, and parts of Africa use Type E as their primary standard. Many Eastern European countries use Type E alongside Type C for different applications.'
+            }
+          }
+        ]
       },
+      // BreadcrumbList schema
       {
-        '@type': 'Question',
-        name: 'Which countries use Type E plugs?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'France, Belgium, Poland, Czech Republic, Slovakia, and parts of Africa use Type E as their primary standard. Many Eastern European countries use Type E alongside Type C for different applications.'
-        }
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://travelpowerplugs.com/'
+          },
+          {
+            '@type': 'ListItem', 
+            position: 2,
+            name: 'Plug Comparisons',
+            item: 'https://travelpowerplugs.com/comparisons'
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Type C vs Type E',
+            item: 'https://travelpowerplugs.com/type-c-vs-type-e-plug'
+          }
+        ]
       }
     ]
   };
@@ -80,11 +126,7 @@ export default function TypeCvsTypeEComparison() {
       
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataGraph) }}
       />
 
       <main className="max-w-7xl mx-auto px-4 py-12">

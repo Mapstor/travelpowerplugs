@@ -167,8 +167,73 @@ export default function HomePage() {
     }
   };
 
+  const structuredDataGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      // WebSite schema with SearchAction
+      {
+        "@type": "WebSite",
+        "name": "Travel Power Plugs",
+        "description": "Complete guide to international electrical outlets, plug types, voltage, and travel adapters for 259 countries worldwide",
+        "url": "https://travelpowerplugs.com",
+        "author": {
+          "@type": "Person",
+          "name": "Marko Visic"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Travel Power Plugs",
+          "url": "https://travelpowerplugs.com"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://travelpowerplugs.com/tools/adapter-finder?country={search_term_string}",
+          "query-input": "required name=search_term_string"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "International Electrical Standards",
+          "description": "Electrical plug types, outlets, voltage, and adapter requirements for international travel"
+        },
+        "mainEntity": {
+          "@type": "ItemList",
+          "name": "Country Electrical Standards",
+          "numberOfItems": COUNTRIES.length,
+          "itemListElement": COUNTRIES.slice(0, 10).map((country, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+              "@type": "Country",
+              "name": country.name,
+              "identifier": country.iso2,
+              "url": `https://travelpowerplugs.com/${country.slug}`
+            }
+          }))
+        }
+      },
+      // BreadcrumbList schema
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://travelpowerplugs.com/"
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataGraph) }}
+      />
+      
       <Header />
 
       <main>

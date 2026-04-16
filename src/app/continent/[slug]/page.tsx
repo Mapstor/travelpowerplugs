@@ -487,55 +487,85 @@ export default async function ContinentPage({ params }: PageProps) {
   const uniquePlugTypes = [...new Set(continentCountries.flatMap(c => c.plugTypes))].sort();
   const uniqueVoltages = [...new Set(continentCountries.map(c => c.voltage))].sort((a, b) => a - b);
 
-  // Generate JSON-LD structured data
-  const jsonLdFaq = continent.faqs ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: continent.faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
-      },
-    })),
-  } : null;
-
-  const jsonLdBreadcrumb = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
+  // Generate JSON-LD structured data with @graph pattern
+  const jsonLdGraph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      // CollectionPage schema
       {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://travelpowerplugs.com/',
+        "@type": "CollectionPage",
+        "name": continent.title,
+        "description": continent.description,
+        "url": `https://travelpowerplugs.com/continent/${slug}`,
+        "author": {
+          "@type": "Person",
+          "name": "Marko Visic"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Travel Power Plugs",
+          "url": "https://travelpowerplugs.com"
+        },
+        "datePublished": "2024-01-01",
+        "dateModified": new Date().toISOString(),
+        "inLanguage": "en",
+        "about": {
+          "@type": "Place",
+          "name": continent.name
+        },
+        "hasPart": continentCountries.map(country => ({
+          "@type": "Country",
+          "name": country.name,
+          "identifier": country.iso2,
+          "url": `https://travelpowerplugs.com/${country.slug}`
+        })),
+        "mainEntity": {
+          "@type": "ItemList",
+          "name": `${continent.name} Countries`,
+          "numberOfItems": continentCountries.length,
+          "itemListElement": continentCountries.map((country, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+              "@type": "Country",
+              "name": country.name,
+              "identifier": country.iso2,
+              "url": `https://travelpowerplugs.com/${country.slug}`
+            }
+          }))
+        }
       },
+      // FAQPage schema (if FAQs exist)
+      ...(continent.faqs ? [{
+        "@type": "FAQPage",
+        "mainEntity": continent.faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer,
+          },
+        })),
+      }] : []),
+      // BreadcrumbList schema
       {
-        '@type': 'ListItem',
-        position: 2,
-        name: `${continent.name} Electric Plug Types`,
-        item: `https://travelpowerplugs.com/continent/${slug}`,
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://travelpowerplugs.com/",
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": `${continent.name} Electric Plug Types`,
+            "item": `https://travelpowerplugs.com/continent/${slug}`,
+          },
+        ],
       },
     ],
-  };
-
-  const jsonLdWebPage = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: continent.title,
-    description: continent.description,
-    url: `https://travelpowerplugs.com/continent/${slug}`,
-    author: {
-      '@type': 'Person',
-      name: 'Marko Visic',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Travel Power Plugs',
-      url: 'https://travelpowerplugs.com',
-    },
-    lastReviewed: new Date().toISOString().split('T')[0],
   };
 
   const getCountryDescription = (country: any) => {
@@ -570,19 +600,9 @@ export default async function ContinentPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-white">
       {/* JSON-LD Structured Data */}
-      {jsonLdFaq && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
-        />
-      )}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
       />
       
       {/* Header */}
